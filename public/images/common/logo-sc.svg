@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="120" height="120" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clippath">
+      <rect width="120" height="120" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g style="clip-path: url(#clippath);">
+      <g>
+        <path d="M33.65,15.41l8.92-8.92v17.03h-8.92v-8.11ZM86.35,15.41l-8.92-8.92v17.03h8.92v-8.11Z" style="fill: #7b7b7b; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M42.57,6.49h34.86v8.51h-34.86V6.49Z" style="fill: #5a5a5a; stroke-width: 0px;"/>
+        <g>
+          <path d="M110.27,113.51H9.73c-5.37,0-9.73-4.36-9.73-9.73v-63.55l16.72-16.72h86.56l16.72,16.72v63.55c0,5.37-4.36,9.73-9.73,9.73Z" style="fill: #e6e7e8; fill-rule: evenodd; stroke-width: 0px;"/>
+          <path d="M0,57.97v-17.74l16.72-16.72h86.56l16.72,16.72v17.74H0Z" style="fill: #d0d1d2; fill-rule: evenodd; stroke-width: 0px;"/>
+          <path d="M13.78,113.51V44.59c0-2.24,1.82-4.05,4.05-4.05h84.32c2.24,0,4.05,1.82,4.05,4.05v68.92H13.78Z" style="fill: #458cf5; fill-rule: evenodd; stroke-width: 0px;"/>
+        </g>
+        <path d="M13.78,57.97h92.43v55.54H13.78v-55.54Z" style="fill: #fff; stroke-width: 0px;"/>
+        <path d="M78.65,113.51v-16.62l-8.11-8.11-5.27-14.59,3.65-9.32,20.68,20.68,3.65-15.41,12.97,12.97v30.41h-27.57Z" style="fill: #d2d3d4; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M19.86,64.46h30.81v34.46h-30.81v-34.46ZM19.86,106.62h39.73v6.89H19.86v-6.89Z" style="fill: #d2d3d4; stroke-width: 0px;"/>
+        <path d="M86.35,100.58v12.93h-17.03v-12.75c-10.09-4.59-14.55-16.49-9.95-26.58,1.94-4.27,5.32-7.73,9.55-9.76v19.09l8.51,5.27,8.92-5.27v-19.09c9.99,4.82,14.18,16.82,9.36,26.8-1.97,4.09-5.27,7.39-9.36,9.36h0Z" style="fill: #505050; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M23.31,45c1.9,0,3.45,1.54,3.45,3.45s-1.54,3.45-3.45,3.45-3.45-1.54-3.45-3.45,1.54-3.45,3.45-3.45ZM33.45,45c1.9,0,3.45,1.54,3.45,3.45s-1.54,3.45-3.45,3.45-3.45-1.54-3.45-3.45,1.54-3.45,3.45-3.45Z" style="fill: #e6e7e8; fill-rule: evenodd; stroke-width: 0px;"/>
+      </g>
+    </g>
+  </g>
+</svg>

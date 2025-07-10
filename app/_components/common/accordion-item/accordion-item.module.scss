@@ -1,0 +1,138 @@
+@import "@sass-utils";
+
+.wrap {
+  background-color: #f5f5f7;
+  padding: 2.4rem 2rem;
+  cursor: pointer;
+  border-radius: 1.2rem;
+  transition: all 0.3s;
+
+  @include sp {
+    padding: 2rem;
+  }
+}
+
+.question {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding-right: 4rem;
+
+  @include sp {
+    padding-right: 2.8rem;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    width: 2.4rem;
+    height: 0.4rem;
+    background-color: $c-main;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    transition: all 0.3s;
+
+    @include sp {
+      width: 1.6rem;
+      height: 0.3rem;
+    }
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  &.isOpen {
+    &::before {
+      transform: rotate(180deg);
+    }
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.questionText {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5rem 0 0.3rem;
+
+  @include sp {
+    font-size: 1.6rem;
+    padding: 0.6rem 0 0;
+  }
+}
+
+.questionIcon,
+.answerIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 0.2rem solid $c-main;
+  font-family: var(--font-fig);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-right: 1.6rem;
+
+  @include sp {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-width: 0.1rem;
+    font-size: 1.4rem;
+    margin-right: 0.8rem;
+  }
+}
+
+.questionIcon {
+  background-color: $c-main;
+  color: $c-white;
+}
+
+.answerIcon {
+  background-color: $c-white;
+  color: $c-main;
+}
+
+.answer {
+  transition: height 0.2s linear, opacity 0.2s ease-in, padding 0.2s ease-in;
+  overflow: hidden;
+  padding: 1rem 4rem 1rem 1rem;
+  box-sizing: content-box;
+
+  a {
+    color: $c-link;
+    text-decoration: underline;
+  }
+}
+
+.answerContent {
+  display: flex;
+  max-width: calc(100% - 4rem);
+
+  @include sp {
+    max-width: 100%;
+  }
+}
+
+.answerText {
+  font-weight: 500;
+  line-height: 2;
+  margin-top: 0.3rem;
+
+  @include sp {
+    line-height: 1.75;
+  }
+
+  & > *:not(:first-child) {
+    margin-top: 1.5em;
+  }
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="120" height="120" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clippath">
+      <rect width="120" height="120" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g style="clip-path: url(#clippath);">
+      <g>
+        <g>
+          <path d="M5.81,9.98h108.38v83.17H5.81V9.98Z" style="fill: #f5f5f7; fill-rule: evenodd; stroke-width: 0px;"/>
+          <path d="M108.17,70.97c-8.55-6.72-17.33-13.19-26.34-19.41-5.99,3.44-11.76,7.14-17.31,11.09-7.91-5.43-15.44-11.43-22.58-18.02-9.63,7.95-19.67,15.35-30.11,22.18V15.52h96.34v55.45Z" style="fill: #deeffd; fill-rule: evenodd; stroke-width: 0px;"/>
+          <path d="M64.52,62.65c8.46,8.25,16.99,16.57,25.59,24.95H11.83v-20.79c10.44-6.83,20.48-14.23,30.11-22.18,7.14,6.59,14.67,12.59,22.58,18.02Z" style="fill: #b6dcfd; fill-rule: evenodd; stroke-width: 0px;"/>
+          <path d="M108.17,70.97v16.63h-18.06c-8.6-8.38-17.14-16.7-25.59-24.95,5.55-3.95,11.32-7.65,17.31-11.09,9.01,6.22,17.79,12.69,26.34,19.41Z" style="fill: #98ccfd; fill-rule: evenodd; stroke-width: 0px;"/>
+          <circle cx="86.34" cy="32.14" r="8.08" style="fill: #9bcdfd; stroke-width: 0px;"/>
+        </g>
+        <g>
+          <circle cx="45.36" cy="105.55" r="4.47" style="fill: #1075e2; stroke-width: 0px;"/>
+          <circle cx="60.36" cy="105.55" r="4.47" style="fill: #1075e2; opacity: .2; stroke-width: 0px;"/>
+          <circle cx="74.64" cy="105.55" r="4.47" style="fill: #1075e2; opacity: .2; stroke-width: 0px;"/>
+        </g>
+      </g>
+      <g>
+        <polygon points="102.49 95.05 104.97 102.04 111.96 104.52 104.97 107.01 102.49 114 100 107.01 93.01 104.52 100 102.04 102.49 95.05" style="fill: #f2d938; fill-rule: evenodd; stroke-width: 0px;"/>
+        <polygon points="14.38 59.54 17.33 67.85 25.64 70.8 17.33 73.75 14.38 82.06 11.43 73.75 3.12 70.8 11.43 67.85 14.38 59.54" style="fill: #f2d938; fill-rule: evenodd; stroke-width: 0px;"/>
+        <polygon points="102.49 6 106.26 16.61 116.88 20.39 106.26 24.16 102.49 34.78 98.71 24.16 88.1 20.39 98.71 16.61 102.49 6" style="fill: #f2d938; fill-rule: evenodd; stroke-width: 0px;"/>
+      </g>
+    </g>
+  </g>
+</svg>

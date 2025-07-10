@@ -1,0 +1,56 @@
+@use "sass:math";
+
+// breakpoints
+
+$bp-pc-large: 1441px;
+$bp-hamburger: 1180px;
+$bp-tab: 1100px;
+$bp-sp: 768px;
+$bp-sp-s: 550px;
+
+@mixin pc-l {
+  @media (min-width: ($bp-pc-large)) {
+    @content;
+  }
+}
+
+@mixin hamburger {
+  @media (max-width: ($bp-hamburger)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: ($bp-tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($bp-sp)) {
+    @content;
+  }
+}
+
+@mixin sp-s {
+  @media (max-width: ($bp-sp-s)) {
+    @content;
+  }
+}
+
+// hover
+
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@function calcHexWidth($value) {
+  // √3/2を計算して、小数点以下を切り上げる
+  @return $value * (math.sqrt(3) / 2);
+}
+
+@mixin outputHexWidth($value) {
+  width: calcHexWidth($value);
+}

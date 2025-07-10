@@ -1,0 +1,48 @@
+@import "@sass-utils";
+
+.section {
+  position: relative;
+  padding: 16rem 0 2.4rem;
+  text-align: center;
+
+  &.hasBorder {
+    &::after {
+      content: "";
+      width: calc(100% - 6rem);
+      height: 0.1rem;
+      background-color: #d3d3df;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+
+      @include sp {
+        width: calc(100% - 4rem);
+      }
+    }
+  }
+}
+
+.title {
+  font-size: 4.8rem;
+  font-weight: bold;
+
+  @include sp {
+    font-size: 3.2rem;
+  }
+
+  &::before {
+    display: block;
+    content: attr(data-en);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $c-main;
+    margin-bottom: 0.8rem;
+
+    @include sp {
+      font-size: 1.4rem;
+    }
+  }
+}

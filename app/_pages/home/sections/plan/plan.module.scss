@@ -1,0 +1,507 @@
+@import "@sass-utils";
+
+.section {
+  padding: 10rem 0;
+  background-color: $c-main;
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: $c-white;
+  margin-top: 12rem;
+}
+
+.cards {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 4rem auto 0;
+  max-width: 100rem;
+}
+
+.card {
+  border-radius: 1.6rem;
+  background-color: $c-white;
+  overflow: hidden;
+  box-shadow: 0 0.8rem 1.2rem 0.4rem rgba($c-black, 0.04);
+  border: 3px solid $c-dark;
+
+  &:first-child {
+    border-color: $c-dark;
+
+    .planName {
+      background-color: $c-dark;
+    }
+
+    .desc {
+      background-color: rgba($c-dark, 0.06);
+    }
+
+    .price {
+      strong {
+        color: $c-text;
+      }
+    }
+
+    .infoList {
+      li {
+        svg {
+          color: $c-dark;
+        }
+      }
+    }
+  }
+}
+
+.planName {
+  font-size: 2.4rem;
+  font-weight: bold;
+  background-color: $c-main;
+  text-align: center;
+  padding: 1.6rem;
+  color: $c-white;
+  border-bottom: 3px solid $c-dark;
+}
+
+.planBody {
+  background-color: $c-white;
+  padding: 3rem 3rem;
+}
+
+.priceBlock {
+  & + .priceBlock {
+    margin-top: 2.4rem;
+    padding-top: 3rem;
+    border-top: 1px solid #dddcdc;
+  }
+}
+
+.price {
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  span {
+    font-size: 2rem;
+  }
+
+  strong {
+    font-size: 4.8rem;
+    font-weight: 900;
+    font-family: var(--font-fig);
+    color: $c-main;
+    margin: 0 0.4rem;
+  }
+
+  small {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-left: 0.4rem;
+  }
+}
+
+.discount {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+
+  span {
+    position: relative;
+    background-color: #ff4771;
+    color: $c-white;
+    font-weight: bold;
+    padding: 0.2rem 1rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0.8rem;
+      height: 0.5rem;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background-color: #ff4771;
+    }
+  }
+}
+
+.head {
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 3.2rem;
+    height: 0.1rem;
+    background-color: $c-black;
+    margin: 0 0.8rem;
+  }
+}
+
+.priceYear {
+  text-align: center;
+  font-size: 1.8rem;
+
+  span {
+    font-weight: bold;
+  }
+
+  del {
+    font-weight: bold;
+  }
+
+  strong {
+    color: #f55595;
+    font-weight: 900;
+    font-family: var(--font-fig);
+  }
+}
+
+.desc {
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: 500;
+  margin-top: 2.4rem;
+  padding: 2.4rem 3rem;
+  background-color: rgba($c-main, 0.08);
+}
+
+.toggleBtns {
+  width: 60rem;
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.6rem;
+  border-radius: 10rem;
+  // background-color: $c-white;
+  border: 3px solid $c-text;
+  margin: 6.4rem auto 0;
+  background-color: $c-white;
+}
+
+.toggleCol {
+  position: relative;
+  width: 50%;
+}
+
+.toggleSale {
+  position: absolute;
+  top: -4.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff4771;
+  color: $c-white;
+  border-radius: 10rem;
+  font-weight: bold;
+  padding: 0.4rem 1.2rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0.8rem;
+    height: 0.5rem;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #ff4771;
+  }
+}
+
+.toggleBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding: 1.2rem;
+  color: rgba($c-text, 0.8);
+  transition: color 0.2s, background-color 0.3s;
+
+  &::before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #ff4771;
+    margin-right: 0.5rem;
+    opacity: 0;
+  }
+
+  &.isActive {
+    color: rgba($c-text, 1);
+    color: $c-white;
+    background-color: $c-dark;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.infoList {
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+  margin-top: 1.6rem;
+
+  li {
+  }
+}
+
+.infoItem {
+  border-top: 1px solid #eee;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  ul {
+    width: 100%;
+    margin-top: 0rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &.blankLines {
+      padding-bottom: 1.75em;
+    }
+
+    li {
+      width: 50%;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: rgba($c-text, 0.7);
+      margin-top: 0.4rem;
+      line-height: 1.75;
+    }
+  }
+
+  svg {
+    margin-right: 0.6rem;
+    color: $c-main;
+  }
+}
+
+.pageStructure {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-left: 1.5em;
+  margin-top: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &::after {
+    content: "";
+    background-color: $c-text;
+    height: 1px;
+    flex-grow: 1;
+    margin-left: 0.6rem;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: rgba($c-text, 0.8);
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 1rem;
+      height: 0.8rem;
+      background-color: $c-text;
+      display: block;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      margin-right: 0.4rem;
+      margin-top: 0.1rem;
+    }
+  }
+}
+
+.tableWrap {
+  margin: 2.4rem auto 0;
+  border: 3px solid $c-dark;
+  border-radius: 1.6rem;
+  background-color: $c-white;
+  max-width: 100rem;
+  padding: 6rem;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableRow {
+  display: flex;
+  width: 100%;
+
+  .tableCol:first-child {
+    width: 24rem;
+    text-align: left;
+    flex-shrink: 0;
+    font-size: 1.6rem;
+    justify-content: flex-start;
+
+    &.isBlank {
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  &:nth-child(2) {
+    .tableCol {
+      border-top: 3px solid $c-dark;
+
+      &:first-child {
+        border-radius: 1.6rem 0 0 0;
+      }
+    }
+  }
+
+  &:nth-child(odd) {
+    background-color: $c-white;
+  }
+
+  &:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  &:last-child {
+    .tableCol {
+      border-bottom: 3px solid $c-dark;
+
+      &:first-child {
+        border-radius: 0 0 0 1.6rem;
+      }
+
+      &:last-child {
+        border-radius: 0 0 1.6rem 0;
+      }
+    }
+  }
+
+  .isHead {
+  }
+
+  & > .tableCol {
+    border-left: 3px solid $c-dark;
+  }
+
+  & > .tableCol:nth-child(1) {
+    border-right: none;
+  }
+
+  & > .tableCol:nth-child(2) {
+    border-left: 3px solid $c-dark;
+    border-right: none;
+  }
+
+  & > .tableCol:nth-child(3) {
+  }
+}
+
+.tableCol {
+  width: calc(50% - 12rem);
+  padding: 2rem 1.6rem;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  border-right: 3px solid rgba($c-dark, 1);
+  // border-radius: 0.8rem;
+
+  &.isSimple {
+    background-color: $c-dark;
+    color: $c-white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 1.6rem 1.6rem 0 0;
+  }
+
+  &.isStandard {
+    background-color: $c-main;
+    color: $c-white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 1.6rem 1.6rem 0 0;
+    border: 3px solid $c-dark;
+    border-bottom: none;
+  }
+}
+
+.circle {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: 3px solid $c-text;
+}
+
+.cross {
+  position: relative;
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: $c-text;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 4rem;
+
+  p {
+    font-size: 1.6rem;
+    color: $c-white;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.2rem;
+}

@@ -1,0 +1,120 @@
+@import "@sass-utils";
+
+.flow {
+  padding: 16rem 0 0;
+  background-color: #f5f5f7;
+
+  @include sp {
+    padding: 8rem 0 0;
+  }
+
+  .en {
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 100%;
+    display: block;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: $c-main;
+
+    @include sp {
+      font-size: 1.2rem;
+    }
+  }
+
+  h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.6rem;
+    text-align: center;
+
+    @include sp {
+      font-size: 2.4rem;
+      margin-top: 0.8rem;
+    }
+  }
+}
+
+.list {
+  margin-top: 6.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: $c-white;
+  border-radius: 3rem;
+  padding: 4rem 0;
+
+  @include sp {
+    margin-top: 3.2rem;
+    padding: 0;
+    border-radius: 1.6rem;
+    overflow: hidden;
+  }
+}
+
+.item {
+  background-color: $c-white;
+  padding: 4rem;
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  border-bottom: 0.1rem dashed #dededf;
+
+  @include sp {
+    padding: 4rem 2.4rem;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .count {
+    color: $c-main;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    @include sp {
+      font-size: 1.2rem;
+    }
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 2.8rem;
+    margin-top: 0.8rem;
+
+    @include sp {
+      font-size: 2.2rem;
+    }
+  }
+  p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 1.6rem;
+    line-height: 2;
+
+    @include sp {
+      font-size: 1.5rem;
+    }
+
+    a {
+      color: $c-main;
+      border-bottom: 0.1rem dashed $c-main;
+      transition: all 0.3s;
+
+      @include hover {
+        &:hover {
+          color: darken($c-main, 20%);
+          border-color: darken($c-main, 20%);
+        }
+      }
+    }
+
+    small {
+      font-size: 1.5rem;
+      color: #7d8393;
+    }
+  }
+}

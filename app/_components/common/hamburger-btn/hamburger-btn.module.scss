@@ -1,0 +1,57 @@
+@import "@sass-utils";
+
+.btn {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: $c-dark;
+  pointer-events: auto;
+  display: none;
+
+  @include hamburger {
+    display: block;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &::before,
+  &::after,
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 2rem;
+    height: 0.1rem;
+    background-color: $c-white;
+    transition: all 0.3s;
+  }
+
+  &::before {
+    transform: translateY(-0.5rem);
+  }
+
+  &::after {
+    transform: translateY(0.5rem);
+  }
+
+  &.isOpen {
+    &::before {
+      transform: translateY(0) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(0) rotate(-45deg);
+    }
+
+    span {
+      opacity: 0;
+    }
+  }
+}

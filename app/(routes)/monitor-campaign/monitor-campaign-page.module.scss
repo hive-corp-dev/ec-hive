@@ -1,0 +1,390 @@
+@import "@sass-utils";
+
+.main {
+}
+
+.body {
+  padding: 8rem 0 12rem;
+  font-weight: 500;
+
+  @include sp {
+    padding: 4rem 0 8rem;
+  }
+}
+
+.intro {
+  line-height: 2.25;
+  max-width: 100rem;
+  width: 100%;
+  margin: 0 auto 12rem;
+}
+
+.secTitle {
+  font-size: 4rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include sp {
+    font-size: 2.4rem;
+  }
+
+  &::before {
+    display: block;
+    content: attr(data-en);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $c-main;
+    margin-bottom: 0.8rem;
+
+    @include sp {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.text {
+  text-align: center;
+  margin-top: 6.4rem;
+}
+
+.benefit {
+  display: flex;
+  width: 100%;
+  gap: 3.2rem;
+  background-color: #fff;
+  margin-top: 4rem;
+  border-radius: 3rem;
+  padding: 4rem;
+
+  @include sp {
+    flex-direction: column;
+    padding: 1.6rem 1.6rem 2.4rem;
+    border-radius: 1.6rem;
+    margin-top: 2.4rem;
+  }
+}
+
+.benefitThumb {
+  width: 32rem;
+  height: 32rem;
+  border-radius: 3rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f5f5f7;
+  display: flex;
+  align-items: center;
+
+  @include sp {
+    width: 100%;
+    height: auto;
+    border-radius: 1.2rem;
+  }
+}
+
+.benefitContent {
+  padding-top: 2.4rem;
+
+  @include sp {
+    padding-top: 0;
+  }
+
+  .benefitNum {
+    font-family: var(--font-fig);
+    color: $c-main;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+
+    @include sp {
+      font-size: 2.2rem;
+    }
+  }
+
+  table {
+    tr {
+      td {
+        font-weight: 500;
+
+        .num {
+          font-family: var(--font-fig);
+        }
+
+        strong {
+          color: $c-sub;
+          font-family: var(--font-fig);
+        }
+
+        small {
+          font-size: 1.2rem;
+        }
+
+        &:first-child {
+          width: 5em;
+          font-weight: bold;
+          font-family: var(--font-fig);
+        }
+
+        &:nth-child(2) {
+          width: 9rem;
+          text-align: right;
+        }
+
+        &:nth-child(3) {
+          padding: 0 1.2rem;
+        }
+
+        &:nth-child(4) {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.benefitText {
+  margin-top: 1.6rem;
+  line-height: 2;
+
+  & > *:not(:first-child) {
+    margin-top: 1.6rem;
+  }
+
+  a {
+    color: $c-main;
+    text-decoration: underline;
+  }
+}
+
+.planPriceText {
+  line-height: 1.75;
+
+  @include sp {
+    font-size: 1.4rem;
+  }
+}
+
+.planPriceNum {
+  @include sp {
+    font-size: 1.3rem;
+  }
+
+  span {
+    font-weight: bold;
+
+    span {
+      font-size: 1.3em;
+      color: $c-main;
+
+      @include sp {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+.require {
+  padding-top: 12rem;
+
+  @include sp {
+    padding-top: 8rem;
+  }
+
+  &Box {
+    background-color: $c-white;
+    border-radius: 3rem;
+    padding: 4rem;
+    margin-top: 4rem;
+
+    @include sp {
+      margin-top: 2.4rem;
+      padding: 0.8rem 2.4rem;
+      border-radius: 1.2rem;
+    }
+
+    dl {
+      div {
+        display: flex;
+        line-height: 2;
+        border-bottom: 0.1rem dashed #e8e8e8;
+        padding: 2.4rem 0;
+
+        @include sp {
+          flex-direction: column;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        dt {
+          font-weight: bold;
+          width: 24rem;
+        }
+
+        dd {
+          @include sp {
+            font-size: 1.4rem;
+          }
+
+          ul {
+            li {
+              display: flex;
+
+              &::before {
+                content: "・";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .count {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 4rem;
+
+    @include sp {
+      font-size: 1.5rem;
+      margin-top: 2.4rem;
+    }
+  }
+}
+
+.message {
+  padding-top: 12rem;
+
+  .spNone {
+    @include sp {
+      display: none;
+    }
+  }
+}
+
+.messageBox {
+  background-color: $c-white;
+  padding: 6.4rem 3.2rem;
+  width: 100%;
+  margin: 4rem auto 0;
+  border-radius: 2.4rem;
+
+  @include sp {
+    padding: 3.2rem 2.4rem;
+    border-radius: 1.2rem;
+  }
+
+  .count {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.6rem;
+
+    @include sp {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.messageText {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2;
+
+  display: flex;
+  justify-content: center;
+
+  @include sp {
+    line-height: 1.75;
+  }
+
+  span {
+    br {
+      display: none;
+
+      @include sp-s {
+        display: block;
+      }
+    }
+  }
+}
+
+.messagePara {
+  max-width: 70rem;
+  width: 100%;
+  margin: 0 auto 0;
+  text-align: center;
+  line-height: 2;
+
+  @include sp {
+    font-size: 1.4rem;
+
+    br {
+      display: none;
+    }
+  }
+
+  @include sp-s {
+    text-align: left;
+  }
+
+  .messageLineLink {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.8rem;
+
+    @include sp {
+      margin-top: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .link {
+    text-align: center;
+    align-items: center;
+    color: $c-link;
+    line-height: 1.25;
+    border-bottom: 0.1rem dashed $c-link;
+    transition: all 0.3s;
+
+    @include hover {
+      &:hover {
+        color: darken($c-main, 20%);
+        border-color: darken($c-main, 20%);
+      }
+    }
+
+    svg {
+      transform: translateY(-0.1rem);
+      margin-left: 0.2rem;
+    }
+  }
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin: 2.4rem auto 0;
+
+  @include sp {
+    gap: 2rem;
+    width: 100%;
+    max-width: 50rem;
+    flex-direction: column;
+    margin-top: 1.6rem;
+  }
+}
+
+.btn {
+  width: 24rem;
+}

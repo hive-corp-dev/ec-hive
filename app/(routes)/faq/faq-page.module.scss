@@ -1,0 +1,118 @@
+@import "@sass-utils";
+
+.body {
+  background-color: $c-white;
+  padding: 12rem 0;
+
+  @include sp {
+    padding: 8rem 0;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+
+    @include sp {
+      font-size: 2.4rem;
+    }
+  }
+
+  h3 {
+    border-bottom: 0.2rem solid #dfdfe6;
+    padding-bottom: 0.8rem;
+    font-size: 2.4rem;
+
+    @include sp {
+      font-size: 2rem;
+    }
+  }
+}
+
+.bodyRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.navCol {
+  background-color: #f5f5f7;
+  padding: 3.2rem;
+  border-radius: 1.2rem;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1.6rem 6rem;
+
+    @include sp {
+      gap: 1.6rem;
+      flex-direction: column;
+    }
+
+    li {
+      a {
+        font-size: 1.8rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        transition: color 0.3s;
+
+        @include sp {
+          font-size: 1.5rem;
+        }
+
+        @include hover {
+          &:hover {
+            color: $c-main;
+          }
+        }
+
+        // &::before {
+        //   content: "";
+        //   width: 2.4rem;
+        //   height: 1px;
+        //   background-color: $c-black;
+        //   margin-right: 1.2rem;
+
+        //   @include sp {
+        //     display: none;
+        //   }
+        // }
+
+        svg {
+          flex-shrink: 0;
+          display: block;
+          color: $c-main;
+          margin-left: 0.6rem;
+          margin-top: 0.4rem;
+        }
+      }
+    }
+  }
+}
+
+.blocks {
+  flex-grow: 1;
+  display: grid;
+}
+
+.block {
+  padding-top: 12rem;
+
+  @include sp {
+    padding-top: 6.4rem;
+  }
+}
+
+.subBlocks {
+  width: 100%;
+  display: grid;
+  gap: 6.4rem;
+  margin-top: 4rem;
+}
+
+.accordion {
+  margin-top: 3.2rem;
+}

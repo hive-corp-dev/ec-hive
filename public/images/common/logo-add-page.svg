@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="120" height="120" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clippath">
+      <rect width="120" height="120" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g style="clip-path: url(#clippath);">
+      <g>
+        <path d="M78.9,22.19h-37.81v10.8h-16.2v5.4h16.2v5.4h-16.2v5.4h16.2v5.4h-16.2v5.4h16.2v5.4h-16.2v5.4h16.2v5.4h-16.2v5.4h16.2v16.2H11.39V8.69h67.51v13.5Z" style="fill: #98ccfd; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M78.9,22.19h29.71v89.12H41.1V22.19h37.81Z" style="fill: #b6dcfd; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M41.1,32.99v5.4h-16.2v-5.4h16.2Z" style="fill: #3377af; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M41.1,43.8v5.4h-16.2v-5.4h16.2Z" style="fill: #3377af; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M54.6,46.5h35.11v5.4h-35.11v-5.4Z" style="fill: #4788c7; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M41.1,54.6v5.4h-16.2v-5.4h16.2Z" style="fill: #3377af; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M54.6,57.3h40.51v5.4h-40.51v-5.4Z" style="fill: #4788c7; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M41.1,65.4v5.4h-16.2v-5.4h16.2Z" style="fill: #3377af; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M54.6,68.1h29.71v5.4h-29.71v-5.4Z" style="fill: #4788c7; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M41.1,76.2v5.4h-16.2v-5.4h16.2Z" style="fill: #3377af; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M54.6,78.9h40.51v5.4h-40.51v-5.4Z" style="fill: #4788c7; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M54.6,89.71h29.71v5.4h-29.71v-5.4Z" style="fill: #4788c7; fill-rule: evenodd; stroke-width: 0px;"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+@import "@sass-utils";
+
+.wrap {
+}
+
+.title {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-bottom: 0.1rem solid #e7e7e7;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
+
+  @include sp {
+    font-size: 1.4rem;
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include sp {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,305 @@
+@import "@sass-utils";
+
+.footer {
+  position: relative;
+  background-color: #14253c;
+  background-color: #041224;
+  background-image: linear-gradient(45deg, #14253c, #041224);
+  padding: 6.4rem 0 2.4rem;
+  z-index: $z-footer;
+
+  @include sp {
+    padding-bottom: 1.6rem;
+  }
+}
+
+.container {
+  // max-width: 132rem;
+
+  @include sp {
+    max-width: 50rem;
+  }
+}
+
+.row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: $c-white;
+
+  @include sp {
+    flex-direction: column;
+  }
+}
+
+.logoCol {
+  width: 28rem;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  width: 24rem;
+  transition: opacity 0.3s;
+
+  @include hover {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  span {
+    letter-spacing: 0;
+
+    &.en {
+      font-family: var(--font-fig);
+      font-weight: 900;
+      font-size: 4rem;
+    }
+
+    &.jp {
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+    }
+  }
+}
+
+.text {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 2.4rem;
+  line-height: 2;
+
+  @include sp {
+  }
+}
+
+.nav {
+  color: $c-white;
+  padding-top: 1.4rem;
+
+  @include sp {
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.navRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: flex-end;
+
+  @include sp {
+    gap: 1.6rem;
+    justify-content: flex-start;
+  }
+}
+
+.navCol {
+  @include sp {
+    width: 100%;
+  }
+}
+
+.navBtnsCol {
+  display: flex;
+  // flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
+  width: 100%;
+
+  @include sp {
+    margin: 2.4rem auto 0;
+    justify-content: space-between;
+  }
+}
+
+.navBtn {
+  position: relative;
+  width: 16rem;
+  height: 4.4rem;
+  border-radius: 8rem;
+  background-color: $c-main;
+  border: 0.1rem solid $c-main;
+  color: $c-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0 1.6rem;
+  transition: all 0.3s;
+
+  @include sp {
+    width: calc(50% - 1rem);
+  }
+
+  @include hover {
+    &:hover {
+      background-color: $c-white;
+      color: $c-main;
+    }
+  }
+
+  &.isLine {
+    border-color: #2c4059;
+    background-color: $c-dark;
+
+    @include hover {
+      &:hover {
+        background-color: $c-white;
+        color: $c-dark;
+
+        .navBtnLine {
+          svg path {
+            fill: $c-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navBtnArrow {
+  display: flex;
+  align-items: center;
+}
+
+.navBtnLine {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 2.4rem;
+
+    path {
+      fill: $c-white;
+    }
+  }
+}
+
+.navLink {
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: opacity 0.3s;
+
+  @include sp {
+    font-size: 1.4rem;
+  }
+
+  @include hover {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.navSubList {
+}
+
+.navSubItem {
+  margin-top: 0.2rem;
+}
+
+.navSubLink {
+  font-weight: 500;
+  font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.3s;
+
+  @include sp {
+    font-size: 1.2rem;
+  }
+
+  @include hover {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &::before {
+    content: "";
+    width: 0.8rem;
+    height: 0.1rem;
+    background-color: $c-white;
+    display: block;
+    margin-right: 0.4rem;
+  }
+
+  svg {
+    margin-left: 0.4rem;
+  }
+}
+
+.subNav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2.4rem;
+  margin-top: 4rem;
+
+  @include sp {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+}
+
+.subNavItem {
+}
+
+.subNavLink {
+  color: $c-white;
+  font-size: 1.3rem;
+  opacity: 0.9;
+  // text-decoration: underline;
+  transition: opacity 0.3s;
+
+  @include hover {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.bannerWrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 32rem;
+
+  @include sp {
+    width: 100%;
+    position: static;
+    margin-top: 3.2rem;
+  }
+
+  .banner {
+    transition: all 0.3s;
+
+    @include hover {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.copy {
+  font-family: vaR(--font-fig);
+  text-align: center;
+  color: $c-white;
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-top: 6.4rem;
+  letter-spacing: 0.1em;
+
+  @include sp {
+    font-size: 1.2rem;
+    margin-top: 5.6rem;
+  }
+}

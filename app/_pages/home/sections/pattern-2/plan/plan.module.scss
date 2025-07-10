@@ -1,0 +1,106 @@
+@import "@sass-utils";
+
+.plan {
+  padding: 16rem 0;
+  background-color: #f5f5f7;
+
+  @include sp {
+    padding: 8rem 0;
+  }
+
+  .en {
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 100%;
+    display: block;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: $c-main;
+
+    @include sp {
+      font-size: 1.2rem;
+    }
+  }
+
+  h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.6rem;
+    text-align: center;
+
+    @include sp {
+      font-size: 2.4rem;
+      margin-top: 0.8rem;
+    }
+  }
+
+  .overview {
+    text-align: center;
+    font-weight: 500;
+    line-height: 2;
+    margin-top: 2.4rem;
+  }
+}
+
+.bottom {
+}
+
+.plus {
+  position: relative;
+  display: block;
+  height: 3.2rem;
+  width: 3.2rem;
+  margin: 8rem auto 0;
+
+  @include sp {
+    margin-top: 4rem;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 3.2rem;
+    height: 0.6rem;
+    background-color: $c-black;
+    display: block;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+.botText {
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2;
+  margin-top: 3.2rem;
+
+  @include sp {
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+}
+
+.linkWrap {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.brSp {
+  display: none;
+
+  @include sp {
+    display: block;
+  }
+}

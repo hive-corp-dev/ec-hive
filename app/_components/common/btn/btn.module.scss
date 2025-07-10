@@ -1,0 +1,140 @@
+@import "@sass-utils";
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: 0.2rem solid;
+  padding: 1.2rem 1.6rem;
+  gap: 2.4rem;
+  border-radius: 10rem;
+  transition: all 0.3s;
+
+  @include sp {
+    font-size: 1.4rem;
+    gap: 1.2rem;
+    border-width: 0.1rem;
+  }
+
+  span {
+    transform: translateY(0.1rem);
+  }
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+
+  @include sp {
+    width: 1.4rem;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.iconLine {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// themes
+
+.btn.themeMain {
+  border-color: $c-main;
+  color: $c-white;
+  background-color: $c-main;
+
+  .icon {
+    color: $c-white;
+  }
+
+  @include hover {
+    &:hover {
+      background-color: $c-white;
+      color: $c-main;
+
+      svg {
+        color: $c-main;
+      }
+    }
+  }
+}
+
+.btn.themeSecondary {
+  border-color: $c-dark;
+  background-color: $c-dark;
+  color: $c-white;
+
+  svg {
+    width: 2.4rem;
+    height: auto;
+
+    path {
+      fill: $c-white;
+    }
+  }
+
+  @include hover {
+    &:hover {
+      background-color: $c-white;
+      color: $c-dark;
+
+      svg {
+        color: $c-dark;
+
+        path {
+          fill: $c-dark;
+        }
+      }
+    }
+  }
+}
+
+.btn.themeSecondaryReverse {
+  border-color: $c-dark;
+  background-color: $c-white;
+  color: $c-dark;
+
+  svg {
+    width: 2.4rem;
+    height: auto;
+  }
+
+  .iconLine {
+    svg {
+      path {
+        fill: $c-dark;
+      }
+    }
+  }
+
+  @include hover {
+    &:hover {
+      background-color: $c-dark;
+      color: $c-white;
+
+      svg {
+        color: $c-white;
+      }
+
+      .iconLine {
+        svg {
+          path {
+            fill: $c-white;
+          }
+        }
+      }
+    }
+  }
+}

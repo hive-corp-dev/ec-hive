@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="120" height="120" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clippath">
+      <rect width="120" height="120" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g style="clip-path: url(#clippath);">
+      <g>
+        <path d="M97.83,88.01c-20.89,12.71-54.77,12.71-75.66,0-20.89-12.71-20.89-33.32,0-46.03,20.89-12.71,54.77-12.71,75.66,0,20.89,12.71,20.89,33.32,0,46.03Z" style="fill: #1075e2; fill-rule: evenodd; stroke-width: 0px;"/>
+        <rect x="107.18" y="53.81" width="6.32" height="15.03" rx="2.1" ry="2.1" style="fill: #1075e2; stroke-width: 0px;"/>
+        <rect x="6.5" y="53.81" width="6.32" height="15.03" rx="2.1" ry="2.1" style="fill: #1075e2; stroke-width: 0px;"/>
+        <path d="M97.83,78.02c-20.89,12.71-54.77,12.71-75.66,0-20.89-12.71-20.89-33.32,0-46.03,20.89-12.71,54.77-12.71,75.66,0,20.89,12.71,20.89,33.32,0,46.03Z" style="fill: #389af2; fill-rule: evenodd; stroke-width: 0px;"/>
+        <text transform="translate(46.12 69.28) scale(1.1 1)" style="fill: #fff; font-family: Figtree-Black, Figtree; font-size: 42.52px; font-weight: 800;"><tspan x="0" y="0">B</tspan></text>
+      </g>
+      <g>
+        <polygon points="99.82 95.05 102.31 102.04 109.3 104.52 102.31 107.01 99.82 114 97.33 107.01 90.34 104.52 97.33 102.04 99.82 95.05" style="fill: #f2d938; fill-rule: evenodd; stroke-width: 0px;"/>
+        <polygon points="11.72 59.54 14.67 67.85 22.97 70.8 14.67 73.75 11.72 82.06 8.76 73.75 .46 70.8 8.76 67.85 11.72 59.54" style="fill: #f2d938; fill-rule: evenodd; stroke-width: 0px;"/>
+        <polygon points="99.82 6 103.6 16.61 114.21 20.39 103.6 24.16 99.82 34.78 96.05 24.16 85.43 20.39 96.05 16.61 99.82 6" style="fill: #f2d938; fill-rule: evenodd; stroke-width: 0px;"/>
+      </g>
+    </g>
+  </g>
+</svg>

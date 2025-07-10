@@ -1,0 +1,95 @@
+@import "@sass-utils";
+
+.mv {
+  padding: 20rem 0 16rem;
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f8f8f8 calc(100% - 1px)),
+    linear-gradient(90deg, transparent calc(100% - 1px), #f8f8f8 calc(100% - 1px));
+  background-color: $c-white;
+  background-size: 2.4rem 2.4rem;
+  background-repeat: repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+
+  @include sp {
+    padding: 12rem 2rem 8rem;
+  }
+}
+
+.intro {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  border: 0.1rem solid $c-black;
+  padding: 0.2rem 0.8rem;
+
+  @include sp {
+    font-size: 1.3rem;
+    padding-top: 0.3rem;
+  }
+}
+
+.title {
+  font-size: 4.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1.6rem;
+
+  @include sp {
+    font-size: 2.8rem;
+  }
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin: 4rem auto 0;
+
+  @include sp {
+    gap: 2rem;
+    width: 100%;
+    max-width: 50rem;
+    justify-content: space-between;
+  }
+}
+
+.btn {
+  width: 22rem;
+
+  @include sp {
+    width: calc(50% - 1rem);
+  }
+}
+
+.brSp {
+  display: none;
+
+  @include sp {
+    display: block;
+  }
+}
+
+.campaign {
+  background-image: repeating-linear-gradient(-55deg, #ffe148, #ffe148 1rem, #fff24e 1rem, #fff24e 2rem);
+  color: $c-black;
+  font-weight: bold;
+}
+
+.campaign {
+}
+
+// .campaignBox {
+//   background-color: $c-white;
+//   border: 0.4rem solid $c-sub;
+//   // color: $c-white;
+//   color: $c-sub;
+//   padding: 3.2rem;
+//   border-radius: 0.8rem;
+
+//   .link {
+//   }
+// }

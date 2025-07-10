@@ -1,0 +1,317 @@
+@import "@sass-utils";
+
+.img {
+  position: relative;
+  max-width: 68rem;
+  width: 100%;
+  margin: 8rem auto 0;
+  animation: show-img 0.6s forwards;
+  opacity: 0;
+  transform: translateY(2rem);
+
+  @include sp {
+    width: 100%;
+    margin-top: 8rem;
+  }
+}
+
+@keyframes show-img {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.circleWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include sp {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  backdrop-filter: blur(0.6rem);
+  animation: circles 3s infinite;
+
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($c-white, 0.9);
+    border-radius: 50%;
+    // animation: circle-core 2s infinite;
+    z-index: 3;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba($c-white, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+  }
+
+  &::before {
+    transform: scale(1.1);
+    // animation: circle 2s infinite;
+    z-index: 2;
+  }
+
+  &::after {
+    transform: scale(1.2);
+    // animation: circle2 2s infinite;
+    z-index: 1;
+  }
+}
+
+.circleText {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  color: $c-dark;
+  font-size: 2.8rem;
+  z-index: 4;
+  background-image: linear-gradient(to right top, #1454dd, #00c3ee);
+  color: transparent;
+  -webkit-background-clip: text;
+  color: $c-dark;
+
+  @include sp {
+    font-size: 1.4rem;
+  }
+
+  // #6a84a1
+}
+
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &.isActive {
+    .bubble {
+      transform: scale(1);
+
+      span {
+        opacity: 1;
+      }
+    }
+  }
+
+  &[data-first-span-active="false"] {
+    .bubble {
+      span {
+        display: none;
+      }
+
+      span:nth-child(2) {
+        display: block;
+      }
+    }
+  }
+}
+
+.bubble {
+  position: absolute;
+  font-weight: bold;
+  color: $c-white;
+  border-radius: 5rem;
+  padding: 1.6rem 2.8rem;
+  transform: scale(0);
+  transition: all 0.5s 0.3s;
+
+  @include sp {
+    padding: 2vw 3vw;
+  }
+
+  span {
+    font-size: 1.6rem;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(0.1rem);
+    transition: all 0.3s;
+
+    @include sp {
+      font-size: 2.5vw;
+    }
+
+    &:nth-child(1) {
+      display: block;
+    }
+
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 3rem;
+    height: 3rem;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    position: absolute;
+    transition: all 0.3s;
+
+    @include sp {
+      width: 3vw;
+      height: 3vw;
+    }
+  }
+
+  &:nth-child(1) {
+    background-color: $c-dark;
+    top: -3rem;
+    left: -3rem;
+
+    @include sp {
+      left: 0;
+      top: -13vw;
+    }
+
+    &::after {
+      background-color: $c-dark;
+      bottom: -1.3rem;
+      right: 0.7rem;
+      transform: rotate(-26deg);
+
+      @include sp {
+        transform: rotate(0);
+        bottom: -2.8vw;
+        right: 3vw;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: $c-dark;
+    right: -4rem;
+    top: -2rem;
+    transition-delay: 0.4s;
+
+    @include sp {
+      right: 0;
+      top: -6vw;
+    }
+
+    span {
+      transition-delay: 0.1s;
+    }
+
+    &::after {
+      background-color: $c-dark;
+      left: 2rem;
+      bottom: -1.5rem;
+      transform: rotate(8deg);
+
+      @include sp {
+        transform: rotate(0);
+        bottom: -2.8vw;
+        left: 5vw;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    background-color: $c-dark;
+    left: -2rem;
+    bottom: 8rem;
+    transition-delay: 0.5s;
+
+    @include sp {
+      bottom: 0;
+      left: 0;
+    }
+
+    span {
+      transition-delay: 0.2s;
+    }
+
+    &::after {
+      background-color: $c-dark;
+      right: 13rem;
+      top: -1.5rem;
+      transform: rotate(-194deg);
+
+      @include sp {
+        transform: rotate(180deg);
+        top: -2.8vw;
+        left: 10vw;
+        right: auto;
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    background-color: $c-dark;
+    right: -11rem;
+    bottom: 15rem;
+    transition-delay: 0.6s;
+
+    @include sp {
+      right: 0;
+      bottom: 14vw;
+    }
+
+    span {
+      transition-delay: 0.3s;
+    }
+
+    &::after {
+      background-color: $c-dark;
+      right: 15.8rem;
+      top: -1.5rem;
+      transform: rotate(-202deg);
+
+      @include sp {
+        transform: rotate(180deg);
+        top: -2.8vw;
+        right: 8vw;
+      }
+    }
+  }
+}
+
+@keyframes circles {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

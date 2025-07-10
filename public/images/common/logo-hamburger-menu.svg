@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="120" height="120" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clippath">
+      <rect width="120" height="120" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g style="clip-path: url(#clippath);">
+      <g>
+        <circle cx="60" cy="60" r="51.35" style="fill: #389af2; stroke-width: 0px;"/>
+        <g>
+          <rect x="37.3" y="43.59" width="45.4" height="4.91" rx="2.46" ry="2.46" style="fill: #fff; stroke-width: 0px;"/>
+          <rect x="37.3" y="57.54" width="45.4" height="4.91" rx="2.46" ry="2.46" style="fill: #fff; stroke-width: 0px;"/>
+          <rect x="37.3" y="71.5" width="45.4" height="4.91" rx="2.46" ry="2.46" style="fill: #fff; stroke-width: 0px;"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

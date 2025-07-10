@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="120" height="120" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clippath">
+      <rect width="120" height="120" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g style="clip-path: url(#clippath);">
+      <g>
+        <path d="M120,17.89v82.3c0,3.96-3.21,7.18-7.18,7.18H7.18c-3.96,0-7.18-3.22-7.18-7.18V17.89c0-2.91,2.36-5.26,5.27-5.26h109.47c2.91,0,5.26,2.35,5.26,5.26Z" style="fill: #458cf5; fill-rule: evenodd; stroke-width: 0px;"/>
+        <path d="M120,35.26v64.93c0,3.96-3.21,7.18-7.18,7.18H7.18c-3.96,0-7.18-3.22-7.18-7.18V35.26h120Z" style="fill: #f5f5f7; stroke-width: 0px;"/>
+        <path d="M12.37,18.42c2.47,0,4.47,2,4.47,4.47s-2,4.47-4.47,4.47-4.47-2-4.47-4.47,2-4.47,4.47-4.47ZM25.53,18.42c2.47,0,4.47,2,4.47,4.47s-2,4.47-4.47,4.47-4.47-2-4.47-4.47,2-4.47,4.47-4.47Z" style="fill: #e6e7e8; fill-rule: evenodd; stroke-width: 0px;"/>
+        <g>
+          <g>
+            <path d="M10.73,46.25h58.47v48.72H10.73v-48.72Z" style="fill: #fefffe; fill-rule: evenodd; stroke-width: 0px;"/>
+            <path d="M65.95,81.98c-4.61-3.94-9.35-7.73-14.21-11.37-3.23,2.02-6.34,4.18-9.34,6.5-4.27-3.18-8.33-6.7-12.18-10.56-5.19,4.66-10.61,8.99-16.24,12.99v-30.04h51.97v32.48Z" style="fill: #deeffd; fill-rule: evenodd; stroke-width: 0px;"/>
+            <path d="M42.4,77.11c4.56,4.83,9.16,9.71,13.8,14.62H13.98v-12.18c5.63-4,11.05-8.33,16.24-12.99,3.85,3.86,7.91,7.38,12.18,10.56Z" style="fill: #b6dcfd; fill-rule: evenodd; stroke-width: 0px;"/>
+            <path d="M65.95,81.98v9.74h-9.74c-4.64-4.91-9.24-9.78-13.8-14.62,2.99-2.32,6.11-4.48,9.34-6.5,4.86,3.64,9.6,7.43,14.21,11.37Z" style="fill: #98ccfd; fill-rule: evenodd; stroke-width: 0px;"/>
+            <circle cx="56.06" cy="59.23" r="4.74" style="fill: #9bcdfd; stroke-width: 0px;"/>
+          </g>
+          <path d="M74.59,49.86h29.33v4.51h-29.33v-4.51Z" style="fill: #4788c7; fill-rule: evenodd; stroke-width: 0px;"/>
+          <path d="M74.59,58.88h33.84v4.51h-33.84v-4.51Z" style="fill: #4788c7; fill-rule: evenodd; stroke-width: 0px;"/>
+          <path d="M74.59,67.9h24.81v4.51h-24.81v-4.51Z" style="fill: #4788c7; fill-rule: evenodd; stroke-width: 0px;"/>
+          <path d="M74.59,76.93h33.84v4.51h-33.84v-4.51Z" style="fill: #4788c7; fill-rule: evenodd; stroke-width: 0px;"/>
+          <path d="M74.59,85.95h24.81v4.51h-24.81v-4.51Z" style="fill: #4788c7; fill-rule: evenodd; stroke-width: 0px;"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

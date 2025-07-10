@@ -1,0 +1,87 @@
+@import "@sass-utils";
+
+.main {
+}
+
+.body {
+  padding-bottom: 12rem;
+}
+
+.bodyContent {
+  background-color: $c-white;
+  padding: 6.4rem 3rem;
+  border-radius: 1.6rem;
+
+  @include sp {
+    padding: 0 2rem;
+  }
+}
+
+.contentInner {
+  max-width: 100rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.list {
+}
+
+.item {
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2;
+  padding: 2.4rem 0;
+  border-bottom: 0.1rem solid #dfe2ed;
+
+  &:last-child {
+    @include sp {
+      border-bottom: none;
+    }
+  }
+
+  @include sp {
+    flex-direction: column;
+  }
+
+  dt {
+    font-weight: bold;
+    padding-right: 2.4rem;
+    width: 26rem;
+    flex-shrink: 0;
+  }
+
+  dd {
+    ul {
+      li {
+        display: flex;
+
+        &::before {
+          content: "・";
+        }
+      }
+    }
+
+    ol {
+      counter-reset: li;
+
+      li {
+        display: flex;
+        &::before {
+          counter-increment: li;
+          content: counter(li) ".";
+          flex-shrink: 0;
+          margin-right: 0.4rem;
+        }
+      }
+    }
+  }
+}
+
+.brSp {
+  display: none;
+
+  @include sp {
+    display: block;
+  }
+}

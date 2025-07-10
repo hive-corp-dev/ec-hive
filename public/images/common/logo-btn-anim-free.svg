@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="120" height="120" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120">
+  <defs>
+    <clipPath id="clippath">
+      <rect width="120" height="120" style="fill: none; stroke-width: 0px;"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g style="clip-path: url(#clippath);">
+      <g>
+        <path d="M97.83,88.01c-20.89,12.71-54.77,12.71-75.66,0-20.89-12.71-20.89-33.32,0-46.03,20.89-12.71,54.77-12.71,75.66,0,20.89,12.71,20.89,33.32,0,46.03Z" style="fill: #1075e2; fill-rule: evenodd; stroke-width: 0px;"/>
+        <rect x="107.18" y="53.81" width="6.32" height="15.03" rx="2.1" ry="2.1" style="fill: #1075e2; stroke-width: 0px;"/>
+        <rect x="6.5" y="53.81" width="6.32" height="15.03" rx="2.1" ry="2.1" style="fill: #1075e2; stroke-width: 0px;"/>
+        <path d="M97.83,78.02c-20.89,12.71-54.77,12.71-75.66,0-20.89-12.71-20.89-33.32,0-46.03,20.89-12.71,54.77-12.71,75.66,0,20.89,12.71,20.89,33.32,0,46.03Z" style="fill: #389af2; fill-rule: evenodd; stroke-width: 0px;"/>
+        <text transform="translate(46.12 69.28) scale(1.1 1)" style="fill: #fff; font-family: Figtree-Black, Figtree; font-size: 42.52px; font-weight: 800;"><tspan x="0" y="0">B</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

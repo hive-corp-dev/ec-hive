@@ -1,0 +1,132 @@
+@import "@sass-utils";
+
+.content {
+  font-weight: 500;
+  line-height: 2;
+
+  @include sp {
+    font-size: 1.5rem;
+  }
+
+  p {
+    line-height: 2;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+
+    @include sp {
+      font-size: 2rem;
+    }
+  }
+
+  ul {
+    li {
+      position: relative;
+      padding-left: 1em;
+
+      &::before {
+        content: "";
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        background-color: $c-black;
+        position: absolute;
+        left: 0;
+        top: 1.1rem;
+
+        @include sp {
+          width: 0.6rem;
+          height: 0.6rem;
+        }
+      }
+
+      ul {
+        li {
+          &::before {
+            content: "";
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 50%;
+            border: 0.1rem solid $c-black;
+            background-color: transparent;
+            position: absolute;
+            left: 0;
+            top: 1.1rem;
+
+            @include sp {
+              width: 0.6rem;
+              height: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ol {
+    counter-reset: li;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+
+      &::before {
+        counter-increment: li;
+        content: counter(li) ".";
+        flex-shrink: 0;
+        margin-right: 0.4rem;
+      }
+
+      div > *:not(:first-child) {
+        margin-top: 1.6rem;
+      }
+    }
+
+    & > li:not(:first-child) {
+      margin-top: 2.4rem;
+    }
+  }
+
+  ul[data-type="alphabet"] {
+    counter-reset: li;
+
+    li {
+      padding-left: 0;
+      display: flex;
+
+      &::before {
+        content: counter(li, lower-alpha) ".";
+        counter-increment: li;
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        margin-right: 0.6rem;
+        font-family: var(--font-ibm-mono);
+      }
+    }
+  }
+
+  // margins
+  & > * {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    margin-top: 2em;
+  }
+
+  p {
+    margin-top: 1.5em;
+  }
+
+  h2 {
+    margin-top: 3em;
+
+    @include sp {
+      margin-top: 2em;
+    }
+  }
+}

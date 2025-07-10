@@ -1,0 +1,61 @@
+@import "@sass-utils";
+
+.main {
+  min-height: calc(100svh - 37rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mv {
+  padding: 20rem 0 16rem;
+  text-align: center;
+
+  .en {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $c-main;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 0.8rem;
+  }
+}
+
+.text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.25;
+  margin-top: 4rem;
+}
+
+.btnWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.btn {
+  width: 18rem;
+  height: 5rem;
+  padding: 0 2.4rem;
+  border: 0.2rem solid $c-main;
+  background-color: $c-main;
+  color: $c-white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10rem;
+  transition: all 0.3s;
+
+  @include hover {
+    &:hover {
+      background-color: transparent;
+      color: $c-main;
+    }
+  }
+}
