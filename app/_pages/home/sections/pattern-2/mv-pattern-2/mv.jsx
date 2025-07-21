@@ -11,15 +11,13 @@ export default function Mv() {
 
   return (
     <section className={styles.mv}>
-      <p className={styles.intro}>個人・小規模事業者様向け</p>
+      <p className={styles.intro}>Shopify構築・運用サポート</p>
       <h1 className={styles.title}>
-        制作費0円！
-        <br className={styles.brSp} />
-        月額{planMinimalData.monthlyPrice.toLocaleString()}円からの
+        私たちは高い技術力を活かし
         <br />
-        サブスク型ホームページ
-        <br className={styles.brSp} />
-        制作サービス
+        質の高いECサイトを
+        <br />
+        すばやく構築します
       </h1>
 
       <MvImg />
