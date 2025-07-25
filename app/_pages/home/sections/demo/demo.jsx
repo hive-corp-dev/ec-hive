@@ -54,7 +54,7 @@ export default function Demo() {
           <li className={styles.item}>
             <span className={styles.link}>
               <a
-                href="https://demo-01.jam-factory.tech"
+                href="https://hive-testing-themes.myshopify.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.thumbWrap}
@@ -69,95 +69,17 @@ export default function Demo() {
               </a>
 
               <div className={styles.content}>
-                <div className={styles.plan}>Minimal Plan</div>
-                <h3 className={styles.name}>JAM CAFE</h3>
+                <div className={styles.plan}>標準プラン</div>
+                <h3 className={styles.name}>アパレルECサイト</h3>
                 <p className={styles.text}>
-                  Minimalプランのシンプルで直感的なデザインを反映したデモサイト「JAM
-                  CAFE」です。当プランは、必要最低限の機能を備えながら、使いやすさと見やすさを両立しています。
+                  アパレルブランドをイメージして制作した、シンプルなサイトです。基本的なページ構成に加え、ブログ機能やお問い合わせ機能も備えています。
                   <br />
-                  1ページ構成ながら、重要な情報をしっかりと掲載できるため、訪問者が必要な情報に迅速にアクセスできます。名刺代わりのホームページが欲しい方、小規模な事業者様におすすめです。
+                  商品一覧ページでは、商品のカテゴリ分けや並び替え、検索機能も備えており、ユーザーが商品を探しやすい仕組みになっています。
                 </p>
 
                 <div className={styles.viewWrap}>
                   <a
-                    href="https://demo-01.jam-factory.tech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.view}
-                  >
-                    デモサイトを見る
-                    <RiExternalLinkLine />
-                  </a>
-                </div>
-              </div>
-            </span>
-          </li>
-          <li className={styles.item}>
-            <span className={styles.link}>
-              <a
-                href="https://demo-02.jam-factory.tech"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.thumbWrap}
-              >
-                <Image
-                  src="/images/demo/demo-flowerful-window.png"
-                  width={1200}
-                  height={900}
-                  alt="Flowerful"
-                  className={styles.thumb}
-                />
-              </a>
-
-              <div className={styles.content}>
-                <div className={styles.plan}>Basic Plan</div>
-                <h3 className={styles.name}>Flowerful</h3>
-                <p className={styles.text}>
-                  豊富な情報を効果的に掲載できるBasicプランのデモサイト「Flowerful」です。当プランでは最大6ページまで制作可能ですので、Minimalプランでは物足りない方にとっておすすめです。
-                  <br />
-                  豊富なページ数を活かして、製品やサービスの詳細を伝えるのに最適です。
-                </p>
-                <div className={styles.viewWrap}>
-                  <a
-                    href="https://demo-02.jam-factory.tech"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.view}
-                  >
-                    デモサイトを見る
-                    <RiExternalLinkLine />
-                  </a>
-                </div>
-              </div>
-            </span>
-          </li>
-          <li className={styles.item}>
-            <span className={styles.link}>
-              <a
-                href="https://demo-03.jam-factory.tech"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.thumbWrap}
-              >
-                <Image
-                  src="/images/demo/demo-jam-solutions-window.png"
-                  width={1200}
-                  height={900}
-                  alt="JAM Solutions"
-                  className={styles.thumb}
-                />
-              </a>
-
-              <div className={styles.content}>
-                <div className={styles.plan}>CMS Plan</div>
-                <h3 className={styles.name}>JAM Solutions</h3>
-                <p className={styles.text}>
-                  豊富なページ数に加え、更新機能を備えたCMSプランのデモサイト「JAM
-                  Solutions」です。お知らせやブログの更新が可能で、最新情報を簡単に発信できます。8P構成なのでMinimalやBasicプランよりも多くの情報を掲載できます。ホームページから情報を発信したい方、本格的なホームページを運営したい方におすすめです。
-                </p>
-                <div className={styles.viewWrap}>
-                  <a
-                    href="https://demo-03.jam-factory.tech"
+                    href="https://hive-testing-themes.myshopify.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.view}

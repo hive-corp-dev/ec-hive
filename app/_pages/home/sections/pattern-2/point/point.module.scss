@@ -1,11 +1,11 @@
 @import "@sass-utils";
 
 .point {
-  padding: 16rem 0;
-  background-color: $c-white;
+  padding: 16rem 0 0;
+  background-color: #f5f5f7;
 
   @include sp {
-    padding: 8rem 0;
+    padding: 8rem 0 0;
   }
 
   .en {
@@ -38,6 +38,8 @@
 
 .blocks {
   margin-top: 6.4rem;
+  display: grid;
+  gap: 4rem;
 
   @include sp {
     margin-top: 3.2rem;
@@ -47,16 +49,15 @@
 .block {
   display: flex;
   gap: 3.2rem;
-  background-color: #f5f5f7;
-  margin-top: 4rem;
-  border-radius: 3rem;
-  padding: 4rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 6rem;
+  box-shadow: 2rem 2rem 2rem rgba(127, 163, 204, 0.1);
 
   @include sp {
     flex-direction: column;
     padding: 1.6rem 1.6rem 2.4rem;
     border-radius: 1.6rem;
-    margin-top: 2.4rem;
   }
 
   &:nth-child(even) {
@@ -69,7 +70,7 @@
 
   .thumb {
     width: 36rem;
-    height: 36rem;
+    height: 26rem;
     background-color: #f5f5f7;
     background-color: $c-white;
     // background-color: rgba($c-main, 1);
@@ -92,12 +93,6 @@
   }
 
   .text {
-    padding: 2.4rem 0;
-
-    @include sp {
-      padding: 0;
-    }
-
     span {
       font-size: 1.4rem;
       color: $c-main;

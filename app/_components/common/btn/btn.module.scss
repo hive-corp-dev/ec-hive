@@ -103,8 +103,8 @@
 
 .btn.themeSecondaryReverse {
   border-color: $c-dark;
-  background-color: $c-white;
-  color: $c-dark;
+  background-color: $c-dark;
+  color: $c-white;
 
   svg {
     width: 2.4rem;
@@ -114,7 +114,7 @@
   .iconLine {
     svg {
       path {
-        fill: $c-dark;
+        fill: $c-white;
       }
     }
   }

@@ -14,13 +14,13 @@ $c-black-border: #555;
 // $c-text: #314156;
 $c-text: #474f4f;
 
-// $c-dark: #1f3450;
 $c-dark: rgb(28, 44, 43);
 
-// $c-main: #1075e2;
-$c-main: #4e9795; //これオリジナル
-$c-main: #21b7b3;
 $c-main: #005ab4;
+
+$c-gr-01: #6b9cde;
+$c-gr-02: #6bcfe1;
+
 $c-main: #6bbce1;
 
 $c-link: #396beb;
@@ -38,3 +38,7 @@ $c-line: #06c755;
 
 $c-acc: #ff902f;
 $c-acc: #ffc107;
+
+$c-acc: #ffb93b;
+
+$font-fira: var(--font-fira);

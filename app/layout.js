@@ -1,6 +1,6 @@
 import "modern-css-reset/dist/reset.min.css";
 import "@/app/_styles/globals.scss";
-import { Noto_Sans_JP, Figtree, IBM_Plex_Sans_JP, IBM_Plex_Mono } from "next/font/google";
+import { Noto_Sans_JP, Figtree, Fira_Sans_Condensed } from "next/font/google";
 import Header from "./_layouts/header/header";
 import Footer from "./_layouts/footer/footer";
 import { HamburgerMenuContextProvider } from "./_context/hamburger-menu-context";
@@ -26,17 +26,10 @@ const figtree = Figtree({
   display: "swap",
 });
 
-const ibm = IBM_Plex_Sans_JP({
+const firaSansCondensed = Fira_Sans_Condensed({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-ibm",
-  display: "swap",
-});
-
-const ibmMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-ibm-mono",
+  weight: ["700", "900"],
+  variable: "--font-fira",
   display: "swap",
 });
 
@@ -47,7 +40,7 @@ export default function RootLayout({ children }) {
         <GoogleAnalytics />
         <Clarity />
       </head>
-      <body className={`${notoSansJp.variable} ${figtree.variable} ${ibm.variable} ${ibmMono.variable}`}>
+      <body className={`${notoSansJp.variable} ${figtree.variable} ${firaSansCondensed.variable}`}>
         <HamburgerMenuContextProvider>
           <HeaderContextProvider>
             <Wrapper>
