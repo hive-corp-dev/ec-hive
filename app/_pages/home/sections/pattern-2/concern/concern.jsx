@@ -33,18 +33,18 @@ export default function Concern() {
             <p>ECを作りたいけれど、すべてまかせたい・・・</p>
           </li>
         </ul>
-
-        <div className={styles.box}>
-          <div className={styles.boxInner}>
-            <p className={styles.acc}>
-              そのお悩み、
-              <br className={styles.brSp} />
-              私たちが解決します！
-            </p>
-            <div className={styles.boxImg}>
-              <Image src={icon} alt="" />
-            </div>
-            {/* <p className={styles.accSub}>
+      </Container>
+      <div className={styles.box}>
+        <div className={styles.boxInner}>
+          <p className={styles.acc}>
+            そのお悩み、
+            <br className={styles.brSp} />
+            私たちが解決します！
+          </p>
+          <div className={styles.boxImg}>
+            <Image src={icon} alt="" />
+          </div>
+          {/* <p className={styles.accSub}>
               EC HIVEは、Shopifyを使用したECサイトの構築・運用サポートをします。
               <br />
               長年ウェブサイトやシステムを構築してきた経験を活かし、
@@ -53,28 +53,26 @@ export default function Concern() {
               <br />
               ECサイトの構築・運用についてのお悩みがございましたら、ぜひご相談ください。
             </p> */}
-            <p className={styles.accSub}>
-              EC HIVEは、長年ウェブサイトやシステムを構築してきた経験を活かし
-              <br />
-              <span>ECサイトの構築・運用サポート</span>を行います。
-              <br />
-              <span>低単価かつ短納期のECサイトの構築</span>から、<br /><span>フルカスタマイズのECサイト構築</span>まで承ります。
-              <br />
-              ECサイトの構築・運用についてのお悩みがございましたら、
-              <br />              
-              ぜひEC HIVEへご相談ください。
-            </p>
-            <div className={styles.btns}>
-              <Btn href="/contact" icon="arrow">
-                お問い合わせ
-              </Btn>
-              <Btn href={LINE_URL_TOP_CONCERN} icon="line" theme="secondary" isExternal>
-                LINEで相談
-              </Btn>
-            </div>
+          <p className={styles.accSub}>
+            ECHiveは、長年ウェブサイトやシステムを構築してきた経験を活かし
+            <br />
+            <span>ECサイトの構築・運用サポート</span>を行います。
+            <br />
+            <span>低単価かつ短納期のECサイトの構築</span>から、
+            <br />
+            <span>フルカスタマイズのECサイト構築</span>まで承ります。
+            <br />
+            ECサイトの構築・運用についてのお悩みがございましたら、
+            <br />
+            ぜひECHiveへご相談ください。
+          </p>
+          <div className={styles.btns}>
+            <Btn href="/contact" icon="arrow">
+              お問い合わせ
+            </Btn>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

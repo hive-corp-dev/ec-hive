@@ -2,8 +2,8 @@ import Container from "@/app/_components/common/container/container";
 import iconPoint01 from "/public/images/common/icon-point-01.svg";
 import iconPointSupport from "/public/images/common/icon-point-support.svg";
 import iconPointDesign from "/public/images/common/icon-point-design.svg";
-import iconPointCost from "/public/images/common/icon-point-cost.svg";
-import iconPointJamstack from "/public/images/common/icon-point-jamstack.svg";
+import iconPointCheap from "/public/images/common/icon-point-cheap.svg";
+import iconPointCustomize from "/public/images/common/icon-point-customize.svg";
 import iconPointTask from "/public/images/common/icon-point-task.svg";
 import styles from "./point.module.scss";
 import Image from "next/image";
@@ -14,9 +14,7 @@ export default function Point() {
     <section className={styles.point} id="point">
       <Container>
         <span className={styles.en}>OUR FEATURES</span>
-        <h2>
-          EC HIVEの5つの特徴
-        </h2>
+        <h2>ECHiveの5つの特徴</h2>
 
         <div className={styles.blocks}>
           <div className={styles.block}>
@@ -25,7 +23,7 @@ export default function Point() {
             </div>
             <div className={styles.text}>
               <span>POINT 01.</span>
-              <h3>高い技術力</h3>
+              <h3>豊富な実務経験と高い技術力</h3>
               <p>
                 EC HIVEのメンバーは長年にわたってウェブサイトやシステムを構築してきたメンバー3名で運営しています。
                 <br />
@@ -35,24 +33,23 @@ export default function Point() {
           </div>
 
           <div className={styles.block}>
-              <div className={styles.thumb}>
-                <Image src={iconPointJamstack} alt="" />
-              </div>
-              <div className={styles.text}>
-                <span>POINT 02.</span>
-                <h3>低単価かつ短納期でのECサイト構築</h3>
-                <p>
-                  テンプレートを使用したECサイト構築であれば低単価かつ短納期での構築が可能です。
-                  <br />
-                  事業立ち上げでできるだけ早くECサイトを公開したいというお客様のご要望にもお応えします。
-                </p>
-              </div>
+            <div className={styles.thumb}>
+              <Image src={iconPointCheap} alt="" />
             </div>
-                  
+            <div className={styles.text}>
+              <span>POINT 02.</span>
+              <h3>低単価かつ短納期でのECサイト構築</h3>
+              <p>
+                テンプレートを使用したECサイト構築であれば低単価かつ短納期での構築が可能です。
+                <br />
+                事業立ち上げでできるだけ早くECサイトを公開したいというお客様のご要望にもお応えします。
+              </p>
+            </div>
+          </div>
 
           <div className={styles.block}>
             <div className={styles.thumb}>
-              <Image src={iconPointCost} alt="" />
+              <Image src={iconPointCustomize} alt="" />
             </div>
             <div className={styles.text}>
               <span>POINT 03.</span>
@@ -60,7 +57,8 @@ export default function Point() {
               <p>
                 ECサイトはお客様のビジネスの特性や規模によって必要とされる要件がお客様ごとに大きく異なります。
                 <br />
-                EC HIVEでは、しっかりとヒアリングを行い、ただテンプレートをそのまま使用するのでなくお客様のビジネスの特性や規模に合わせたカスタマイズを行っております。                
+                EC
+                HIVEでは、しっかりとヒアリングを行い、ただテンプレートをそのまま使用するのでなくお客様のビジネスの特性や規模に合わせたカスタマイズを行っております。
               </p>
             </div>
           </div>
@@ -96,13 +94,6 @@ export default function Point() {
               </p>
             </div>
           </div>
-          </div>  
-
-
-        <div className={styles.bannerWrap}>
-          <Link className={styles.banner} href="/monitor-campaign">
-            <Image src="/images/common/banner-sp.svg" width={360} height={148} alt="モニターキャンペーン実施中！" />
-          </Link>
         </div>
       </Container>
     </section>

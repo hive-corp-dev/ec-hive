@@ -1,11 +1,11 @@
 @import "@sass-utils";
 
 .flow {
-  padding: 16rem 0 0;
+  padding: 16rem 0;
   background-color: #f5f5f7;
 
   @include sp {
-    padding: 8rem 0 0;
+    padding: 8rem 0;
   }
 
   .en {
@@ -36,85 +36,204 @@
   }
 }
 
+// .list {
+//   margin-top: 6.4rem;
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: flex-start;
+//   justify-content: space-between;
+//   background-color: $c-white;
+//   border-radius: 3rem;
+//   padding: 4rem 0;
+
+//   @include sp {
+//     margin-top: 3.2rem;
+//     padding: 0;
+//     border-radius: 1.6rem;
+//     overflow: hidden;
+//   }
+// }
+
+// .item {
+//   background-color: $c-white;
+//   padding: 4rem;
+//   width: 100%;
+//   max-width: 100rem;
+//   margin: 0 auto;
+//   border-bottom: 0.1rem dashed #dededf;
+
+//   @include sp {
+//     padding: 4rem 2.4rem;
+//   }
+
+//   &:last-child {
+//     border-bottom: none;
+//   }
+
+//   .count {
+//     color: $c-main;
+//     font-size: 1.4rem;
+//     font-weight: 500;
+
+//     @include sp {
+//       font-size: 1.2rem;
+//     }
+//   }
+
+//   h3 {
+//     font-weight: bold;
+//     font-size: 2.8rem;
+//     margin-top: 0.8rem;
+
+//     @include sp {
+//       font-size: 2.2rem;
+//     }
+//   }
+//   p {
+//     font-size: 1.6rem;
+//     font-weight: 500;
+//     margin-top: 1.6rem;
+//     line-height: 2;
+
+//     @include sp {
+//       font-size: 1.5rem;
+//     }
+
+//     a {
+//       color: $c-main;
+//       border-bottom: 0.1rem dashed $c-main;
+//       transition: all 0.3s;
+
+//       @include hover {
+//         &:hover {
+//           color: darken($c-main, 20%);
+//           border-color: darken($c-main, 20%);
+//         }
+//       }
+//     }
+
+//     small {
+//       font-size: 1.5rem;
+//       color: #7d8393;
+//     }
+//   }
+// }
+
 .list {
-  margin-top: 6.4rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: $c-white;
-  border-radius: 3rem;
-  padding: 4rem 0;
+  margin-top: 12rem;
 
   @include sp {
     margin-top: 3.2rem;
-    padding: 0;
-    border-radius: 1.6rem;
-    overflow: hidden;
   }
 }
 
 .item {
-  background-color: $c-white;
-  padding: 4rem;
-  width: 100%;
-  max-width: 100rem;
-  margin: 0 auto;
-  border-bottom: 0.1rem dashed #dededf;
+  position: relative;
+  display: flex;
+  margin-top: -4rem;
 
-  @include sp {
-    padding: 4rem 2.4rem;
+  &::before {
+    content: "";
+    width: 0.1rem;
+    height: 100%;
+    background-color: $c-main;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 0;
   }
 
-  &:last-child {
-    border-bottom: none;
-  }
+  &:nth-child(odd) {
+    .itemContent {
+      box-shadow: 2rem 2rem 2rem rgba(127, 163, 204, 0.1);
 
-  .count {
-    color: $c-main;
-    font-size: 1.4rem;
-    font-weight: 500;
-
-    @include sp {
-      font-size: 1.2rem;
+      &::after {
+        top: 3rem;
+        right: -2rem;
+        clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+      }
     }
+  }
+
+  &:nth-child(even) {
+    .itemContent {
+      margin-left: auto;
+      box-shadow: -2rem 2rem 2rem rgba(127, 163, 204, 0.1);
+
+      &::after {
+        top: 3rem;
+        left: -2rem;
+        clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
+
+.count {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $c-main;
+  background-image: linear-gradient(to right top, $c-gr-01, $c-gr-02);
+  color: $c-white;
+  font-family: $font-fira;
+  font-size: 2.8rem;
+  font-weight: bold;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.itemContent {
+  position: relative;
+  width: calc(50% - 8rem);
+  background-color: $c-white;
+  border-radius: 1rem;
+  padding: 3.2rem;
+
+  &::after {
+    content: "";
+    width: 2rem;
+    height: 1.6rem;
+    background-color: $c-white;
+    position: absolute;
   }
 
   h3 {
+    font-size: 2.2rem;
     font-weight: bold;
-    font-size: 2.8rem;
-    margin-top: 0.8rem;
-
-    @include sp {
-      font-size: 2.2rem;
-    }
+    color: #3a3a49;
   }
-  p {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-top: 1.6rem;
-    line-height: 2;
+}
 
-    @include sp {
-      font-size: 1.5rem;
-    }
+.itemText {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1.6rem;
+  line-height: 2;
+  color: #4b4b5d;
 
-    a {
-      color: $c-main;
-      border-bottom: 0.1rem dashed $c-main;
-      transition: all 0.3s;
+  a {
+    color: $c-gr-01;
+    border-bottom: 0.1rem solid $c-gr-01;
+    transition: all 0.3s;
 
-      @include hover {
-        &:hover {
-          color: darken($c-main, 20%);
-          border-color: darken($c-main, 20%);
-        }
+    @include hover {
+      &:hover {
+        opacity: 0.8;
       }
     }
+  }
 
-    small {
-      font-size: 1.5rem;
-      color: #7d8393;
-    }
+  small {
+    font-size: 1.3rem;
+    color: #7d8393;
   }
 }

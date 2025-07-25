@@ -136,7 +136,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className={styles.copy}>&copy; Jam Factory All Rights Reserved.</p>
+        <p className={styles.copy}>&copy; ECHive All Rights Reserved.</p>
       </Container>
     </footer>
   );

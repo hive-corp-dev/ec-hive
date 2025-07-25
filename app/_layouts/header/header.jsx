@@ -45,9 +45,6 @@ export default function Header() {
           <Link href="/contact" className={styles.btn}>
             お問い合わせ
           </Link>
-          <Link href={LINE_URL_HEADER} target="_blank" className={`${styles.btn} ${styles.isDarker}`}>
-            LINEで相談
-          </Link>
         </nav>
         <HamburgerBtn />
       </div>

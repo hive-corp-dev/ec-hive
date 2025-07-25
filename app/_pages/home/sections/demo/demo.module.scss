@@ -84,7 +84,7 @@
 .thumbWrap {
   position: relative;
   width: calc(50% - 3.2rem);
-  aspect-ratio: 474 / 298;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 
   @include tab {
