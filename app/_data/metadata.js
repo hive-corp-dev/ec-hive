@@ -1,8 +1,7 @@
 export const SITE_INFO = {
-  siteName: "サブスク型ホームページ制作 - ジャムファクトリー",
-  siteDescription:
-    "ジャムファクトリーは、制作費0円で月額5,980円から始められる個人・小規模事業者様向けのサブスク型ホームページ制作サービスです。制作だけでなく、公開後の保守運用もサポートさせていただきます。",
-  siteUrl: "https://jam-factory.tech",
+  siteName: "ECHive - ECサイト構築・運用サポート",
+  siteDescription: "ECHiveは、ECサイト構築・運用サポートを行うサービスです。",
+  siteUrl: "https://ec.hive-corp.jp/",
 };
 
 export const TOP_METADATA = {

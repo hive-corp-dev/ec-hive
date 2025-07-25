@@ -47,7 +47,16 @@ export default function Plan() {
                   <li>お問い合わせ</li>
                 </ul>
               </td>
-              <td>無制限</td>
+              <td>
+                <ul>
+                  <li>必須ページ</li>
+                  <li>よくあるご質問</li>
+                  <li>会社概要</li>
+                  <li>お知らせ一覧・詳細</li>
+                  <li>お問い合わせ</li>
+                </ul>
+                <span className={styles.subText}>+ ページの追加無制限</span>
+              </td>
             </tr>
             <tr>
               <td>商品登録</td>
