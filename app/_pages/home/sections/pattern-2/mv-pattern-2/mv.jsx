@@ -111,61 +111,63 @@ export default function Mv() {
 
   return (
     <section className={styles.mv}>
-      <div className={styles.bgShapes}>
-        {glowingOrbs.map((orb) => (
-          <div
-            key={orb.id}
-            className={styles.glowingOrb}
-            style={{
-              "--start-x": `${orb.startX}%`,
-              "--start-y": `${orb.startY}%`,
-              "--end-x": `${orb.endX}%`,
-              "--end-y": `${orb.endY}%`,
-              "--duration": `${orb.duration}s`,
-              "--delay": `${orb.delay}s`,
-              "--size": `${orb.size}px`,
-            }}
-          />
-        ))}
-      </div>
-      <div className={styles.bgGrid}></div>
-      <div className={styles.boxWrap}>
-        <Image src={shop} alt="shop" className={`${styles.box} ${styles.box2} ${styles.shop}`} />
-        <Image src={supermarket} alt="supermarket" className={`${styles.box} ${styles.box3} ${styles.supermarket}`} />
-        <Image src={store} alt="store" className={`${styles.box} ${styles.box4} ${styles.store}`} />
-        <Image src={shop} alt="shop" className={`${styles.box} ${styles.box5} ${styles.shop}`} />
-        <Image src={supermarket} alt="supermarket" className={`${styles.box} ${styles.box6} ${styles.supermarket}`} />
-        <Image src={store3} alt="cafe" className={`${styles.box} ${styles.box7} ${styles.cafe}`} />
-        <Image src={cafe} alt="cafe" className={`${styles.box} ${styles.box8} ${styles.cafe}`} />
-        <Image src={store} alt="store" className={`${styles.box} ${styles.box9} ${styles.store}`} />
-        <Image src={famCafe} alt="store" className={`${styles.box} ${styles.box10} ${styles.store}`} />
-        <Image src={mall} alt="supermarket" className={`${styles.box} ${styles.box11} ${styles.supermarket}`} />
-        <Image src={shop} alt="shop" className={`${styles.box} ${styles.box12} ${styles.shop}`} />
-        <Image src={store2} alt="cafe" className={`${styles.box} ${styles.box13} ${styles.cafe}`} />
-        <Image src={store3} alt="shop" className={`${styles.box} ${styles.box14} ${styles.shop}`} />
-        <Image src={store} alt="store" className={`${styles.box} ${styles.box15} ${styles.store}`} />
-        <Image src={cafe} alt="cafe" className={`${styles.box} ${styles.box16} ${styles.cafe}`} />
-        <Image src={store} alt="store" className={`${styles.box} ${styles.box17} ${styles.store}`} />
-      </div>
+      <div className={styles.mvInner}>
+        <div className={styles.bgShapes}>
+          {glowingOrbs.map((orb) => (
+            <div
+              key={orb.id}
+              className={styles.glowingOrbWhite}
+              style={{
+                "--start-x": `${orb.startX}%`,
+                "--start-y": `${orb.startY}%`,
+                "--end-x": `${orb.endX}%`,
+                "--end-y": `${orb.endY}%`,
+                "--duration": `${orb.duration}s`,
+                "--delay": `${orb.delay}s`,
+                "--size": `${orb.size}px`,
+              }}
+            />
+          ))}
+        </div>
+        <div className={styles.bgGrid}></div>
+        <div className={styles.boxWrap}>
+          <Image src={shop} alt="shop" className={`${styles.box} ${styles.box2} ${styles.shop}`} />
+          <Image src={supermarket} alt="supermarket" className={`${styles.box} ${styles.box3} ${styles.supermarket}`} />
+          <Image src={store} alt="store" className={`${styles.box} ${styles.box4} ${styles.store}`} />
+          <Image src={shop} alt="shop" className={`${styles.box} ${styles.box5} ${styles.shop}`} />
+          <Image src={supermarket} alt="supermarket" className={`${styles.box} ${styles.box6} ${styles.supermarket}`} />
+          <Image src={store3} alt="cafe" className={`${styles.box} ${styles.box7} ${styles.cafe}`} />
+          <Image src={cafe} alt="cafe" className={`${styles.box} ${styles.box8} ${styles.cafe}`} />
+          <Image src={store} alt="store" className={`${styles.box} ${styles.box9} ${styles.store}`} />
+          <Image src={famCafe} alt="store" className={`${styles.box} ${styles.box10} ${styles.store}`} />
+          <Image src={mall} alt="supermarket" className={`${styles.box} ${styles.box11} ${styles.supermarket}`} />
+          <Image src={shop} alt="shop" className={`${styles.box} ${styles.box12} ${styles.shop}`} />
+          <Image src={store2} alt="cafe" className={`${styles.box} ${styles.box13} ${styles.cafe}`} />
+          <Image src={store3} alt="shop" className={`${styles.box} ${styles.box14} ${styles.shop}`} />
+          <Image src={store} alt="store" className={`${styles.box} ${styles.box15} ${styles.store}`} />
+          <Image src={cafe} alt="cafe" className={`${styles.box} ${styles.box16} ${styles.cafe}`} />
+          <Image src={store} alt="store" className={`${styles.box} ${styles.box17} ${styles.store}`} />
+        </div>
 
-      <div className={styles.content}>
-        <p className={styles.intro}>Shopify構築・運用サポート</p>
-        <h1 className={styles.title}>
-          私たちは高い技術力を活かし
-          <br />
-          高品質なECサイトを構築します
-        </h1>
+        <div className={styles.content}>
+          <p className={styles.intro}>Shopify構築・運用サポート</p>
+          <h1 className={styles.title}>
+            私たちは高い技術力を活かし
+            <br />
+            高品質なECサイトを構築します
+          </h1>
 
-        <div className={styles.btns}>
-          <div className={styles.btn}>
-            <Btn href="/contact" icon="arrow">
-              お問い合わせ
-            </Btn>
-          </div>
-          <div className={styles.btn}>
-            <Btn href="/plan" theme="secondary-reverse" icon="arrow">
-              料金プラン
-            </Btn>
+          <div className={styles.btns}>
+            <div className={styles.btn}>
+              <Btn href="/contact" icon="arrow">
+                お問い合わせ
+              </Btn>
+            </div>
+            <div className={styles.btn}>
+              <Btn href="/plan" theme="secondary-reverse" icon="arrow">
+                料金プラン
+              </Btn>
+            </div>
           </div>
         </div>
       </div>
