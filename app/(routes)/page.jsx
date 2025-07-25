@@ -24,6 +24,8 @@ import { TOP_METADATA } from "../_data/metadata";
 import { outputMetadata } from "../_utils/outputMetadata";
 import Btn from "../_components/common/btn/btn";
 import Demo from "../_pages/home/sections/demo/demo";
+import GridSection from "../_pages/home/sections/grid-section/grid-section";
+import IsometricGridDemo from "../_components/common/isometric-grid-demo/isometric-grid-demo";
 
 export const metadata = outputMetadata(null, TOP_METADATA.description, TOP_METADATA.slug);
 

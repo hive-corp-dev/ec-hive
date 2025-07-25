@@ -7,7 +7,7 @@ import HamburgerBtn from "@/app/_components/common/hamburger-btn/hamburger-btn";
 import { HeaderContext } from "@/app/_context/header-context";
 import { HamburgerMenuContext } from "@/app/_context/hamburger-menu-context";
 import { useContext } from "react";
-import logo from "/public/images/common/logo.svg";
+import logo from "/public/images/common/logo-echive-gr.svg";
 import logoWhite from "/public/images/common/logo-white.svg";
 import Image from "next/image";
 

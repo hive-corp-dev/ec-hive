@@ -1,0 +1,36 @@
+@import "../../../../_styles/base/vars.scss";
+@import "../../../../_styles/base/mixins.scss";
+
+.isoGrid {
+  --line-color: rgba(0, 0, 0, 0.1);
+  --line-thickness: 1px;
+  --grid-spacing: 40px;
+
+  width: 100%;
+  height: 100vh;
+  background-image:
+    /* 150° の斜め線 */ repeating-linear-gradient(
+      150deg,
+      var(--line-color) 0,
+      var(--line-color) var(--line-thickness),
+      transparent var(--line-thickness),
+      transparent var(--grid-spacing)
+    ),
+    /* 30° の斜め線 */
+      repeating-linear-gradient(
+        30deg,
+        var(--line-color) 0,
+        var(--line-color) var(--line-thickness),
+        transparent var(--line-thickness),
+        transparent var(--grid-spacing)
+      ),
+    /* 90° の水平線 */
+      repeating-linear-gradient(
+        90deg,
+        var(--line-color) 0,
+        var(--line-color) var(--line-thickness),
+        transparent var(--line-thickness),
+        transparent var(--grid-spacing)
+      );
+  background-size: cover;
+}

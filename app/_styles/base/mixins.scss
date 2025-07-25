@@ -54,3 +54,169 @@ $bp-sp-s: 550px;
 @mixin outputHexWidth($value) {
   width: calcHexWidth($value);
 }
+
+// アイソメトリックグリッド模様
+@mixin isometric-grid($size: 20px, $color: rgba(0, 0, 0, 0.1), $angle: 30deg) {
+  background-image: linear-gradient(
+      $angle,
+      transparent 0,
+      transparent calc(50% - 1px),
+      $color calc(50% - 1px),
+      $color calc(50% + 1px),
+      transparent calc(50% + 1px)
+    ),
+    linear-gradient(
+      -$angle,
+      transparent 0,
+      transparent calc(50% - 1px),
+      $color calc(50% - 1px),
+      $color calc(50% + 1px),
+      transparent calc(50% + 1px)
+    );
+  background-size: $size $size;
+}
+
+// より詳細なアイソメトリックグリッド（六角形パターン）
+@mixin isometric-hex-grid($size: 30px, $color: rgba(0, 0, 0, 0.1)) {
+  background-image: linear-gradient(
+      60deg,
+      transparent 0,
+      transparent calc(50% - 1px),
+      $color calc(50% - 1px),
+      $color calc(50% + 1px),
+      transparent calc(50% + 1px)
+    ),
+    linear-gradient(
+      -60deg,
+      transparent 0,
+      transparent calc(50% - 1px),
+      $color calc(50% - 1px),
+      $color calc(50% + 1px),
+      transparent calc(50% + 1px)
+    ),
+    linear-gradient(
+      0deg,
+      transparent 0,
+      transparent calc(50% - 1px),
+      $color calc(50% - 1px),
+      $color calc(50% + 1px),
+      transparent calc(50% + 1px)
+    );
+  background-size: $size $size;
+}
+
+// ドット状のアイソメトリックグリッド
+@mixin isometric-dot-grid($size: 20px, $color: rgba(0, 0, 0, 0.1)) {
+  background-image: radial-gradient(circle at 25% 25%, $color 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, $color 1px, transparent 1px);
+  background-size: $size $size;
+}
+
+// 3D効果のあるアイソメトリックグリッド
+@mixin isometric-3d-grid($size: 30px, $color: rgba(0, 0, 0, 0.1)) {
+  background-image: linear-gradient(
+      30deg,
+      transparent 0,
+      transparent calc(50% - 1px),
+      $color calc(50% - 1px),
+      $color calc(50% + 1px),
+      transparent calc(50% + 1px)
+    ),
+    linear-gradient(
+      -30deg,
+      transparent 0,
+      transparent calc(50% - 1px),
+      $color calc(50% - 1px),
+      $color calc(50% + 1px),
+      transparent calc(50% + 1px)
+    ),
+    linear-gradient(
+      90deg,
+      transparent 0,
+      transparent calc(50% - 1px),
+      rgba($color, 0.5) calc(50% - 1px),
+      rgba($color, 0.5) calc(50% + 1px),
+      transparent calc(50% + 1px)
+    );
+  background-size: $size $size;
+}
+
+// アニメーション可能なアイソメトリックグリッド
+@mixin isometric-animated-grid($size: 25px, $color: rgba(0, 0, 0, 0.1)) {
+  background-image: linear-gradient(
+      45deg,
+      transparent 0,
+      transparent calc(50% - 1px),
+      $color calc(50% - 1px),
+      $color calc(50% + 1px),
+      transparent calc(50% + 1px)
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 0,
+      transparent calc(50% - 1px),
+      $color calc(50% - 1px),
+      $color calc(50% + 1px),
+      transparent calc(50% + 1px)
+    );
+  background-size: $size $size;
+
+  @if $size == 20px {
+    animation: gridMove20 20s linear infinite;
+  } @else if $size == 25px {
+    animation: gridMove25 20s linear infinite;
+  } @else if $size == 30px {
+    animation: gridMove30 20s linear infinite;
+  } @else if $size == 35px {
+    animation: gridMove35 20s linear infinite;
+  } @else if $size == 40px {
+    animation: gridMove40 20s linear infinite;
+  } @else {
+    animation: gridMove25 20s linear infinite;
+  }
+}
+
+@keyframes gridMove20 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}
+
+@keyframes gridMove25 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 25px 25px;
+  }
+}
+
+@keyframes gridMove30 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 30px;
+  }
+}
+
+@keyframes gridMove35 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 35px 35px;
+  }
+}
+
+@keyframes gridMove40 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}

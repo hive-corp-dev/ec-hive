@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="120" height="120" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="500" height="500" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
   <defs>
-    <linearGradient id="linear-gradient" x1="49.78" y1="46.06" x2="97.57" y2="87.47" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#1454dd"/>
-      <stop offset="1" stop-color="#00c3ee"/>
+    <linearGradient id="linear-gradient" x1="4.95" y1="317.58" x2="352.9" y2="156.26" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6b9cde"/>
+      <stop offset="1" stop-color="#6bcfe1"/>
     </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="165.95" y1="360.99" x2="480.43" y2="215.18" xlink:href="#linear-gradient"/>
   </defs>
   <g id="Layer_1-2" data-name="Layer 1">
     <g>
-      <rect width="120" height="120" style="fill: #fff; stroke-width: 0px;"/>
-      <path d="M56.24,103.46c-5.2,0-9.72-.88-13.56-2.64-3.84-1.76-7-4.02-9.48-6.78-2.48-2.76-4.32-5.62-5.52-8.58-1.2-2.96-1.8-5.64-1.8-8.04l19.56-6c.88,3.92,2.24,6.84,4.08,8.76,1.84,1.92,4.16,2.88,6.96,2.88,2.08,0,3.9-.44,5.46-1.32,1.56-.88,2.78-2.22,3.66-4.02.88-1.8,1.32-4.06,1.32-6.78V17.54h22.2v58.92c0,3.92-.74,7.54-2.22,10.86-1.48,3.32-3.64,6.18-6.48,8.58-2.84,2.4-6.3,4.26-10.38,5.58s-8.68,1.98-13.8,1.98Z" style="fill: url(#linear-gradient); stroke-width: 0px;"/>
+      <rect width="500" height="500" style="fill: #fff;"/>
+      <g>
+        <polygon points="54.69 133.05 54.69 383.21 143.14 435.47 143.14 169.99 306.75 72.62 234.1 29.39 54.69 133.05" style="fill: url(#linear-gradient);"/>
+        <polygon points="234.22 205.56 234.22 292.65 357.42 220.71 357.42 312.21 234.22 384.15 234.22 470.61 445.31 346.92 445.31 153.81 385.67 117.84 234.22 205.56" style="fill: url(#linear-gradient-2);"/>
+      </g>
     </g>
   </g>
 </svg>
