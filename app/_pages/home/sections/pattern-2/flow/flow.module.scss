@@ -170,6 +170,10 @@
       }
     }
   }
+
+  &:last-child {
+    padding-bottom: 2rem;
+  }
 }
 
 .count {
@@ -181,9 +185,9 @@
   background-color: $c-main;
   background-image: linear-gradient(to right top, $c-gr-01, $c-gr-02);
   color: $c-white;
-  font-family: $font-fira;
+  font-family: $font-manrope;
+  font-weight: 800;
   font-size: 2.8rem;
-  font-weight: bold;
   border-radius: 50%;
   position: absolute;
   left: 0;
@@ -210,6 +214,7 @@
     font-size: 2.2rem;
     font-weight: bold;
     color: #3a3a49;
+    text-align: center;
   }
 }
 
@@ -235,5 +240,63 @@
   small {
     font-size: 1.3rem;
     color: #7d8393;
+  }
+}
+
+.start {
+  position: relative;
+  padding-top: 12rem;
+}
+
+.startCount {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $c-main;
+  background-image: linear-gradient(to right top, $c-gr-01, $c-gr-02);
+  color: $c-white;
+  font-family: $font-manrope;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.startContent {
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  position: relative;
+  background-color: $c-white;
+  border-radius: 1rem;
+  padding: 3.2rem;
+  box-shadow: 0rem 2rem 4rem rgba(127, 163, 204, 0.1);
+
+  &::after {
+    content: "";
+    width: 1.6rem;
+    height: 2rem;
+    background-color: $c-white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -2rem;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #3a3a49;
+    text-align: center;
   }
 }

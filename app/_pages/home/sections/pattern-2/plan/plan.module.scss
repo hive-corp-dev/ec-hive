@@ -43,6 +43,214 @@
   }
 }
 
+.planCols {
+  display: flex;
+  gap: 4rem;
+  margin: 4rem auto 0;
+}
+
+.infoCol {
+  width: 15rem;
+}
+
+.infoList {
+  margin-top: 13.8rem;
+  font-weight: bold;
+  background-color: #354851;
+  border-radius: 1rem;
+  box-shadow: 2rem 2rem 2rem rgba(127, 163, 204, 0.1);
+  color: $c-white;
+}
+
+.infoItem {
+  padding: 2rem;
+  border-bottom: 1px solid rgba($c-white, 0.1);
+
+  &:nth-child(2) {
+    min-height: 23.3rem;
+  }
+
+  &:nth-child(4) {
+    min-height: 8.9rem;
+  }
+
+  &:nth-child(6) {
+    min-height: 32.1rem;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.planCol {
+  flex: 1;
+}
+
+.planList {
+  font-weight: 500;
+}
+
+.planCol.isStandard {
+  .planItem.isHead {
+    background: $c-gr-02 !important;
+
+    .planIntro {
+      background: #5bbed8;
+    }
+  }
+}
+
+.planCol.isCustom {
+  .planItem.isHead {
+    background: $c-gr-01 !important;
+
+    .planIntro {
+      background: #628dd7;
+    }
+  }
+}
+
+.planItem {
+  background-color: $c-white;
+  box-shadow: 2rem 2rem 2rem rgba(127, 163, 204, 0.1);
+  padding: 2rem;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.05);
+
+  &:nth-child(odd) {
+    // background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  }
+
+  &.isHead {
+    color: $c-white;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    min-height: 13.8rem;
+  }
+
+  &:last-child {
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  // 制作ページ
+  &:nth-child(3) {
+    min-height: 23.3rem;
+  }
+
+  // 商品登録
+  &:nth-child(4) {
+  }
+
+  &:nth-child(5) {
+    min-height: 8.9rem;
+  }
+
+  &:nth-child(7) {
+    min-height: 32.1rem;
+  }
+
+  small {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #777f85;
+  }
+
+  .subText {
+    display: block;
+    font-size: 1.4rem;
+    margin-top: 0.6rem;
+  }
+}
+
+.planIntro {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.6rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.planHeadMain {
+  padding: 1.2rem;
+}
+
+.planTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.planPrice {
+  font-weight: bold;
+
+  .price {
+    font-family: $font-manrope;
+    font-weight: 800;
+    font-size: 3.6rem;
+    letter-spacing: 0;
+
+    span {
+      font-size: 2.8rem;
+      margin: 0 0.4rem;
+    }
+  }
+
+  .negotiable {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 0.6rem;
+    display: block;
+  }
+}
+
+.planCheckList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0.4rem 0;
+    // border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    // font-weight: 500;
+    line-height: 1.5;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &::before {
+      content: "✓";
+      color: $c-main;
+      font-weight: 700;
+      margin-right: 0.8rem;
+    }
+  }
+}
+
+.planPlusList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0.4rem 0;
+    line-height: 1.5;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &::before {
+      content: "+";
+      color: $c-main;
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-right: 0.8rem;
+      line-height: 1;
+    }
+  }
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;

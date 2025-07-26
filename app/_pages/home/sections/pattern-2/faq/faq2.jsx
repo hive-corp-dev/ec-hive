@@ -15,14 +15,14 @@ export default function Faq2() {
         <h2>よくあるご質問</h2>
 
         <ul className={styles.list}>
-          {data.map((faq) => (
-            <li className={styles.item}>
+          {data.map((faq, index) => (
+            <li key={index} className={styles.item}>
               <div className={styles.question}>
-                <span className={styles.qIcon}>Q.</span>
+                <span className={styles.qIcon}>Q</span>
                 <h3>{faq.question}</h3>
               </div>
               <div className={styles.answer}>
-                <span className={styles.aIcon}>A.</span>
+                <span className={styles.aIcon}>A</span>
                 <div>
                   <p>{faq.answer}</p>
                 </div>
@@ -30,12 +30,6 @@ export default function Faq2() {
             </li>
           ))}
         </ul>
-
-        <div className={styles.linkWrap}>
-          <Btn href="/faq" icon="arrow">
-            よくあるご質問
-          </Btn>
-        </div>
       </Container>
     </section>
   );

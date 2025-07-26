@@ -26,6 +26,7 @@ import Btn from "../_components/common/btn/btn";
 import Demo from "../_pages/home/sections/demo/demo";
 import GridSection from "../_pages/home/sections/grid-section/grid-section";
 import IsometricGridDemo from "../_components/common/isometric-grid-demo/isometric-grid-demo";
+import ContactForm from "../_components/common/contact-form/contact-form";
 
 export const metadata = outputMetadata(null, TOP_METADATA.description, TOP_METADATA.slug);
 
@@ -44,20 +45,14 @@ export default function Home() {
         <Container>
           <span className={styles.en}>CONTACT</span>
           <h2>お問い合わせ</h2>
-          <p>
+          <p className={styles.ctaText}>
             ビジネスを始めたての方、サイトについてよくわからない方のために、親身になってサポートします。
             <br />
             事前知識は一切必要ありませんので、お気軽にご相談ください。
           </p>
 
-          <div className={styles.ctaBtns}>
-            <Btn href="/contact" icon="arrow">
-              お問い合わせ
-            </Btn>
-
-            <Btn href={LINE_URL_TOP_CONTACT} icon="line" theme="secondary" isExternal>
-              LINEで相談
-            </Btn>
+          <div className={styles.formWrap}>
+            <ContactForm />
           </div>
         </Container>
       </div>

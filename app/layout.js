@@ -1,6 +1,6 @@
 import "modern-css-reset/dist/reset.min.css";
 import "@/app/_styles/globals.scss";
-import { Noto_Sans_JP, Figtree, Fira_Sans_Condensed } from "next/font/google";
+import { Noto_Sans_JP, Figtree, Fira_Sans_Condensed, Manrope } from "next/font/google";
 import Header from "./_layouts/header/header";
 import Footer from "./_layouts/footer/footer";
 import { HamburgerMenuContextProvider } from "./_context/hamburger-menu-context";
@@ -33,6 +33,12 @@ const firaSansCondensed = Fira_Sans_Condensed({
   display: "swap",
 });
 
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "800"],
+  variable: "--font-manrope",
+  display: "swap",
+});
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
@@ -40,7 +46,7 @@ export default function RootLayout({ children }) {
         <GoogleAnalytics />
         <Clarity />
       </head>
-      <body className={`${notoSansJp.variable} ${figtree.variable} ${firaSansCondensed.variable}`}>
+      <body className={`${notoSansJp.variable} ${figtree.variable} ${firaSansCondensed.variable} ${manrope.variable}`}>
         <HamburgerMenuContextProvider>
           <HeaderContextProvider>
             <Wrapper>

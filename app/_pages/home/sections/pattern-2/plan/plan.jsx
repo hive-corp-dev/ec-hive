@@ -19,68 +19,50 @@ export default function Plan() {
           2つのプランからお選びいただけます。
         </p>
 
-        <table className={styles.table}>
-          <tbody>
-            <tr>
-              <td></td>
-              <td>標準プラン</td>
-              <td>オーダーメイドプラン</td>
-            </tr>
-            <tr>
-              <td>価格</td>
-              <td>298,000円〜</td>
-              <td>要相談</td>
-            </tr>
-            <tr>
-              <td>制作期間</td>
-              <td>2週間〜4週間</td>
-              <td>1ヶ月〜</td>
-            </tr>
-            <tr>
-              <td>制作ページ</td>
-              <td>
-                <ul>
+        <div className={styles.planCols}>
+          <div className={styles.infoCol}>
+            <ul className={styles.infoList}>
+              <li className={styles.infoItem}>制作期間</li>
+              <li className={styles.infoItem}>制作ページ</li>
+              <li className={styles.infoItem}>商品登録</li>
+              <li className={styles.infoItem}>デザイン</li>
+              <li className={styles.infoItem}>多言語化対応</li>
+              <li className={styles.infoItem}>追加機能</li>
+            </ul>
+          </div>
+          <div className={`${styles.planCol} ${styles.isStandard}`}>
+            <ul className={styles.planList}>
+              <li className={`${styles.planItem} ${styles.isHead}`}>
+                <p className={styles.planIntro}>充実した機能を備えた</p>
+                <div className={styles.planHeadMain}>
+                  <h3 className={styles.planTitle}>標準プラン</h3>
+                  <span className={styles.planPrice}>
+                    <span className={styles.price}>
+                      <span>¥</span>298,000
+                      <span>〜</span>
+                    </span>
+                  </span>
+                </div>
+              </li>
+              <li className={styles.planItem}>2週間〜4週間</li>
+              <li className={styles.planItem}>
+                <ul className={styles.planCheckList}>
                   <li>必須ページ</li>
                   <li>よくあるご質問</li>
                   <li>会社概要</li>
                   <li>お知らせ一覧・詳細</li>
                   <li>お問い合わせ</li>
                 </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>必須ページ</li>
-                  <li>よくあるご質問</li>
-                  <li>会社概要</li>
-                  <li>お知らせ一覧・詳細</li>
-                  <li>お問い合わせ</li>
-                </ul>
-                <span className={styles.subText}>+ ページの追加無制限</span>
-              </td>
-            </tr>
-            <tr>
-              <td>商品登録</td>
-              <td>無制限</td>
-              <td>無制限</td>
-            </tr>
-            <tr>
-              <td>デザイン</td>
-              <td>
+              </li>
+              <li className={styles.planItem}>無制限</li>
+              <li className={styles.planItem}>
                 既存テーマのカスタマイズ
                 <br />
                 <small>（コーディング対応可）</small>
-              </td>
-              <td>オーダーメイド</td>
-            </tr>
-            <tr>
-              <td>多言語化対応</td>
-              <td>3言語まで対応可能</td>
-              <td>無制限</td>
-            </tr>
-            <tr>
-              <td>追加機能</td>
-              <td>
-                <ul>
+              </li>
+              <li className={styles.planItem}>3言語まで対応可能</li>
+              <li className={styles.planItem}>
+                <ul className={styles.planCheckList}>
                   <li>
                     サイト解析ツール
                     <br />
@@ -92,15 +74,57 @@ export default function Plan() {
                   <li>カスタマーレビュー</li>
                   <li>ソーシャルログイン</li>
                 </ul>
-              </td>
-              <td>
-                必要な機能を実装可能
-                <br />
-                独自のカスタムアプリ開発も可能
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              </li>
+            </ul>
+          </div>
+          <div className={`${styles.planCol} ${styles.isCustom}`}>
+            <ul className={styles.planList}>
+              <li className={`${styles.planItem} ${styles.isHead}`}>
+                <p className={styles.planIntro}>デザインからフルカスタマイズ</p>
+                <div className={styles.planHeadMain}>
+                  <h3 className={styles.planTitle}>オーダーメイドプラン</h3>
+                  <span className={styles.planPrice}>
+                    <span className={styles.negotiable}>要相談</span>
+                  </span>
+                </div>
+              </li>
+              <li className={styles.planItem}>1ヶ月〜</li>
+              <li className={styles.planItem}>
+                <ul className={styles.planCheckList}>
+                  <li>必須ページ</li>
+                  <li>よくあるご質問</li>
+                  <li>会社概要</li>
+                  <li>お知らせ一覧・詳細</li>
+                  <li>お問い合わせ</li>
+                  <ul className={styles.planPlusList}>
+                    <li>ページの追加無制限</li>
+                  </ul>
+                </ul>
+              </li>
+              <li className={styles.planItem}>無制限</li>
+              <li className={styles.planItem}>オーダーメイド</li>
+              <li className={styles.planItem}>無制限</li>
+              <li className={styles.planItem}>
+                <ul className={styles.planCheckList}>
+                  <li>
+                    サイト解析ツール
+                    <br />
+                    <small>（Googleアナリティクス、サーチコンソール、Clarity等）</small>
+                  </li>
+                  <li>お問い合わせフォーム</li>
+                  <li>ブログ機能</li>
+                  <li>SNS埋め込み</li>
+                  <li>カスタマーレビュー</li>
+                  <li>ソーシャルログイン</li>
+                </ul>
+                <ul className={styles.planPlusList}>
+                  <li>必要な機能を実装可能</li>
+                  <li>独自のカスタムアプリ開発も可能</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <div className={styles.bottom}>
           <span className={styles.plus}></span>

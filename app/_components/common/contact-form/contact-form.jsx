@@ -84,9 +84,6 @@ export default function ContactForm() {
         onSubmit={handleSubmit(send)}
       >
         <div className={styles.inner}>
-          <p className={styles.info}>
-            <span>*</span>は必須項目です。
-          </p>
           <div className={styles.row}>
             <label htmlFor="your-name" className={`${styles.label} ${styles.isRequired}`}>
               お名前
@@ -112,7 +109,7 @@ export default function ContactForm() {
                 type="text"
                 id="corp-name"
                 name="法人名"
-                placeholder="株式会社ジャムファクトリー"
+                placeholder="株式会社ECHive"
                 className={styles.input}
                 {...register("法人名")}
               />

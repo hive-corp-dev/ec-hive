@@ -102,7 +102,7 @@ export default function Flow2() {
           <li className={styles.item}>
             <span className={styles.count}>07</span>
             <div className={styles.itemContent}>
-              <h3>公開</h3>
+              <h3>サイトの公開</h3>
               <div className={styles.itemText}>
                 <p>
                   ご確認完了後、本番サーバーに移行して公開となります。
@@ -113,6 +113,18 @@ export default function Flow2() {
             </div>
           </li>
         </ol>
+
+        <div className={styles.start}>
+          <span className={styles.startCount}>START</span>
+          <div className={styles.startContent}>
+            <h3>運用開始</h3>
+            <div className={styles.itemText}>
+              <p>
+                ECサイトは公開してからが本当のスタートです。開店後の運用を工夫することで、売上向上へとつながります。ECHiveでは、必要に応じてサイトの保守や、WEBの専門家としての運営サポート・アドバイスも承っています。お気軽にご相談ください。
+              </p>
+            </div>
+          </div>
+        </div>
       </Container>
     </section>
   );
