@@ -1,0 +1,60 @@
+---
+const { Tag = "h2", en, jp, isWhite, class: className, ...rest } = Astro.props;
+---
+
+<div class:list={["wrap", { "is-white": isWhite }, className]} {...rest}>
+  <span class="en">{en}</span>
+  <Tag class="jp">{jp}</Tag>
+</div>
+
+<style lang="scss">
+  .wrap {
+    text-align: center;
+
+    &.is-white {
+      .en {
+        color: var.$c-black-l-2;
+      }
+
+      .jp {
+        color: var.$c-white;
+      }
+    }
+  }
+
+  .en {
+    font-family: var.$font-manrope;
+    font-size: 1.6rem;
+    font-weight: 800;
+    width: 100%;
+    display: block;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: var.$c-main;
+
+    @include mixin.tab {
+      font-size: 1.4rem;
+    }
+
+    @include mixin.sp {
+      font-size: 1.2rem;
+    }
+  }
+
+  .jp {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.6rem;
+    text-align: center;
+
+    @include mixin.tab {
+      font-size: 3.6rem;
+    }
+
+    @include mixin.sp {
+      font-size: 2.4rem;
+      margin-top: 0.8rem;
+    }
+  }
+</style>

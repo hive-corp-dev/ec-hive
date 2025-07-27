@@ -1,0 +1,21 @@
+---
+const { class: className, ...rest } = Astro.props;
+---
+
+<div class:list={["container", className]} {...rest}>
+  <slot />
+</div>
+
+<style lang="scss">
+  .container {
+    max-width: 120rem;
+    width: 100%;
+    padding: 0 3rem;
+    margin: 0 auto;
+
+    @include mixin.sp {
+      padding: 0 2rem;
+      max-width: 64rem;
+    }
+  }
+</style>

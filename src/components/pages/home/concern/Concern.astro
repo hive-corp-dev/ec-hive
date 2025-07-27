@@ -1,0 +1,241 @@
+---
+import { Image } from "astro:assets";
+import Container from "@/components/common/Container.astro";
+import SectionTitle from "@/components/common/SectionTitle.astro";
+import LinkButton from "@/components/common/LinkButton.astro";
+import concernImg from "@/assets/img/home/concern-img.svg";
+---
+
+<section class="section">
+  <Container>
+    <SectionTitle en="CONCERNS" jp="こんなお悩みありませんか？" />
+    <ul class="list">
+      <li>
+        <p>ECサイトを作りたいけれど、どこに頼めばいいかわからない・・・</p>
+      </li>
+      <li>
+        <p>自分でECサイトを作り始めたけれど、うまくいかない・・・</p>
+      </li>
+      <li>
+        <p>他社に見積もりを出してもらったけれど、予算を超えている・・・</p>
+      </li>
+      <li>
+        <p>ビジネスを始めたばかりなので、まずは小さく始めたい・・・</p>
+      </li>
+      <li>
+        <p>とにかく早くECサイトを作りたい・・・</p>
+      </li>
+      <li>
+        <p>ECを作りたいけれど、すべてまかせたい・・・</p>
+      </li>
+    </ul>
+  </Container>
+
+  <div class="box">
+    <div class="box-inner">
+      <p class="acc">
+        そのお悩み、
+        <br class="br-sp" />
+        私たちが解決します！
+      </p>
+      <div class="box-img">
+        <Image src={concernImg} alt="" />
+      </div>
+      <p class="acc-sub">
+        ECHiveは、長年ウェブサイトや<br
+          class="br-tab br-sp-none"
+        />システムを構築してきた経験を活かし、
+        <br class="br-sp-none" />
+        <span>ECサイトの構築・運用サポート</span>を行います。
+        <br />
+        <span>低単価かつ短納期のECサイトの構築</span>から、
+        <br class="br-sp-none" />
+        <span>フルカスタマイズのECサイト構築</span>まで承ります。
+        <br />
+        ECサイトの構築・運用についてのお悩みがございましたら、
+        <br class="br-sp-none" />
+        ぜひECHiveへご相談ください。
+      </p>
+      <div class="btns">
+        <LinkButton href="#contact" icon="arrow" theme="primary">
+          お問い合わせ
+        </LinkButton>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .section {
+    padding: 12rem 0 0;
+    background-color: var.$c-white-bg;
+
+    @include mixin.sp {
+      padding: 8rem 0 0;
+    }
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 6.4rem;
+    gap: 2.4rem;
+
+    @include mixin.tab {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixin.sp {
+      grid-template-columns: 1fr;
+      margin-top: 3.2rem;
+      gap: 1.6rem;
+    }
+
+    li {
+      background-color: var.$c-white;
+      border-radius: 1rem;
+      padding: 3.2rem;
+      font-weight: bold;
+      box-shadow: 1rem 1rem 1rem var.$c-shadow;
+
+      @include mixin.sp {
+        padding: 2.4rem;
+      }
+    }
+  }
+
+  .box {
+    margin: 16rem auto 0;
+    background-color: var.$c-white;
+    width: 100%;
+    background-image:
+      repeating-linear-gradient(
+        150deg,
+        var.$c-white-bg-2 0,
+        var.$c-white-bg-2 0.1rem,
+        transparent 0.1rem,
+        transparent 2.4rem
+      ),
+      repeating-linear-gradient(
+        30deg,
+        var.$c-white-bg-2 0,
+        var.$c-white-bg-2 0.1rem,
+        transparent 0.1rem,
+        transparent 2.4rem
+      );
+    background-size: cover;
+
+    @include mixin.sp {
+      margin-top: 8rem;
+    }
+  }
+
+  .box-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 2rem;
+
+    @include mixin.sp {
+      padding: 6.4rem 2rem;
+      border-radius: 1.6rem;
+    }
+  }
+
+  .br-tab {
+    display: none;
+
+    @include mixin.tab {
+      display: block;
+    }
+  }
+
+  .br-sp {
+    display: none;
+
+    @include mixin.sp {
+      display: block;
+    }
+  }
+
+  .br-sp-none {
+    @include mixin.sp {
+      display: none;
+    }
+  }
+
+  .box-img {
+    width: 50rem;
+    margin: 2.4rem auto 0.8rem;
+
+    @include mixin.sp {
+      width: 100%;
+    }
+  }
+
+  .acc {
+    font-size: 3.8rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.75;
+
+    @include mixin.tab {
+      font-size: 3.2rem;
+    }
+
+    @include mixin.sp {
+      font-size: 2.4rem;
+      line-height: 1.5;
+    }
+  }
+
+  .acc-sub {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    margin-top: 2.4rem;
+
+    span {
+      color: var.$c-main;
+    }
+
+    @include mixin.tab {
+      font-size: 2rem;
+    }
+
+    @include mixin.sp {
+      font-size: 1.8rem;
+      line-height: 1.75;
+      text-align: left;
+    }
+  }
+
+  .btns {
+    margin: 4rem auto 0;
+    display: flex;
+    gap: 2.4rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 40rem;
+
+    @include mixin.sp {
+      gap: 2rem;
+      width: 100%;
+      max-width: 50rem;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    a {
+      width: calc(50% - 1rem);
+
+      @include mixin.sp {
+        width: 100%;
+        max-width: 18rem;
+      }
+    }
+  }
+</style>

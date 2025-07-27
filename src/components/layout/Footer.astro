@@ -1,0 +1,336 @@
+---
+import Container from "@/components/common/Container.astro";
+import { IoArrowForward } from "react-icons/io5";
+import { LuExternalLink } from "react-icons/lu";
+import { Image } from "astro:assets";
+import logoWhite from "@/assets/img/common/logo-white.svg";
+---
+
+<footer class="footer">
+  <Container class="container">
+    <div class="row">
+      <div class="logo-col">
+        <a href="/" class="logo">
+          <Image src={logoWhite} alt="ECHive" />
+        </a>
+        <p class="text">
+          ECサイト構築・運用サポートなら<br />ECHiveにお任せください
+        </p>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav-row">
+          <li class="nav-col">
+            <a class="nav-link" href="/#point"> 選ばれる理由 </a>
+          </li>
+          <li class="nav-col">
+            <a class="nav-link" href="/#demo"> デモサイト </a>
+          </li>
+          <li class="nav-col">
+            <a class="nav-link" href="/#plan">料金プラン</a>
+          </li>
+          <li class="nav-col">
+            <a class="nav-link" href="/#flow"> 制作の流れ </a>
+          </li>
+          <li class="nav-col">
+            <a class="nav-link" href="/#faq"> よくあるご質問 </a>
+          </li>
+          <li class="nav-btns-col">
+            <a class="nav-btn" href="/#contact">
+              <span>お問い合わせ</span>
+              <span class="nav-btn-arrow">
+                <IoArrowForward />
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="sub-nav">
+          <li class="sub-nav-item">
+            <a class="sub-nav-link" href="/privacy-policy">
+              プライバシーポリシー
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <p class="copy">&copy; ECHive All Rights Reserved.</p>
+  </Container>
+</footer>
+
+<style lang="scss">
+  .footer {
+    position: relative;
+    padding: 6.4rem 0 2.4rem;
+    z-index: var.$z-footer;
+    background-color: var.$c-dark-bg-2;
+
+    @include mixin.sp {
+      padding-bottom: 1.6rem;
+    }
+  }
+
+  .container {
+    @include mixin.sp {
+      max-width: 50rem;
+    }
+  }
+
+  .row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: var.$c-white;
+
+    @include mixin.sp {
+      flex-direction: column;
+    }
+  }
+
+  .logo-col {
+    width: 28rem;
+    flex-shrink: 0;
+  }
+
+  .logo {
+    display: flex;
+    width: 18rem;
+    transition: opacity 0.3s;
+
+    @include mixin.hover {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    span {
+      letter-spacing: 0;
+
+      &.jp {
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: 0.2em;
+      }
+    }
+  }
+
+  .text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 2.4rem;
+    line-height: 2;
+  }
+
+  .nav {
+    color: var.$c-white;
+    padding-top: 1.4rem;
+
+    @include mixin.sp {
+      max-width: 50rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .nav-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: flex-end;
+
+    @include mixin.tab {
+      gap: 2.4rem 4rem;
+    }
+
+    @include mixin.sp {
+      gap: 1.6rem;
+      justify-content: flex-start;
+    }
+  }
+
+  .nav-col {
+    @include mixin.sp {
+      width: 100%;
+    }
+  }
+
+  .nav-link {
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: opacity 0.3s;
+
+    @include mixin.sp {
+      font-size: 1.4rem;
+    }
+
+    @include mixin.hover {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .nav-btns-col {
+    display: flex;
+    // flex-direction: column;
+    justify-content: flex-end;
+    gap: 2rem;
+    width: 100%;
+
+    @include mixin.tab {
+      margin-top: 1.6rem;
+    }
+
+    @include mixin.sp {
+      margin: 2.4rem auto 0;
+      justify-content: space-between;
+    }
+  }
+
+  .nav-btn {
+    position: relative;
+    width: 16rem;
+    height: 4.4rem;
+    border-radius: 0.6rem;
+    background-color: var.$c-main;
+    border: 0.1rem solid var.$c-main;
+    color: var.$c-white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0 1.6rem;
+    transition: all 0.3s;
+
+    @include mixin.sp {
+      width: calc(50% - 1rem);
+    }
+
+    @include mixin.hover {
+      &:hover {
+        background-color: var.$c-white;
+        color: var.$c-main;
+      }
+    }
+  }
+
+  .nav-btn-arrow {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-btn-line {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 2.4rem;
+
+      path {
+        fill: var.$c-white;
+      }
+    }
+  }
+
+  .navLink {
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: opacity 0.3s;
+
+    @include mixin.sp {
+      font-size: 1.4rem;
+    }
+
+    @include mixin.hover {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .nav-sub-list {
+  }
+
+  .nav-sub-item {
+    margin-top: 0.2rem;
+  }
+
+  .nav-sub-link {
+    font-weight: 500;
+    font-size: 1.3rem;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.3s;
+
+    @include mixin.sp {
+      font-size: 1.2rem;
+    }
+
+    @include mixin.hover {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 0.8rem;
+      height: 0.1rem;
+      background-color: var.$c-white;
+      display: block;
+      margin-right: 0.4rem;
+    }
+
+    svg {
+      margin-left: 0.4rem;
+    }
+  }
+
+  .sub-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2.4rem;
+    margin-top: 4rem;
+
+    @include mixin.sp {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+    }
+  }
+
+  .sub-nav-item {
+  }
+
+  .sub-nav-link {
+    color: var.$c-white;
+    font-size: 1.3rem;
+    opacity: 0.9;
+    // text-decoration: underline;
+    transition: opacity 0.3s;
+
+    @include mixin.hover {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .copy {
+    font-family: var.$font-manrope;
+    text-align: center;
+    color: var.$c-white;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-top: 6.4rem;
+    letter-spacing: 0.1em;
+
+    @include mixin.sp {
+      font-size: 1.2rem;
+      margin-top: 5.6rem;
+    }
+  }
+</style>

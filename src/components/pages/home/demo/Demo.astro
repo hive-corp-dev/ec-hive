@@ -1,0 +1,278 @@
+---
+import Container from "@/components/common/Container.astro";
+import SectionTitle from "@/components/common/SectionTitle.astro";
+import { Image } from "astro:assets";
+import { RiExternalLinkLine } from "react-icons/ri";
+import demo01 from "@/assets/img/home/demo-01-thumb.png";
+---
+
+<section class="section js-header-theme-white-section" id="demo">
+  <Container>
+    <SectionTitle en="DEMO" jp="デモサイト" isWhite />
+    <p class="intro">
+      ECサイトのデモページをご用意いたしました。
+      <br />
+      実際のデザインや操作感、機能をお試しください。
+    </p>
+
+    <ul class="list">
+      <li class="item">
+        <span class="link">
+          <div class="thumb-wrap">
+            <Image src={demo01} alt="アパレルECサイト" class="thumb" />
+          </div>
+
+          <div class="content">
+            <div class="plan">標準プラン</div>
+            <h3 class="name">アパレルECサイト</h3>
+            <p class="text">
+              アパレルブランドをイメージして制作した、シンプルなサイトです。基本的なページ構成に加え、ブログ機能やお問い合わせ機能も備えています。
+              <br />
+              商品一覧ページでは、商品のカテゴリ分けや並び替え、検索機能も備えており、ユーザーが商品を探しやすい仕組みになっています。
+            </p>
+
+            <div class="view-wrap">
+              <p class="password">
+                <span>パスワード: </span><span>echive</span>
+              </p>
+              <a
+                href="https://hive-testing-themes.myshopify.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="view"
+              >
+                <span class="text">デモサイトを見る</span>
+                <RiExternalLinkLine />
+                <span class="tooltip">パスワード: echive</span>
+              </a>
+            </div>
+          </div>
+        </span>
+      </li>
+    </ul>
+  </Container>
+</section>
+
+<style lang="scss">
+  .section {
+    padding: 16rem 0;
+    background-color: var.$c-dark-bg;
+
+    @include mixin.sp {
+      padding: 8rem 0;
+    }
+  }
+
+  .intro {
+    color: var.$c-white;
+    text-align: center;
+    font-weight: 400;
+    line-height: 2;
+    margin-top: 2.4rem;
+  }
+
+  .list {
+    gap: 6.4rem;
+    display: grid;
+    margin-top: 6.4rem;
+
+    @include mixin.sp {
+      gap: 2.4rem;
+      margin-top: 2.4rem;
+    }
+  }
+
+  .link {
+    display: flex;
+    justify-content: space-between;
+    background-color: var.$c-dark-bg-2;
+    background-color: #2d3236;
+    padding: 6.4rem;
+    border-radius: 3rem;
+    color: var.$c-white;
+
+    @include mixin.tab {
+      padding: 4rem;
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+
+    @include mixin.sp {
+      padding: 2.4rem 2.4rem 3.2rem;
+      flex-direction: column;
+      border-radius: 2rem;
+    }
+  }
+
+  .thumb-wrap {
+    position: relative;
+    width: calc(50% - 3.2rem);
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+
+    @include mixin.tab {
+      width: 100%;
+    }
+  }
+
+  .thumb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(50% - 3.2rem);
+
+    @include mixin.tab {
+      width: 100%;
+    }
+
+    @include mixin.sp {
+      width: 100%;
+    }
+  }
+
+  .plan {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var.$c-black-l-2;
+
+    @include mixin.sp {
+      font-size: 1.4rem;
+    }
+  }
+
+  .name {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-top: 0.8rem;
+
+    @include mixin.sp {
+      font-size: 2rem;
+    }
+  }
+
+  .text {
+    font-size: 1.4rem;
+    line-height: 2;
+    font-weight: 400;
+    margin-top: 1.6rem;
+  }
+
+  .view-wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.6rem;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+
+    @include mixin.sp {
+      margin-top: 2rem;
+    }
+  }
+
+  .password {
+    font-size: 1.4rem;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem 0.4rem;
+    border-radius: 0.4rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.2);
+    transform: translateY(0.1rem);
+
+    span {
+      font-size: 1.2rem;
+      font-weight: 500;
+
+      &:last-of-type {
+        font-size: 1.4rem;
+        font-family: var.$font-manrope;
+      }
+    }
+  }
+
+  .view {
+    position: relative;
+    transition: opacity 0.3s;
+    font-size: 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.1rem;
+      background-color: var.$c-white;
+      transition: opacity 0.3s;
+    }
+
+    .text {
+      transition: opacity 0.3s;
+    }
+
+    svg {
+      margin-left: 0.4rem;
+      transform: translateY(0.1rem);
+      transition: opacity 0.3s;
+    }
+
+    .tooltip {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var.$c-black;
+      color: var.$c-white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 0.6rem;
+      font-size: 1.3rem;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      margin-bottom: 0.8rem;
+      box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.3);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 0.6rem solid transparent;
+        border-top-color: var.$c-black;
+      }
+    }
+
+    @include mixin.hover {
+      &:hover {
+        &::before {
+          opacity: 0.7;
+        }
+
+        .text {
+          opacity: 0.7;
+        }
+
+        svg {
+          opacity: 0.7;
+        }
+
+        .tooltip {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+</style>

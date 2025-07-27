@@ -1,0 +1,206 @@
+---
+import Container from "@/components/common/Container.astro";
+import SectionTitle from "@/components/common/SectionTitle.astro";
+import { Image } from "astro:assets";
+import feature01 from "@/assets/img/home/feature-01.svg";
+import feature02 from "@/assets/img/home/feature-02.svg";
+import feature03 from "@/assets/img/home/feature-03.svg";
+import feature04 from "@/assets/img/home/feature-04.svg";
+import feature05 from "@/assets/img/home/feature-05.svg";
+---
+
+<section class="section" id="point">
+  <Container>
+    <SectionTitle en="OUR FEATURES" jp="ECHiveの5つの特徴" />
+
+    <div class="blocks">
+      <div class="block">
+        <div class="thumb">
+          <Image src={feature01} alt="" />
+        </div>
+        <div class="text">
+          <span>POINT 01.</span>
+          <h3>豊富な実務経験と高い技術力</h3>
+          <p>
+            ECHiveのメンバーは長年にわたってウェブサイトやシステムを構築してきたメンバー3名で運営しています。
+            <br />
+            これまでの経験を活かし、高い品質でECサイトを構築やカスタマイズサービスを提供します。
+          </p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="thumb">
+          <Image src={feature02} alt="" />
+        </div>
+        <div class="text">
+          <span>POINT 02.</span>
+          <h3>低単価かつ短納期でのECサイト構築</h3>
+          <p>
+            テンプレートを使用したECサイト構築であれば低単価かつ短納期での構築が可能です。
+            <br />
+            事業立ち上げでできるだけ早くECサイトを公開したいというお客様のご要望にもお応えします。
+          </p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="thumb">
+          <Image src={feature03} alt="" />
+        </div>
+        <div class="text">
+          <span>POINT 03.</span>
+          <h3>必要に応じたカスタマイズサービス</h3>
+          <p>
+            ECサイトはお客様のビジネスの特性や規模によって必要とされる要件がお客様ごとに大きく異なります。
+            <br />
+            EC HIVEでは、しっかりとヒアリングを行い、ただテンプレートをそのまま使用するのでなくお客様のビジネスの特性や規模に合わせたカスタマイズを行っております。
+          </p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="thumb">
+          <Image src={feature04} alt="" />
+        </div>
+        <div class="text">
+          <span>POINT 04.</span>
+          <h3>オリジナルデザインのECも作成可能</h3>
+          <p>
+            商品のブランディングであったり、競合他社や他ブランドと差別化を図る目的でしっかりとデザインをしたECサイトを構築したいというお客様のご要望にもお応えします。
+            <br />
+            ユーザーが使いやすく、商品の魅力を伝えやすいデザインを制作し構築まで行います。
+          </p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="thumb">
+          <Image src={feature05} alt="" />
+        </div>
+        <div class="text">
+          <span>POINT 05.</span>
+          <h3>公開後のサポートも承ります</h3>
+          <p>
+            ECサイトは公開しただけで終わりではありません。商品ラインナップの更新や機能の拡張、セキュリティ対策など、公開後も様々な作業が必要となります。
+            <br />
+            ECHiveでは、公開後もお客様のサポートを行うプランをご用意しています。
+            <br />
+            ECサイトの運用サポートを通じてお客様の事業の成長をお手伝いします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style lang="scss">
+  .section {
+    padding: 16rem 0 8rem;
+    background-color: var.$c-white-bg;
+
+    @include mixin.sp {
+      padding: 8rem 0 4rem;
+    }
+  }
+
+  .blocks {
+    margin-top: 6.4rem;
+    display: grid;
+    gap: 4rem;
+
+    @include mixin.sp {
+      margin-top: 3.2rem;
+    }
+  }
+
+  .block {
+    display: flex;
+    align-items: flex-start;
+    gap: 3.2rem;
+    background-color: var.$c-white;
+    border-radius: 1rem;
+    padding: 6rem;
+    box-shadow: 2rem 2rem 2rem var.$c-shadow;
+
+    @include mixin.tab {
+      padding: 4rem 3.2rem;
+    }
+
+    @include mixin.sp {
+      flex-direction: column;
+      padding: 2.4rem;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      @include mixin.sp {
+        flex-direction: column;
+      }
+    }
+
+    .thumb {
+      width: 36rem;
+      background-color: var.$c-white;
+      border-radius: 3rem;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include mixin.tab {
+        width: 45%;
+      }
+
+      @include mixin.sp {
+        width: 100%;
+        height: auto;
+        border-radius: 1.2rem;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text {
+      span {
+        font-size: 1.4rem;
+        color: var.$c-main;
+        font-weight: 500;
+      }
+
+      h3 {
+        font-size: 3.2rem;
+        font-weight: bold;
+        margin-top: 1rem;
+
+        @include mixin.tab {
+          font-size: 2.6rem;
+        }
+
+        @include mixin.sp {
+          font-size: 2rem;
+        }
+      }
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2;
+        margin-top: 2.4rem;
+        text-align: justify;
+
+        @include mixin.tab {
+          font-size: 1.5rem;
+        }
+
+        @include mixin.sp {
+          font-size: 1.4rem;
+          margin-top: 1.6rem;
+        }
+      }
+    }
+  }
+</style>

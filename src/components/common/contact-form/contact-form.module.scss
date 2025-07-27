@@ -1,0 +1,158 @@
+.form_row {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2.4rem;
+
+  @include mixin.sp {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  & + & {
+    margin-top: 4rem;
+
+    @include mixin.sp {
+      margin-top: 2.4rem;
+    }
+  }
+}
+
+.form_head {
+  min-width: 16rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 1.2rem;
+
+  @include mixin.sp {
+    font-size: 1.5rem;
+    padding-top: 0;
+  }
+}
+
+.form_required {
+  color: var.$c-main;
+  margin-left: 0.4rem;
+
+  @include mixin.sp {
+  }
+}
+
+.form_body {
+  flex-grow: 1;
+
+  @include mixin.sp {
+    width: 100%;
+  }
+}
+
+.form_input,
+.form_select,
+.form_textarea {
+  // reset
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+
+  // common styles
+  font-size: 1.6rem;
+  font-weight: 500;
+  width: 100%;
+  color: var.$c-black;
+  background-color: var.$c-white-bg;
+  border-radius: 0.6rem;
+  padding: 1.2rem 1.6rem;
+
+  @include mixin.sp {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+
+  &:focus {
+    outline-color: var.$c-main;
+  }
+
+  &::placeholder {
+    color: var.$c-black-l-2;
+  }
+}
+
+.form_select {
+  cursor: pointer;
+  line-height: 1.5;
+
+  &::placeholder {
+    color: var.$c-black-l-2;
+  }
+
+  &.placeholder {
+    color: var.$c-black-l-2;
+  }
+}
+
+.form_btn {
+  width: 30.4rem;
+  margin: 0 auto;
+
+  @include mixin.sp {
+    width: 100%;
+    max-width: 24rem;
+  }
+}
+
+.form_btnItem {
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 0.6rem;
+  background-color: var.$c-main;
+  color: var.$c-white;
+  padding: 1.6rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1rem solid var.$c-main;
+  transition:
+    color 0.3s,
+    background-color 0.3s;
+
+  @include mixin.sp {
+    font-size: 1.6rem;
+  }
+
+  @include mixin.hover {
+    &:hover {
+      color: var.$c-main;
+      background-color: var.$c-white;
+    }
+  }
+
+  &:focus {
+    outline-color: var.$c-main;
+  }
+}
+
+.form_recapcha {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto 0;
+  width: 30.4rem;
+  height: 7.8rem;
+
+  @include mixin.sp {
+    width: 100%;
+  }
+}

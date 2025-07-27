@@ -1,0 +1,244 @@
+---
+import { Image, getImage } from "astro:assets";
+import store01 from "@/assets/img/home/mv-store-01.svg";
+import store02 from "@/assets/img/home/mv-store-02.svg";
+import store03 from "@/assets/img/home/mv-store-03.svg";
+import store04 from "@/assets/img/home/mv-store-04.svg";
+import store05 from "@/assets/img/home/mv-store-05.svg";
+import store06 from "@/assets/img/home/mv-store-06.svg";
+import store07 from "@/assets/img/home/mv-store-07.svg";
+import store08 from "@/assets/img/home/mv-store-08.svg";
+import gridBgImg from "@/assets/img/home/mv-grid-bg.svg";
+import GridBgOrbs from "./GridBgOrbs.astro";
+
+const gridBg = await getImage({ src: gridBgImg });
+---
+
+<div class="grid-bg">
+  <GridBgOrbs />
+  <div class="grid-bg-img" style={`background-image: url(${gridBg.src})`}></div>
+  <div class="store-wrap">
+    <Image src={store07} alt="" class="store store-01" />
+    <Image src={store08} alt="" class="store store-02 supermarket" />
+    <Image src={store03} alt="" class="store store-03" />
+    <Image src={store07} alt="" class="store store-04" />
+    <Image src={store08} alt="" class="store store-05 supermarket" />
+    <Image src={store02} alt="" class="store store-06" />
+    <Image src={store04} alt="" class="store store-07" />
+    <Image src={store03} alt="" class="store store-08" />
+    <Image src={store05} alt="" class="store store-09" />
+    <Image src={store06} alt="" class="store store-10 supermarket" />
+    <Image src={store07} alt="" class="store store-11" />
+    <Image src={store01} alt="" class="store store-12" />
+    <Image src={store02} alt="" class="store store-13" />
+    <Image src={store03} alt="" class="store store-14" />
+    <Image src={store04} alt="" class="store store-15" />
+    <Image src={store03} alt="" class="store store-16" />
+  </div>
+</div>
+
+<style lang="scss">
+  .grid-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .grid-bg-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 3;
+    animation: grid-pulse 8s ease-in-out infinite;
+    transform-origin: center center;
+  }
+
+  .store-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 4;
+  }
+
+  .store {
+    position: absolute;
+    width: 8vw;
+    min-width: 10rem;
+    opacity: 1;
+    animation: store-float 7s ease-in-out infinite;
+
+    @include mixin.sp {
+      min-width: 7rem;
+      width: 10vw;
+    }
+
+    &.supermarket {
+      width: 11vw;
+      min-width: 12rem;
+
+      @include mixin.sp {
+        width: 13vw;
+        min-width: 9rem;
+      }
+    }
+
+    &.store-01 {
+      top: 2%;
+      left: 22%;
+      animation-delay: 0.5s;
+
+      @include mixin.sp {
+        left: 16%;
+      }
+    }
+    &.store-02 {
+      top: 10%;
+      left: 48%;
+      animation-delay: 1.2s;
+
+      @include mixin.sp {
+        left: 42%;
+      }
+    }
+    &.store-03 {
+      top: -4%;
+      left: 70%;
+      animation-delay: 2.1s;
+    }
+    &.store-04 {
+      top: 6%;
+      right: -2%;
+      animation-delay: 3s;
+    }
+    &.store-05 {
+      top: 28%;
+      left: -5%;
+      animation-delay: 1.7s;
+    }
+    &.store-06 {
+      top: 25%;
+      left: 18%;
+      animation-delay: 2.8s;
+
+      @include mixin.sp {
+        top: 18%;
+      }
+    }
+    &.store-07 {
+      top: 18%;
+      left: 68%;
+      animation-delay: 0.9s;
+    }
+    &.store-08 {
+      top: 37%;
+      right: 2%;
+      animation-delay: 2.3s;
+    }
+    &.store-09 {
+      bottom: 24%;
+      left: 6%;
+      animation-delay: 1.1s;
+
+      @include mixin.sp {
+        bottom: 29%;
+      }
+    }
+    &.store-10 {
+      bottom: 15%;
+      left: 43%;
+      animation-delay: 2.6s;
+    }
+    &.store-11 {
+      bottom: -2%;
+      right: 24%;
+      animation-delay: 0.7s;
+
+      @include mixin.sp {
+        right: 4%;
+        bottom: 4%;
+      }
+    }
+    &.store-12 {
+      bottom: 20%;
+      right: 12%;
+      animation-delay: 1.9s;
+
+      @include mixin.sp {
+        right: -1%;
+      }
+    }
+    &.store-13 {
+      bottom: -4%;
+      right: -4%;
+      animation-delay: 2.4s;
+
+      @include mixin.sp {
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        bottom: -2%;
+      }
+    }
+    &.store-14 {
+      bottom: -4%;
+      left: 20%;
+      animation-delay: 0.3s;
+
+      @include mixin.sp {
+        left: 10%;
+        bottom: 4%;
+      }
+    }
+    &.store-15 {
+      bottom: -10%;
+      left: 105%;
+      animation-delay: 1.5s;
+    }
+    &.store-16 {
+      bottom: -7%;
+      right: -10%;
+      animation-delay: 2.2s;
+
+      @include mixin.sp {
+        display: none;
+      }
+    }
+  }
+
+  @keyframes grid-pulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
+  }
+
+  @keyframes store-float {
+    0%,
+    100% {
+      transform: translateY(0px) scale(1);
+    }
+    25% {
+      transform: translateY(-8px) scale(1.02);
+    }
+    50% {
+      transform: translateY(-12px) scale(1.05);
+    }
+    75% {
+      transform: translateY(-8px) scale(1.02);
+    }
+  }
+</style>

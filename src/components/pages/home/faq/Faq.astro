@@ -1,0 +1,212 @@
+---
+import Container from "@/components/common/Container.astro";
+import SectionTitle from "@/components/common/SectionTitle.astro";
+---
+
+<section class="section" id="faq">
+  <Container>
+    <SectionTitle en="Q&A" jp="よくあるご質問" />
+
+    <ul class="list">
+      {
+        (
+          <li class="item">
+            <div class="question">
+              <span class="q-icon">Q</span>
+              <h3>
+                ホームページの知識が一切ないのですが、相談しながら制作していただけますか？
+              </h3>
+            </div>
+            <div class="answer">
+              <span class="a-icon">A</span>
+              <div>
+                <p>
+                  もちろんです！ジャムファクトリーは、ホームページの知識がない方でも安心してご利用いただけるサービスです。ホームページ制作のプロがお客様のニーズやご要望に合わせて、最適なホームページを提案＆制作いたします。
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="item">
+            <div class="question">
+              <span class="q-icon">Q</span>
+              <h3>
+                他社のホームページ制作サービスと迷っています。無料で相談に乗っていただけますか？
+              </h3>
+            </div>
+            <div class="answer">
+              <span class="a-icon">A</span>
+              <div>
+                <p>
+                  はい、公式LINEやメール、ビデオ通話で無料相談を受け付けております。<br />ご検討中のサービスと比較しながら、お客様の視点に立ってメリット・デメリットを提示した上で、最適なサービスをご提案いたします。
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="item">
+            <div class="question">
+              <span class="q-icon">Q</span>
+              <h3>
+                本当に月額料金以外は一切かからないのですか？
+              </h3>
+            </div>
+            <div class="answer">
+              <span class="a-icon">A</span>
+              <div>
+                <p>
+                  はい、制作費用やサーバー・ドメイン費用は保守運用費は月額料金に含まれていますので、月額料金以外は一切かかりません。<br />有料の追加オプションをご利用いただく場合は別途料金がかかりますが、無料オプションのみで本格的なホームページが作成できるよう設定しております。
+                </p>
+              </div>
+            </div>
+          </li>
+        )
+      }
+    </ul>
+  </Container>
+</section>
+
+<style lang="scss">
+  .section {
+    padding: 16rem 0;
+    background-color: var.$c-white;
+    position: relative;
+
+    @include mixin.sp {
+      padding: 8rem 0;
+    }
+  }
+
+  .list {
+    margin-top: 6.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    @include mixin.sp {
+      margin-top: 3.2rem;
+      gap: 1.6rem;
+    }
+  }
+
+  .item {
+    background: var.$c-white;
+    border-radius: 1rem;
+    padding: 4rem;
+    box-shadow: 2rem 2rem 4rem var.$c-shadow;
+    border: 1px solid var.$c-white-bg;
+    position: relative;
+    overflow: hidden;
+
+    @include mixin.tab {
+      padding: 3.2rem;
+    }
+
+    @include mixin.sp {
+      padding: 2rem;
+    }
+  }
+
+  .question {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2.4rem;
+
+    @include mixin.tab {
+      margin-bottom: 1.6rem;
+    }
+
+    h3 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin: 0;
+      padding-top: .6rem;
+
+      @include mixin.tab {
+        font-size: 2rem;
+      }
+
+      @include mixin.sp {
+        font-size: 1.6rem;
+        padding-top: 0.2rem;
+      }
+    }
+  }
+
+  .q-icon {
+    flex-shrink: 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: var.$font-manrope;
+    color: var.$c-white;
+    margin-right: 1.6rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var.$c-gr-01 0%, var.$c-gr-02 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.2rem;
+
+    @include mixin.sp {
+      font-size: 1.8rem;
+      margin-right:.8rem;
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+  }
+
+  .answer {
+    display: flex;
+    align-items: flex-start;
+
+    div {
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 1.8;
+      padding-top: .6rem;
+
+
+      @include mixin.tab {
+        font-size: 1.5rem;
+        line-height: 1.7;
+      }
+
+      @include mixin.sp {
+        font-size: 1.4rem;
+        padding-top: .2rem;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .a-icon {
+    flex-shrink: 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: var.$font-manrope;
+    margin-right: 1.6rem;
+    background-color: var.$c-black-l;
+    color: var.$c-white;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.2rem;
+
+    @include mixin.sp {
+      font-size: 1.6rem;
+      margin-right:.8rem;
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+  }
+
+</style>

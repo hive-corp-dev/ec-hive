@@ -1,0 +1,61 @@
+---
+import Container from "@/components/common/Container.astro";
+import SectionTitle from "@/components/common/SectionTitle.astro";
+import ContactForm from "@/components/common/contact-form/contact-form.jsx";
+---
+
+<section class="section" id="contact">
+  <Container>
+    <SectionTitle en="CONTACT" jp="お問い合わせ" />
+
+    <p class="text">
+      ECサイトを始めてみたい方、ECサイトについてよくわからない方のために、親身になってサポートします。
+      <br />
+      事前知識は一切必要ありませんので、お気軽にご相談ください。
+    </p>
+
+    <div class="form-wrap">
+      <ContactForm client:load />
+    </div>
+  </Container>
+</section>
+
+<style lang="scss">
+  .section {
+    background-color: var.$c-white-bg;
+    padding: 16rem 0;
+
+    @include mixin.sp {
+      padding: 8rem 0;
+    }
+  }
+
+  .text {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2;
+    margin-top: 1.6rem;
+
+    @include mixin.sp {
+      font-size: 1.5rem;
+      line-height: 1.75;
+    }
+  }
+
+  .form-wrap {
+    max-width: 90rem;
+    margin: 4rem auto 0;
+    background-color: var.$c-white;
+    padding: 8rem 8rem;
+    border-radius: 1rem;
+    box-shadow: 2rem 2rem 2rem var.$c-shadow;
+
+    @include mixin.tab {
+      padding: 6.4rem 4rem;
+    }
+
+    @include mixin.sp {
+      padding: 4rem 1.6rem;
+    }
+  }
+</style>

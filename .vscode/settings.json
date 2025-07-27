@@ -1,0 +1,9 @@
+{
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  }
+}

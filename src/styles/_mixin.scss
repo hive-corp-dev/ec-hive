@@ -1,0 +1,43 @@
+@use "sass:math";
+
+$bp-pc-largest: 1601px;
+$bp-pc-large: 1441px;
+$bp-tab: 1024px;
+$bp-sp: 767px;
+$bg-sp-s: 480px;
+
+@mixin pc-lx {
+  @media (min-width: ($bp-pc-largest)) {
+    @content;
+  }
+}
+
+@mixin pc-l {
+  @media (min-width: ($bp-pc-large)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: ($bp-tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($bp-sp)) {
+    @content;
+  }
+}
+
+@mixin sp-s {
+  @media (max-width: ($bg-sp-s)) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}

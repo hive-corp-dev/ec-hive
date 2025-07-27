@@ -1,0 +1,125 @@
+---
+import { IoArrowForward } from "react-icons/io5";
+
+interface Props {
+  href: string;
+  theme: "primary" | "secondary" | "outline" | "black";
+  icon?: "arrow";
+  class?: string;
+}
+
+const { href, theme, icon, class: className, ...rest } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={["btn", theme, className]}
+  {...rest}
+>
+  <span class="text"><slot /></span>
+
+  {
+    icon === "arrow" && (
+      <span class="icon">
+        <IoArrowForward />
+      </span>
+    )
+  }
+</a>
+
+<style lang="scss">
+  .btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: 0.1rem solid;
+    padding: 1.2rem 1.6rem;
+    gap: 2.4rem;
+    border-radius: 0.6rem;
+    transition: all 0.3s;
+
+    @include mixin.sp {
+      font-size: 1.4rem;
+      gap: 1.2rem;
+      border-width: 0.1rem;
+    }
+
+    span {
+      transform: translateY(0.1rem);
+    }
+
+    &.primary {
+      border-color: var.$c-main;
+      color: var.$c-white;
+      background-color: var.$c-main;
+
+      .icon {
+        color: var.$c-white;
+      }
+
+      @include mixin.hover {
+        &:hover {
+          background-color: var.$c-white;
+          color: var.$c-main;
+
+          svg {
+            color: var.$c-main;
+          }
+        }
+      }
+    }
+
+    &.black {
+      border-color: var.$c-dark;
+      background-color: var.$c-dark;
+      color: var.$c-white;
+
+      svg {
+        width: 2.4rem;
+        height: auto;
+
+        path {
+          fill: var.$c-white;
+        }
+      }
+
+      @include mixin.hover {
+        &:hover {
+          background-color: var.$c-white;
+          color: var.$c-dark;
+
+          svg {
+            color: var.$c-dark;
+
+            path {
+              fill: var.$c-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  
+
+  .icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8rem;
+
+    @include mixin.sp {
+      width: 1.4rem;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+</style>

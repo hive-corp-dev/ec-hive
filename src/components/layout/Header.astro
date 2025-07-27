@@ -1,0 +1,243 @@
+---
+import { Image } from "astro:assets";
+import logoMain from "@/assets/img/common/logo-main.svg";
+import logoWhite from "@/assets/img/common/logo-white.svg";
+---
+
+<header class="header js-header">
+  <div class="inner">
+    <a href="/" class="logo">
+      <Image src={logoMain} alt="ECHive" />
+      <Image src={logoWhite} alt="ECHive" />
+    </a>
+    <nav class="nav">
+      <ul class="list">
+        <li>
+          <a href="/#point">選ばれる理由</a>
+        </li>
+        <li>
+          <a href="/#demo">デモサイト</a>
+        </li>
+        <li>
+          <a href="/#plan">料金プラン</a>
+        </li>
+        <li>
+          <a href="/#flow">制作の流れ</a>
+        </li>
+        <li>
+          <a href="/#faq">よくあるご質問</a>
+        </li>
+      </ul>
+      <a href="/#contact" class="btn"> お問い合わせ </a>
+    </nav>
+    <!-- <HamburgerBtn /> -->
+  </div>
+</header>
+
+<style lang="scss">
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    z-index: var.$z-header;
+  }
+
+  .inner {
+    width: 100%;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+
+    @include mixin.tab {
+      padding: 2rem 3rem;
+    }
+
+    @include mixin.sp {
+      padding: 1.2rem 2rem;
+    }
+  }
+
+  .logo {
+    position: relative;
+    width: 16rem;
+    height: 4.4rem;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+
+    @include mixin.sp {
+      width: 12rem;
+      height: 3.3rem;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: opacity 0.3s;
+
+      &:nth-child(1) {
+        opacity: 1;
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+    }
+
+    @include mixin.hover {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    pointer-events: auto;
+
+    @include mixin.tab {
+      display: none;
+    }
+  }
+
+  .list {
+    display: flex;
+    gap: 2.4rem;
+    flex-shrink: 0;
+
+    li {
+      flex-shrink: 0;
+    }
+
+    a {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #314156;
+      transition: color 0.3s;
+
+      @include mixin.hover {
+        &:hover {
+          color: var.$c-main;
+        }
+      }
+    }
+  }
+
+  .btn {
+    width: 14rem;
+    height: 4.4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var.$c-main;
+    color: var.$c-white;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    border: 0.1rem solid var.$c-main;
+    font-size: 1.4rem;
+    margin-left: 2.4rem;
+    transition: all 0.3s;
+
+    @include mixin.hover {
+      &:hover {
+        background-color: var.$c-white;
+        color: var.$c-main;
+      }
+    }
+  }
+
+  .header.header-theme-white {
+    .logo {
+      img {
+        &:nth-child(1) {
+          opacity: 0;
+        }
+
+        &:nth-child(2) {
+          opacity: 1;
+        }
+      }
+    }
+
+    .list a {
+      color: var.$c-white;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".js-header") as HTMLElement;
+    const headerWhiteSections = document.querySelectorAll<HTMLElement>(
+      ".js-header-theme-white-section",
+    );
+
+    if (!header) {
+      console.error("Header要素が見つかりません。セレクタを確認してください。");
+      return;
+    }
+
+    const headerObserver = new IntersectionObserver(
+      (entries) => {
+        let whiteSectionVisible = false;
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            whiteSectionVisible = true;
+          }
+        });
+        if (whiteSectionVisible) {
+          header.classList.remove("header-theme-black");
+          header.classList.add("header-theme-white");
+        } else {
+          header.classList.remove("header-theme-white");
+          header.classList.add("header-theme-black");
+        }
+      },
+      {
+        root: null,
+        threshold: 0,
+        rootMargin: "0px 0px -99% 0px",
+      },
+    );
+
+    headerWhiteSections.forEach((section) => {
+      headerObserver.observe(section);
+    });
+
+    function updateHeaderThemeOnLoad() {
+      let whiteSectionFound = false;
+      const scrollY = window.scrollY; // ページ上部からのスクロール量
+
+      headerWhiteSections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        // 現在のスクロール位置が、白セクション内にあるかチェック
+        if (scrollY >= sectionTop && scrollY < sectionBottom) {
+          whiteSectionFound = true;
+        }
+      });
+
+      if (whiteSectionFound) {
+        header.classList.remove("header-theme-black");
+        header.classList.add("header-theme-white");
+      } else {
+        header.classList.remove("header-theme-white");
+        header.classList.add("header-theme-black");
+      }
+    }
+
+    updateHeaderThemeOnLoad();
+    window.addEventListener("resize", updateHeaderThemeOnLoad);
+  });
+</script>
