@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 
 export default function ContactForm() {
   const contentRef = useRef(null);
-  const recaptchaSrc = "https://www.google.com/recaptcha/api.js";
   const [selectedValue, setSelectedValue] = useState("");
 
   const handleSubmit = (e) => {
@@ -11,20 +10,10 @@ export default function ContactForm() {
     e.target.submit();
   };
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    contentRef.current.appendChild(script);
-    script.src = recaptchaSrc;
-
-    return () => {
-      script.remove();
-    };
-  }, []);
-
   return (
     <div className={styles.form} ref={contentRef}>
       <form
-        action="https://ssgform.com/s/MrgOYCrnpxVF"
+        action="https://hyperform.jp/api/MEq0IMsk"
         method="post"
         onSubmit={handleSubmit}
       >
@@ -96,7 +85,6 @@ export default function ContactForm() {
           <div className={styles.form_body}>
             <select
               name="お問い合わせ内容"
-              id=""
               required="required"
               value={selectedValue}
               onChange={(e) => setSelectedValue(e.target.value)}
@@ -122,7 +110,6 @@ export default function ContactForm() {
           <div className={styles.form_body}>
             <textarea
               name="お問い合わせ詳細"
-              id=""
               cols="30"
               rows="10"
               placeholder="詳細を入力してください"
@@ -131,13 +118,6 @@ export default function ContactForm() {
             ></textarea>
           </div>
         </label>
-
-        <div className={`${styles.form_recapcha} ${styles.form_row}`}>
-          <div
-            className="g-recaptcha"
-            data-sitekey="6LcsUpIqAAAAAPxe0fWMHzFXBKLG0Mq0x3kMC3Gd"
-          ></div>
-        </div>
 
         <div className={styles.form_row}>
           <div className={styles.form_btn}>

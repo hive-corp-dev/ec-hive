@@ -1,0 +1,39 @@
+---
+import Container from "@/components/common/Container.astro";
+const { en, jp } = Astro.props;
+---
+
+<section class="mv">
+  <Container>
+    <div class="content">
+      <div class="en">{en}</div>
+      <h1 class="jp">{jp}</h1>
+    </div>
+  </Container>
+</section>
+
+<style lang="scss">
+  .mv {
+    padding: 16rem 0 12rem;
+  }
+
+  .content {
+  }
+
+  .en {
+    color: var.$c-main;
+    font-family: var.$font-manrope;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .jp {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.6rem;
+    text-align: center;
+  }
+</style>
