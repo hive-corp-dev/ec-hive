@@ -13,7 +13,7 @@ export default function ContactForm() {
   return (
     <div className={styles.form} ref={contentRef}>
       <form
-        action="https://hyperform.jp/api/MEq0IMsk"
+        action="https://hyperform.jp/api/SSXRJsPR"
         method="post"
         onSubmit={handleSubmit}
       >

@@ -2,6 +2,9 @@
 import { Image } from "astro:assets";
 import logoMain from "@/assets/img/common/logo-main.svg";
 import logoWhite from "@/assets/img/common/logo-white.svg";
+
+// 現在のページがトップページかどうかチェック
+const isTopPage = Astro.url.pathname === "/";
 ---
 
 <header class="header js-header">
@@ -13,24 +16,34 @@ import logoWhite from "@/assets/img/common/logo-white.svg";
     <nav class="nav">
       <ul class="list">
         <li>
-          <a href="/#point">選ばれる理由</a>
+          <a href={isTopPage ? "#feature" : "/#feature"}>選ばれる理由</a>
         </li>
         <li>
-          <a href="/#demo">デモサイト</a>
+          <a href={isTopPage ? "#plan" : "/#plan"}>料金プラン</a>
         </li>
         <li>
-          <a href="/#plan">料金プラン</a>
+          <a href={isTopPage ? "#demo" : "/#demo"}>デモサイト</a>
         </li>
         <li>
-          <a href="/#flow">制作の流れ</a>
+          <a href={isTopPage ? "#flow" : "/#flow"}>制作の流れ</a>
         </li>
         <li>
-          <a href="/#faq">よくあるご質問</a>
+          <a href={isTopPage ? "#faq" : "/#faq"}>よくあるご質問</a>
         </li>
       </ul>
-      <a href="/#contact" class="btn"> お問い合わせ </a>
+      <a href={isTopPage ? "#contact" : "/#contact"} class="btn">
+        お問い合わせ
+      </a>
     </nav>
-    <!-- <HamburgerBtn /> -->
+
+    <button
+      class="menu-btn js-menu-btn"
+      aria-label="メニュー"
+      aria-expanded="false"
+      aria-controls="menu"
+    >
+      <span></span>
+    </button>
   </div>
 </header>
 
@@ -156,6 +169,66 @@ import logoWhite from "@/assets/img/common/logo-white.svg";
     }
   }
 
+  .menu-btn {
+    position: relative;
+    display: none;
+    width: 4rem;
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var.$c-black;
+    color: var.$c-white;
+    pointer-events: auto;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+    @include mixin.tab {
+      display: flex;
+    }
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 2.4rem;
+      height: 0.1rem;
+      background-color: var.$c-white;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transition: transform 0.3s;
+    }
+
+    span {
+    }
+
+    &::before {
+      transform: translateY(-0.6rem);
+    }
+
+    &::after {
+      transform: translateY(0.6rem);
+    }
+
+    &[aria-expanded="true"] {
+      span {
+        opacity: 0;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
   .header.header-theme-white {
     .logo {
       img {
@@ -176,68 +249,10 @@ import logoWhite from "@/assets/img/common/logo-white.svg";
 </style>
 
 <script>
+  import { initHeader, initHamburgerMenu } from "@/scripts/header";
+
   document.addEventListener("DOMContentLoaded", () => {
-    const header = document.querySelector(".js-header") as HTMLElement;
-    const headerWhiteSections = document.querySelectorAll<HTMLElement>(
-      ".js-header-theme-white-section",
-    );
-
-    if (!header) {
-      console.error("Header要素が見つかりません。セレクタを確認してください。");
-      return;
-    }
-
-    const headerObserver = new IntersectionObserver(
-      (entries) => {
-        let whiteSectionVisible = false;
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            whiteSectionVisible = true;
-          }
-        });
-        if (whiteSectionVisible) {
-          header.classList.remove("header-theme-black");
-          header.classList.add("header-theme-white");
-        } else {
-          header.classList.remove("header-theme-white");
-          header.classList.add("header-theme-black");
-        }
-      },
-      {
-        root: null,
-        threshold: 0,
-        rootMargin: "0px 0px -99% 0px",
-      },
-    );
-
-    headerWhiteSections.forEach((section) => {
-      headerObserver.observe(section);
-    });
-
-    function updateHeaderThemeOnLoad() {
-      let whiteSectionFound = false;
-      const scrollY = window.scrollY; // ページ上部からのスクロール量
-
-      headerWhiteSections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionBottom = sectionTop + section.offsetHeight;
-
-        // 現在のスクロール位置が、白セクション内にあるかチェック
-        if (scrollY >= sectionTop && scrollY < sectionBottom) {
-          whiteSectionFound = true;
-        }
-      });
-
-      if (whiteSectionFound) {
-        header.classList.remove("header-theme-black");
-        header.classList.add("header-theme-white");
-      } else {
-        header.classList.remove("header-theme-white");
-        header.classList.add("header-theme-black");
-      }
-    }
-
-    updateHeaderThemeOnLoad();
-    window.addEventListener("resize", updateHeaderThemeOnLoad);
+    initHeader();
+    initHamburgerMenu();
   });
 </script>

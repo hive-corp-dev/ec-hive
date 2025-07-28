@@ -13,7 +13,8 @@
       "@/styles/*": ["src/styles/*"],
       "@/layouts/*": ["src/layouts/*"],
       "@/assets/*": ["src/assets/*"],
-      "@/libs/*": ["src/libs/*"]
+      "@/libs/*": ["src/libs/*"],
+      "@/scripts/*": ["src/scripts/*"]
     }
   }
 }

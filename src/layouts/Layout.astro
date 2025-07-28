@@ -6,6 +6,7 @@ import "@/styles/global.scss";
 // Components
 import Header from "@/components/layout/Header.astro";
 import Footer from "@/components/layout/Footer.astro";
+import HamburgerMenu from "@/components/layout/HamburgerMenu.astro";
 // Fonts
 import "@fontsource-variable/noto-sans-jp";
 import "@fontsource-variable/manrope";
@@ -22,9 +23,17 @@ import "@fontsource-variable/manrope";
   <body>
     <div class="wrap">
       <Header />
+      <HamburgerMenu />
       <slot />
       <Footer />
     </div>
+    <script>
+      import { initSmoothScroll } from "@/scripts/smooth-scroll";
+
+      document.addEventListener("DOMContentLoaded", () => {
+        initSmoothScroll();
+      });
+    </script>
   </body>
 </html>
 

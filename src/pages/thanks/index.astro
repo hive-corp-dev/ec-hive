@@ -3,18 +3,25 @@ import Layout from "@/layouts/Layout.astro";
 import SubMv from "@/components/common/SubMv.astro";
 import Container from "@/components/common/Container.astro";
 import LinkButton from "@/components/common/LinkButton.astro";
+import { OUR_EMAIL } from "@/data/site-info";
 ---
 
 <Layout>
-  <SubMv en="THANK YOU" jp="お問い合わせ完了" />
+  <SubMv
+    en="THANK YOU"
+    jp="お問い合わせ完了"
+    breadcrumbPaths={[{ name: "お問い合わせ完了" }]}
+  />
   <div class="content">
     <Container>
-      <h2 class="title">お問い合わせありがとうございます。</h2>
+      <h2 class="title">
+        お問い合わせ<br class="br-sp" />ありがとうございます。
+      </h2>
       <p class="text">
         2営業日以内に担当者からご連絡させていただきますので、しばらくお待ちくださいませ。<br
         />万が一返信メールが届かない場合や担当者からの連絡が無い場合は、お手数ですが
         <span class="mail">
-          <a href="mailto:info@hive-corp.jp">info@hive-corp.jp</a>
+          <a href={`mailto:${OUR_EMAIL}`}>{OUR_EMAIL}</a>
         </span>
         に直接ご連絡ください。
       </p>
@@ -32,12 +39,20 @@ import LinkButton from "@/components/common/LinkButton.astro";
   .content {
     padding: 12rem 0;
     background-color: var.$c-white;
+
+    @include mixin.sp {
+      padding: 8rem 0;
+    }
   }
 
   .title {
     font-size: 3.2rem;
     font-weight: bold;
     text-align: center;
+
+    @include mixin.sp {
+      font-size: 2.4rem;
+    }
   }
 
   .text {
@@ -45,6 +60,11 @@ import LinkButton from "@/components/common/LinkButton.astro";
     text-align: center;
     line-height: 2.25;
     margin-top: 4rem;
+
+    @include mixin.sp {
+      font-size: 1.5rem;
+      margin-top: 2.4rem;
+    }
   }
 
   .mail {
@@ -55,9 +75,10 @@ import LinkButton from "@/components/common/LinkButton.astro";
       font-size: 4rem;
       font-family: var.$font-manrope;
       color: var.$c-main;
+      font-weight: bold;
 
       @include mixin.sp {
-        font-size: 1.6rem;
+        font-size: 2.4rem;
         text-decoration: underline;
       }
 
@@ -70,7 +91,15 @@ import LinkButton from "@/components/common/LinkButton.astro";
   }
 
   .btn {
-    max-width: 30rem;
+    max-width: 22.8rem;
     margin: 4rem auto 0;
+  }
+
+  .br-sp {
+    display: none;
+
+    @include mixin.sp {
+      display: block;
+    }
   }
 </style>

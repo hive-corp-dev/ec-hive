@@ -1,7 +1,222 @@
 ---
+import { Image } from "astro:assets";
+import Container from "@/components/common/Container.astro";
+import { IoArrowForward } from "react-icons/io5";
+import { LuExternalLink } from "react-icons/lu";
 
+// 現在のページがトップページかどうかチェック
+const isTopPage = Astro.url.pathname === "/";
 ---
 
-<nav class="menu">
-  <p>テスト</p>
+<nav class="menu" id="menu">
+  <div class="inner">
+    <ul class="list">
+      <li>
+        <a href="/">
+          <span>TOP</span>
+          <IoArrowForward />
+        </a>
+      </li>
+      <li>
+        <a href={isTopPage ? "#feature" : "/#feature"}>
+          <span>選ばれる理由</span>
+          <IoArrowForward />
+        </a>
+      </li>
+      <li>
+        <a href={isTopPage ? "#demo" : "/#demo"}>
+          <span>デモサイト</span>
+          <IoArrowForward />
+        </a>
+      </li>
+      <li>
+        <a
+          class="child-link"
+          href="https://hive-testing-themes.myshopify.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>アパレルECサイト<small>(パスワード: echive)</small></span>
+          <LuExternalLink />
+        </a>
+      </li>
+      <li>
+        <a href={isTopPage ? "#plan" : "/#plan"}>
+          <span>料金プラン</span>
+          <IoArrowForward />
+        </a>
+      </li>
+      <li>
+        <a href={isTopPage ? "#flow" : "/#flow"}>
+          <span>制作の流れ</span>
+          <IoArrowForward />
+        </a>
+      </li>
+      <li>
+        <a href={isTopPage ? "#faq" : "/#faq"}>
+          <span>よくあるご質問</span>
+          <IoArrowForward />
+        </a>
+      </li>
+    </ul>
+
+    <div class="btns">
+      <a href={isTopPage ? "#contact" : "/#contact"} class="btn btn-primary"> お問い合わせ </a>
+    </div>
+
+    <ul class="sub-link-list">
+      <li class="sub-link-item">
+        <a href="/privacy-policy"> プライバシーポリシー </a>
+      </li>
+    </ul>
+  </div>
 </nav>
+
+<style lang="scss">
+  .menu {
+    background-color: #f5f5f7;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var.$z-menu;
+    opacity: 0;
+    pointer-events: none;
+    height: 100dvh;
+    width: 100%;
+    padding-top: 9.7rem; // header height
+    overflow-y: auto;
+    transition: all 0.3s;
+
+    &.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .inner {
+    width: 100%;
+    height: 100%;
+    padding: 0 3rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include mixin.sp {
+      padding: 0 2rem;
+    }
+  }
+
+  .list {
+    border-top: 0.1rem solid #e7e7e7;
+
+    li {
+      border-bottom: 0.1rem solid #e7e7e7;
+
+      a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.6rem 1.2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var.$c-text;
+        transition: background-color 0.3s;
+
+        &.child-link {
+          padding-left: 3.2rem;
+
+          small {
+            color: var.$c-black-l-2;
+            font-weight: 500;
+            font-size: 1.3rem;
+            display: block;
+            margin-top: 0.4rem;
+          }
+        }
+
+        @include mixin.hover {
+          &:hover {
+            background-color: #e7e7e7;
+          }
+        }
+
+        svg {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .btns {
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+    margin: 3.2rem auto 0;
+    margin-bottom: 4.8rem;
+    max-width: 40rem;
+    width: 100%;
+
+    @include mixin.sp {
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        width: calc(50% - 1rem);
+      }
+    }
+
+    .btn {
+      padding: 1.2rem 2.4rem;
+      border-radius: 0.4rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s;
+      text-align: center;
+
+      &.btn-primary {
+        background-color: var.$c-main;
+        color: var.$c-white;
+
+        @include mixin.hover {
+          &:hover {
+            background-color: var.$c-main;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+
+  .sub-link-list {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    padding-bottom: 4.8rem;
+
+    @include mixin.sp {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    a {
+      text-decoration: underline;
+      color: var.$c-text;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+  }
+
+  .banner-wrap {
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 4.8rem;
+    display: flex;
+    justify-content: center;
+  }
+</style>

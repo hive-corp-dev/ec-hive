@@ -1,6 +1,7 @@
 ---
 import Container from "@/components/common/Container.astro";
-const { en, jp } = Astro.props;
+import Breadcrumb from "@/components/layout/Breadcrumb.astro";
+const { en, jp, breadcrumbPaths, class: className, ...rest } = Astro.props;
 ---
 
 <section class="mv">
@@ -8,13 +9,15 @@ const { en, jp } = Astro.props;
     <div class="content">
       <div class="en">{en}</div>
       <h1 class="jp">{jp}</h1>
+
+      <Breadcrumb paths={breadcrumbPaths} class="breadcrumb" />
     </div>
   </Container>
 </section>
 
 <style lang="scss">
   .mv {
-    padding: 16rem 0 12rem;
+    padding: 16rem 0 2.4rem;
   }
 
   .content {
@@ -27,6 +30,10 @@ const { en, jp } = Astro.props;
     font-weight: 800;
     letter-spacing: 0.1em;
     text-align: center;
+
+    @include mixin.sp {
+      font-size: 1.4rem;
+    }
   }
 
   .jp {
@@ -35,5 +42,13 @@ const { en, jp } = Astro.props;
     text-align: center;
     margin-top: 1.6rem;
     text-align: center;
+
+    @include mixin.sp {
+      font-size: 3rem;
+    }
+  }
+
+  .breadcrumb {
+    margin-top: 10rem;
   }
 </style>

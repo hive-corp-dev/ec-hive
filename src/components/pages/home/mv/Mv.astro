@@ -9,149 +9,204 @@ import LinkButton from "@/components/common/LinkButton.astro";
     <GridBg />
 
     <div class="content">
-      <p class="intro">Shopify構築・運用サポート</p>
-      <h1 class="title">
+      <p class="intro">世界シェアNo.1 Shopifyで構築</p>
+      <!-- <h1 class="title">
         私たちは<br class="br-sp" />高い技術力を活かし
         <br />
         高品質なECサイトを<br class="br-sp" />構築します
+      </h1> -->
+      <h1 class="title">
+        <strong>ECサイト開設</strong>から<br class="br-sp" /><strong
+          >運用<span class="-sp">サポート</span></strong
+        >まで、<br />すべてお任せください
       </h1>
 
-      <div class="btns">
-        <div class="btn">
-          <LinkButton
-            href="#contact"
-            theme="primary"
-            icon="arrow"
-            class="mv-btn"
-          >
-            お問い合わせ
-          </LinkButton>
+      <p class="sub-title">
+        <span>最短1週間でオープン！</span><br class="br-sp" /><span
+          >設計・構築・運用まで専門チームが完全サポート
+        </span>
+
+        <div class="btns">
+          <div class="btn">
+            <LinkButton
+              href="#contact"
+              theme="primary"
+              icon="arrow"
+              class="mv-btn"
+            >
+              お問い合わせ
+            </LinkButton>
+          </div>
+          <div class="btn">
+            <LinkButton href="#plan" theme="black" icon="arrow" class="mv-btn">
+              料金プラン
+            </LinkButton>
+          </div>
         </div>
-        <div class="btn">
-          <LinkButton href="#plan" theme="black" icon="arrow" class="mv-btn">
-            料金プラン
-          </LinkButton>
-        </div>
-      </div>
+      </p>
     </div>
   </div>
+
+  <style lang="scss">
+    .mv {
+      padding: 8.5rem 4rem 4rem;
+      height: 100svh;
+
+      @include mixin.tab {
+        padding: 8.5rem 3rem 3rem;
+      }
+
+      @include mixin.sp {
+        padding: 5.6rem 2rem 2rem;
+      }
+    }
+
+    .mv-inner {
+      position: relative;
+      padding: 12rem 0 8rem;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(to right top, #479cd4, #4aa1da);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+      justify-content: center;
+    }
+
+    .content {
+      position: relative;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .intro {
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.6rem;
+      letter-spacing: 0.05em;
+      border: 0.1rem solid var.$c-black;
+      padding: 0.3rem 1.2rem 0.3rem 1.2rem;
+      background-color: var.$c-white;
+
+      color: var.$c-white;
+      border-color: var.$c-white;
+      background-color: transparent;
+
+      @include mixin.sp {
+        font-size: 1.2rem;
+        padding-top: 0.3rem;
+        backdrop-filter: blur(1rem);
+      }
+    }
+
+    .title {
+      position: relative;
+      text-shadow: 0 1rem 1rem var.$c-shadow-text;
+      font-size: 4.8rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 2.4rem;
+      color: var.$c-white;
+
+      @include mixin.tab {
+        font-size: 4rem;
+      }
+
+      @include mixin.sp {
+        font-size: 3rem;
+        line-height: 1.5;
+        margin-top: 2.4rem;
+      }
+
+      strong {
+        font-size: 5.2rem;
+        font-weight: 800;
+
+        @include mixin.tab {
+          font-size: 4.4rem;
+        }
+
+        @include mixin.sp {
+          font-size: 3rem;
+        }
+
+        span.-sp {
+          display: none;
+
+          @include mixin.sp {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .sub-title {
+      color: var.$c-white;
+      font-size: 1.6rem;
+      font-weight: 600;
+      text-align: center;
+      line-height: 2;
+      margin-top: 1.6rem;
+
+      @include mixin.sp {
+        font-size: 1.2rem;
+        margin-top: 2.4rem;
+      }
+
+      span {
+        padding: 0.3rem 0.6rem;
+        line-height: 2.5;
+
+        @include mixin.sp {
+          background-color: var.$c-dark-bg;
+        }
+      }
+    }
+
+    .btns {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      margin: 4rem auto 0;
+
+      @include mixin.sp {
+        gap: 2rem;
+        width: 100%;
+        max-width: 50rem;
+        justify-content: space-between;
+        padding: 0 2rem;
+        margin-top: 2.4rem;
+      }
+    }
+
+    .btn {
+      width: 22rem;
+
+      @include mixin.sp {
+        width: 100%;
+      }
+    }
+
+    .mv-btn {
+      @include mixin.sp {
+        padding: 1.2rem 0.8rem;
+      }
+    }
+
+    .br-sp {
+      display: none;
+
+      @include mixin.sp {
+        display: block;
+      }
+    }
+  </style>
 </section>
-
-<style lang="scss">
-  .mv {
-    padding: 8.5rem 4rem 4rem;
-    height: 100svh;
-
-    @include mixin.tab {
-      padding: 8.5rem 3rem 3rem;
-    }
-
-    @include mixin.sp {
-      padding: 5.6rem 2rem 2rem;
-    }
-  }
-
-  .mv-inner {
-    position: relative;
-    padding: 12rem 0 8rem;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(to right top, #479cd4, #4aa1da);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
-    justify-content: center;
-  }
-
-  .content {
-    position: relative;
-    z-index: 4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .intro {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.6rem;
-    letter-spacing: 0.1em;
-    border: 0.1rem solid var.$c-black;
-    padding: 0.3rem 1.2rem 0.3rem 1.2rem;
-    background-color: var.$c-white;
-
-    color: var.$c-white;
-    border-color: var.$c-white;
-    background-color: transparent;
-
-    @include mixin.sp {
-      font-size: 1.2rem;
-      padding-top: 0.3rem;
-      backdrop-filter: blur(1rem);
-    }
-  }
-
-  .title {
-    position: relative;
-    text-shadow: 0 1rem 1rem var.$c-shadow-text;
-    font-size: 4.8rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 3.2rem;
-    color: var.$c-white;
-
-    @include mixin.tab {
-      font-size: 4rem;
-    }
-
-    @include mixin.sp {
-      font-size: 2.4rem;
-      line-height: 1.75;
-      margin-top: 2.4rem;
-    }
-  }
-
-  .btns {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    margin: 4rem auto 0;
-
-    @include mixin.sp {
-      gap: 2rem;
-      width: 100%;
-      max-width: 50rem;
-      justify-content: space-between;
-      padding: 0 2rem;
-      margin-top: 2.4rem;
-    }
-  }
-
-  .btn {
-    width: 22rem;
-
-    @include mixin.sp {
-      width: 100%;
-    }
-  }
-
-  .mv-btn {
-    @include mixin.sp {
-      padding: 1.2rem 0.8rem;
-    }
-  }
-
-  .br-sp {
-    display: none;
-
-    @include mixin.sp {
-      display: block;
-    }
-  }
-</style>

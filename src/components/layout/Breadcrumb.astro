@@ -1,0 +1,103 @@
+---
+import { AiFillHome } from "react-icons/ai";
+import { FiChevronRight } from "react-icons/fi";
+
+const { paths, class: className, ...rest } = Astro.props;
+---
+
+<div class:list={["breadcrumb", className]} {...rest}>
+  <ul class="list">
+    <li class="item">
+      <a href="/" class="link is-home">
+        <AiFillHome />
+        <span>HOME</span>
+      </a>
+      <div class="arrow">
+        <FiChevronRight />
+      </div>
+    </li>
+
+    {
+      paths.map((path, i) => {
+        const { name, slug } = path;
+        if (slug) {
+          return (
+            <li class="item">
+              <a href={slug} class="link">
+                <span class="name">{name}</span>
+              </a>
+              {paths.length !== i + 1 && (
+                <div class="arrow">
+                  <FiChevronRight />
+                </div>
+              )}
+            </li>
+          );
+        } else {
+          return (
+            <li class="item">
+              <span class="name">{name}</span>
+              {paths.length !== i + 1 && (
+                <div class="arrow">
+                  <FiChevronRight />
+                </div>
+              )}
+            </li>
+          );
+        }
+      })
+    }
+  </ul>
+</div>
+
+<style lang="scss">
+  .list {
+  }
+
+  .item {
+    position: relative;
+    display: inline;
+    font-weight: 500;
+    margin-right: 0.8rem;
+
+    @include mixin.sp {
+      margin-right: 0.4rem;
+    }
+  }
+
+  .link {
+    position: relative;
+    text-decoration: underline;
+    transition: all 0.3s;
+
+    &.is-home {
+      padding-left: 2rem;
+
+      svg {
+        position: absolute;
+        left: 0;
+        top: 0.4rem;
+      }
+    }
+
+    @include mixin.hover {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .name {
+  }
+
+  .arrow {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-left: 0.8rem;
+    transform: translateY(0.3rem);
+
+    @include mixin.sp {
+      margin-left: 0.4rem;
+    }
+  }
+</style>

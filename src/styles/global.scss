@@ -29,6 +29,10 @@ body {
   @include mixin.sp {
     font-size: 1.5rem;
   }
+
+  &.is-menu-open {
+    overflow: hidden;
+  }
 }
 
 img {

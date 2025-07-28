@@ -4,6 +4,9 @@ import { IoArrowForward } from "react-icons/io5";
 import { LuExternalLink } from "react-icons/lu";
 import { Image } from "astro:assets";
 import logoWhite from "@/assets/img/common/logo-white.svg";
+
+// 現在のページがトップページかどうかチェック
+const isTopPage = Astro.url.pathname === "/";
 ---
 
 <footer class="footer">
@@ -21,22 +24,32 @@ import logoWhite from "@/assets/img/common/logo-white.svg";
       <nav class="nav">
         <ul class="nav-row">
           <li class="nav-col">
-            <a class="nav-link" href="/#point"> 選ばれる理由 </a>
+            <a class="nav-link" href={isTopPage ? "#feature" : "/#feature"}>
+              選ばれる理由
+            </a>
           </li>
           <li class="nav-col">
-            <a class="nav-link" href="/#demo"> デモサイト </a>
+            <a class="nav-link" href={isTopPage ? "#plan" : "/#plan"}
+              >料金プラン</a
+            >
           </li>
           <li class="nav-col">
-            <a class="nav-link" href="/#plan">料金プラン</a>
+            <a class="nav-link" href={isTopPage ? "#demo" : "/#demo"}>
+              デモサイト
+            </a>
           </li>
           <li class="nav-col">
-            <a class="nav-link" href="/#flow"> 制作の流れ </a>
+            <a class="nav-link" href={isTopPage ? "#flow" : "/#flow"}>
+              制作の流れ
+            </a>
           </li>
           <li class="nav-col">
-            <a class="nav-link" href="/#faq"> よくあるご質問 </a>
+            <a class="nav-link" href={isTopPage ? "#faq" : "/#faq"}>
+              よくあるご質問
+            </a>
           </li>
           <li class="nav-btns-col">
-            <a class="nav-btn" href="/#contact">
+            <a class="nav-btn" href={isTopPage ? "#contact" : "/#contact"}>
               <span>お問い合わせ</span>
               <span class="nav-btn-arrow">
                 <IoArrowForward />
