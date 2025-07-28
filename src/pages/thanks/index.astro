@@ -4,9 +4,10 @@ import SubMv from "@/components/common/SubMv.astro";
 import Container from "@/components/common/Container.astro";
 import LinkButton from "@/components/common/LinkButton.astro";
 import { OUR_EMAIL } from "@/data/site-info";
+import { THANKS_METADATA } from "@/data/metadata";
 ---
 
-<Layout>
+<Layout title={THANKS_METADATA.title} description={THANKS_METADATA.description}>
   <SubMv
     en="THANK YOU"
     jp="お問い合わせ完了"

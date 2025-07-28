@@ -1,0 +1,110 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { NOT_FOUND_METADATA } from "@/data/metadata";
+import Container from "@/components/common/Container.astro";
+import LinkButton from "@/components/common/LinkButton.astro";
+---
+
+<Layout
+  title={NOT_FOUND_METADATA.title}
+  description={NOT_FOUND_METADATA.description}
+  noindex={true}
+>
+  <div class="content">
+    <main class="main">
+      <Container class="container">
+        <p class="title-en">
+          <span>404</span> NOT FOUND
+        </p>
+        <h1 class="title">
+          お探しのページが<br class="br-sp" />見つかりません
+        </h1>
+        <div class="text">
+          申し訳ございません。あなたがアクセスしようとしたページが見つかりませんでした。
+          <br />
+          ページが移動または削除されたか、URLの入力間違いの可能性があります。
+          <br />
+          正しいURLをご入力いただくか、メニューからご覧になりたい情報をお探しください。
+        </div>
+
+        <div class="btn-wrap">
+          <LinkButton href="/" icon="arrow" theme="primary"> HOME </LinkButton>
+        </div>
+      </Container>
+    </main>
+  </div>
+</Layout>
+
+<style lang="scss">
+  .main {
+    position: relative;
+    padding: 20rem 0 20rem;
+
+    @include mixin.sp {
+      padding: 12rem 0 10rem;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .title-en {
+    font-family: var.$font-manrope;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var.$c-main;
+    margin-top: 0.8rem;
+    text-align: center;
+
+    @include mixin.sp {
+      font-size: 1.6rem;
+    }
+  }
+
+  .title {
+    position: relative;
+    font-size: 3.6rem;
+    font-weight: bold;
+    margin-top: 1.6rem;
+    letter-spacing: 0.08em;
+    text-align: center;
+
+    @include mixin.sp {
+      font-size: 2.6rem;
+    }
+
+    .br-sp {
+      display: none;
+
+      @include mixin.sp {
+        display: block;
+      }
+    }
+  }
+
+  .text {
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.2;
+    letter-spacing: 0.06em;
+    margin-top: 3.2rem;
+    text-align: center;
+
+    @include mixin.sp {
+      font-size: 1.4rem;
+    }
+  }
+
+  .btn-wrap {
+    width: 24rem;
+    margin: 5.6rem auto 0;
+
+    @include mixin.sp {
+      width: 20rem;
+      margin-top: 4rem;
+    }
+  }
+</style>

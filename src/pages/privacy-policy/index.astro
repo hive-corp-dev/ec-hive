@@ -2,11 +2,14 @@
 import Layout from "@/layouts/Layout.astro";
 import SubMv from "@/components/common/SubMv.astro";
 import Container from "@/components/common/Container.astro";
-import LinkButton from "@/components/common/LinkButton.astro";
 import { OUR_EMAIL } from "@/data/site-info";
+import { PRIVACY_POLICY_METADATA } from "@/data/metadata";
 ---
 
-<Layout>
+<Layout
+  title={PRIVACY_POLICY_METADATA.title}
+  description={PRIVACY_POLICY_METADATA.description}
+>
   <SubMv
     en="PRIVACY POLICY"
     jp="プライバシーポリシー"
