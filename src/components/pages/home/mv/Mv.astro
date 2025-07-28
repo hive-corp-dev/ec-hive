@@ -30,7 +30,7 @@ import LinkButton from "@/components/common/LinkButton.astro";
           <div class="btn">
             <LinkButton
               href="#contact"
-              theme="primary"
+              theme="black"
               icon="arrow"
               class="mv-btn"
             >
@@ -38,7 +38,12 @@ import LinkButton from "@/components/common/LinkButton.astro";
             </LinkButton>
           </div>
           <div class="btn">
-            <LinkButton href="#plan" theme="black" icon="arrow" class="mv-btn">
+            <LinkButton
+              href="#plan"
+              theme="white-black"
+              icon="arrow"
+              class="mv-btn"
+            >
               料金プラン
             </LinkButton>
           </div>
@@ -57,7 +62,7 @@ import LinkButton from "@/components/common/LinkButton.astro";
       }
 
       @include mixin.sp {
-        padding: 5.6rem 2rem 2rem;
+        padding: 6.4rem 2rem 2rem;
       }
     }
 
@@ -73,6 +78,10 @@ import LinkButton from "@/components/common/LinkButton.astro";
       overflow: hidden;
       position: relative;
       justify-content: center;
+
+      @include mixin.sp {
+        padding: 8rem 0;
+      }
     }
 
     .content {
@@ -165,7 +174,7 @@ import LinkButton from "@/components/common/LinkButton.astro";
         line-height: 2.5;
 
         @include mixin.sp {
-          background-color: var.$c-dark-bg;
+          background-color: #203f54;
         }
       }
     }

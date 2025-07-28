@@ -3,7 +3,7 @@ import { IoArrowForward } from "react-icons/io5";
 
 interface Props {
   href: string;
-  theme: "primary" | "secondary" | "outline" | "black";
+  theme: "primary" | "secondary" | "white-black" | "black";
   icon?: "arrow";
   class?: string;
 }
@@ -11,11 +11,7 @@ interface Props {
 const { href, theme, icon, class: className, ...rest } = Astro.props;
 ---
 
-<a
-  href={href}
-  class:list={["btn", theme, className]}
-  {...rest}
->
+<a href={href} class:list={["btn", theme, className]} {...rest}>
   <span class="text"><slot /></span>
 
   {
@@ -72,6 +68,32 @@ const { href, theme, icon, class: className, ...rest } = Astro.props;
       }
     }
 
+    &.white-black {
+      background-color: var.$c-white;
+      border-color: var.$c-dark;
+      color: var.$c-dark;
+
+      svg {
+        color: var.$c-dark;
+      }
+
+      @include mixin.hover {
+        &:hover {
+          background-color: var.$c-main;
+          border-color: var.$c-main;
+          color: var.$c-white;
+
+          svg {
+            color: var.$c-white;
+
+            path {
+              fill: var.$c-white;
+            }
+          }
+        }
+      }
+    }
+
     &.black {
       border-color: var.$c-dark;
       background-color: var.$c-dark;
@@ -103,8 +125,6 @@ const { href, theme, icon, class: className, ...rest } = Astro.props;
     }
   }
 
-  
-
   .icon {
     position: relative;
     display: flex;
@@ -121,5 +141,4 @@ const { href, theme, icon, class: className, ...rest } = Astro.props;
       height: auto;
     }
   }
-
 </style>
