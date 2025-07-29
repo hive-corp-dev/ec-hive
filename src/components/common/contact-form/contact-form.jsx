@@ -25,7 +25,7 @@ export default function ContactForm() {
           <div className={styles.form_body}>
             <input
               type="text"
-              name="お名前"
+              name="name"
               placeholder="お名前"
               required="required"
               className={styles.form_input}
@@ -40,7 +40,7 @@ export default function ContactForm() {
           <div className={styles.form_body}>
             <input
               type="text"
-              name="法人名"
+              name="company"
               placeholder="株式会社ECHive"
               className={styles.form_input}
             />
@@ -54,7 +54,7 @@ export default function ContactForm() {
           <div className={styles.form_body}>
             <input
               type="tel"
-              name="電話番号"
+              name="tel"
               placeholder="000-0000-0000"
               className={styles.form_input}
             />
@@ -69,7 +69,7 @@ export default function ContactForm() {
           <div className={styles.form_body}>
             <input
               type="email"
-              name="メールアドレス"
+              name="email"
               placeholder="example@mail.com"
               required="required"
               className={styles.form_input}
@@ -84,7 +84,7 @@ export default function ContactForm() {
           </div>
           <div className={styles.form_body}>
             <select
-              name="お問い合わせ内容"
+              name="category"
               required="required"
               value={selectedValue}
               onChange={(e) => setSelectedValue(e.target.value)}
@@ -109,7 +109,7 @@ export default function ContactForm() {
           </div>
           <div className={styles.form_body}>
             <textarea
-              name="お問い合わせ詳細"
+              name="inquiry"
               cols="30"
               rows="10"
               placeholder="詳細を入力してください"
