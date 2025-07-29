@@ -1,1 +1,1 @@
-export const OUR_EMAIL = "info@hive-corp.jp";
+export const OUR_EMAIL = "ec@hive-corp.jp";

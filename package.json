@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
+    "@astrojs/sitemap": "^3.4.2",
     "@fontsource-variable/manrope": "^5.2.6",
     "@fontsource-variable/noto-sans-jp": "^5.2.6",
     "@types/react": "^19.1.8",

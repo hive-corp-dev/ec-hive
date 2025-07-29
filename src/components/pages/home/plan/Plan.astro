@@ -1,6 +1,7 @@
 ---
 import Container from "@/components/common/Container.astro";
 import SectionTitle from "@/components/common/SectionTitle.astro";
+import PlanTable from "./parts/PlanTable.astro";
 ---
 
 <section class="section" id="plan">
@@ -13,144 +14,19 @@ import SectionTitle from "@/components/common/SectionTitle.astro";
       2つのプランからお選びいただけます。
     </p>
 
-    <div class="plan-cols">
-      <div class="info-col">
-        <ul class="info-list">
-          <li class="info-item">制作期間</li>
-          <li class="info-item">制作ページ</li>
-          <li class="info-item">商品登録</li>
-          <li class="info-item">デザイン</li>
-          <li class="info-item">多言語化</li>
-          <li class="info-item">追加機能</li>
-        </ul>
-      </div>
-      <div class="plan-col is-standard">
-        <ul class="plan-list">
-          <li class="plan-item is-head">
-            <p class="plan-intro">充実した機能を備えた</p>
-            <div class="plan-head-main">
-              <h3 class="plan-title">標準プラン</h3>
-              <span class="plan-price">
-                <span class="price">
-                  <span>¥</span>298,000
-                  <span>〜</span>
-                </span>
-              </span>
-            </div>
-          </li>
-          <li class="plan-item">
-            <p class="plan-item-head">制作期間</p>
-            <p>2週間〜4週間</p>
-          </li>
-          <li class="plan-item">
-            <p class="plan-item-head">制作ページ</p>
-            <ul class="plan-check-list">
-              <li>必須ページ</li>
-              <li>よくあるご質問</li>
-              <li>会社概要</li>
-              <li>お知らせ一覧・詳細</li>
-              <li>お問い合わせ</li>
-            </ul>
-          </li>
-          <li class="plan-item">
-            <p class="plan-item-head">商品登録</p>
-            <p>無制限</p>
-          </li>
-          <li class="plan-item">
-            <p class="plan-item-head">デザイン</p>
-            <p>
-              既存テーマのカスタマイズ
-              <br />
-              <small>（コーディング対応可）</small>
-            </p>
-          </li>
-          <li class="plan-item">
-            <p class="plan-item-head">多言語化</p>
-            <p>3言語まで対応可能</p>
-          </li>
-          <li class="plan-item">
-            <p class="plan-item-head">追加機能</p>
-            <ul class="plan-check-list">
-              <li>
-                サイト解析ツール
-                <br />
-                <small
-                  >（Googleアナリティクス、サーチコンソール、Clarity等）</small
-                >
-              </li>
-              <li>お問い合わせフォーム</li>
-              <li>ブログ機能</li>
-              <li>SNS埋め込み</li>
-              <li>カスタマーレビュー</li>
-              <li>ソーシャルログイン</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="plan-col is-custom">
-        <ul class="plan-list">
-          <li class="plan-item is-head">
-            <p class="plan-intro">デザインからフルカスタマイズ</p>
-            <div class="plan-head-main">
-              <h3 class="plan-title">オーダーメイドプラン</h3>
-              <span class="plan-price">
-                <span class="negotiable">要相談</span>
-              </span>
-            </div>
-          </li>
-          <li class="plan-item">
-            <p class="plan-item-head">制作期間</p>
-            <p>1ヶ月〜</p>
-          </li>
-          <li class="plan-item">
-            <p class="plan-item-head">制作ページ</p>
-            <ul class="plan-check-list">
-              <li>必須ページ</li>
-              <li>よくあるご質問</li>
-              <li>会社概要</li>
-              <li>お知らせ一覧・詳細</li>
-              <li>お問い合わせ</li>
-              <ul class="plan-plus-list">
-                <li>ページの追加無制限</li>
-              </ul>
-            </ul>
-          </li>
-          <li class="plan-item">
-            <p class="plan-item-head">商品登録</p>
-            <p>無制限</p>
-          </li>
-          <li class="plan-item">
-            <p class="plan-item-head">デザイン</p>
-            <p>オーダーメイド</p>
-          </li>
-          <li class="plan-item">
-            <p class="plan-item-head">多言語化</p>
-            <p>無制限</p>
-          </li>
-          <li class="plan-item">
-            <p class="plan-item-head">追加機能</p>
-            <ul class="plan-check-list">
-              <li>
-                サイト解析ツール
-                <br />
-                <small
-                  >（Googleアナリティクス、サーチコンソール、Clarity等）</small
-                >
-              </li>
-              <li>お問い合わせフォーム</li>
-              <li>ブログ機能</li>
-              <li>SNS埋め込み</li>
-              <li>カスタマーレビュー</li>
-              <li>ソーシャルログイン</li>
-            </ul>
-            <ul class="plan-plus-list">
-              <li>必要な機能を実装可能</li>
-              <li>独自のカスタムアプリ開発も可能</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <PlanTable />
+
+    <ul class="sub-info-list">
+      <li>
+        <span>※1</span>
+        必須ページは、トップページ、商品一覧ページ、商品詳細ページ、カートページ、チェックアウトページ、その他ポリシーページ一式（利用規約、プライバシーポリシー、特定商法取引法に基づく表記、返品・返金ポリシー、配送ポリシー）です。
+      </li>
+
+      <li>
+        <span>※2</span>
+        サイト解析ツールは、Googleアナリティクス、サーチコンソール、Clarityからご希望のものを全て導入可能です。
+      </li>
+    </ul>
 
     <div class="bottom">
       <span class="plus"></span>
@@ -171,6 +47,12 @@ import SectionTitle from "@/components/common/SectionTitle.astro";
         <li>予約販売</li>
         <li>チャットbot設置</li>
       </ul>
+
+      <p class="option-sub-text">
+        上記以外にも、ご要望に合わせて機能を追加することが可能です。<br
+          class="br-sp-none"
+        />お気軽にご相談ください。
+      </p>
     </div>
   </Container>
 </section>
@@ -192,273 +74,21 @@ import SectionTitle from "@/components/common/SectionTitle.astro";
     margin-top: 2.4rem;
   }
 
-  .plan-cols {
-    display: flex;
-    gap: 4rem;
-    margin: 4rem auto 0;
-
-    @include mixin.tab {
-      gap: 2.4rem;
-    }
-
-    @include mixin.sp {
-      flex-direction: column;
-    }
-  }
-
-  .info-col {
-    width: 15rem;
-
-    @include mixin.tab {
-      display: none;
-    }
-  }
-
-  .info-list {
-    margin-top: 15.9rem;
-    font-weight: bold;
-    background-color: #354851;
-    border-radius: 1rem;
-    box-shadow: 2rem 2rem 2rem var.$c-shadow;
-    color: var.$c-white;
-
-    .info-item {
-      padding: 2rem;
-      border-bottom: 1px solid rgba(var.$c-white, 0.1);
-
-      &:nth-child(2) {
-        min-height: 23.3rem;
-      }
-
-      &:nth-child(4) {
-        min-height: 8.9rem;
-      }
-
-      &:nth-child(6) {
-        min-height: 34.5rem;
-      }
-
-      &:last-child {
-        border-bottom: none;
-      }
-    }
-  }
-
-  .plan-col {
-    flex: 1;
-
-    &.is-standard {
-      .plan-item {
-        &.is-head {
-          background: var.$c-gr-02 !important;
-          background: #5bbed8 !important;
-
-          .plan-intro {
-            background: #4aadc7;
-          }
-        }
-      }
-
-      .plan-item-head {
-        // background-color: #e6fafe;
-      }
-    }
-
-    &.is-custom {
-      .plan-item {
-        &.is-head {
-          background: var.$c-gr-01 !important;
-
-          .plan-intro {
-            background: #628dd7;
-          }
-        }
-      }
-
-      .plan-item-head {
-        // background-color: #dfedff;
-      }
-    }
-  }
-
-  .plan-list {
-    font-weight: 500;
-  }
-
-  .plan-item {
-    background-color: var.$c-white;
-    box-shadow: 2rem 2rem 2rem var.$c-shadow;
-    padding: 2rem;
-    border-bottom: 0.1rem solid rgba(var.$c-darkest, 0.05);
-
-    @include mixin.tab {
-      font-size: 1.5rem;
-      border-bottom: none;
-    }
-
-    &.is-head {
-      color: var.$c-white;
-      border-radius: 1rem 1rem 0 0;
-      overflow: hidden;
-      padding: 0;
-      text-align: center;
-      min-height: 15.9rem;
-    }
-
-    &:last-child {
-      border-radius: 0 0 1rem 1rem;
-    }
-
-    &:nth-child(3) {
-      min-height: 23.3rem;
-
-      @include mixin.tab {
-        min-height: 26.6rem;
-      }
-
-      @include mixin.sp {
-        min-height: 0;
-      }
-    }
-
-    &:nth-child(5) {
-      min-height: 8.9rem;
-
-      @include mixin.tab {
-        min-height: 12.7rem;
-      }
-
-      @include mixin.sp {
-        min-height: 0;
-      }
-    }
-
-    &:nth-child(7) {
-      min-height: 34.5rem;
-
-      @include mixin.tab {
-        min-height: 37.2rem;
-      }
-
-      @include mixin.sp {
-        min-height: 0;
-      }
-    }
-
-    small {
-      font-weight: 500;
-      font-size: 1.3rem;
-      color: var.$c-black-l-2;
-    }
-
-    .subText {
-      display: block;
-      font-size: 1.4rem;
-      margin-top: 0.6rem;
-    }
-  }
-
-  .plan-item-head {
-    display: none;
-
-    font-weight: 600;
-    padding: 0.6rem 1.2rem;
-    margin-bottom: 1.2rem;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    background: var.$c-white-bg;
-
-    @include mixin.tab {
-      display: flex;
-    }
-  }
-
-  .plan-intro {
+  .sub-info-list {
     font-size: 1.3rem;
-    font-weight: bold;
-    padding: 1rem;
-    border-radius: 1rem 1rem 0 0;
-  }
+    line-height: 1.75;
+    margin-top: 2.4rem;
+    color: var.$c-black-l-2;
+    display: grid;
+    gap: 1.6rem;
 
-  .plan-head-main {
-    padding: 2.2rem 1.2rem;
-  }
-
-  .plan-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-
-    @include mixin.sp {
-      font-size: 1.6rem;
-    }
-  }
-
-  .plan-price {
-    font-weight: bold;
-
-    .price {
-      font-family: var.$font-manrope;
-      font-weight: 800;
-      font-size: 3.6rem;
-      letter-spacing: 0;
+    li {
+      display: flex;
 
       span {
-        font-size: 2.8rem;
-        margin: 0 0.4rem;
-      }
-    }
-
-    .negotiable {
-      font-size: 3rem;
-      font-weight: bold;
-      margin-top: 0.6rem;
-      display: block;
-    }
-  }
-
-  .plan-check-list,
-  .plan-plus-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .plan-check-list {
-    li {
-      padding: 0.4rem 0;
-      line-height: 1.5;
-
-      &:last-child {
-        border-bottom: none;
-      }
-
-      &::before {
-        content: "✓";
-        color: var.$c-main;
-        font-weight: 700;
-        margin-right: 0.8rem;
-      }
-    }
-  }
-
-  .plan-plus-list {
-    li {
-      padding: 0.4rem 0;
-      line-height: 1.5;
-
-      &:last-child {
-        border-bottom: none;
-      }
-
-      &::before {
-        content: "+";
-        color: var.$c-main;
-        font-size: 1.8rem;
-        font-weight: 500;
-        margin-right: 0.8rem;
-        line-height: 1;
+        display: block;
+        flex-shrink: 0;
+        margin-right: 0.75em;
       }
     }
   }
@@ -599,11 +229,29 @@ import SectionTitle from "@/components/common/SectionTitle.astro";
     }
   }
 
+  .option-sub-text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 4rem;
+    line-height: 1.8;
+
+    @include mixin.sp {
+      font-size: 1.6rem;
+    }
+  }
+
   .br-sp {
     display: none;
 
     @include mixin.sp {
       display: block;
+    }
+  }
+
+  .br-sp-none {
+    @include mixin.sp {
+      display: none;
     }
   }
 </style>
