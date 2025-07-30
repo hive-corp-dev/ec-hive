@@ -8,9 +8,12 @@ import Header from "@/components/layout/Header.astro";
 import Footer from "@/components/layout/Footer.astro";
 import HamburgerMenu from "@/components/layout/HamburgerMenu.astro";
 import Seo from "@/components/head/Seo.astro";
+import GoogleAnalytics from "@/components/head/GoogleAnalytics.astro";
 // Fonts
 import "@fontsource-variable/noto-sans-jp";
 import "@fontsource-variable/manrope";
+
+const isProduction = import.meta.env.PROD;
 
 const { title, description, ogImageUrl, ogType, noindex, nofollow } =
   Astro.props;
@@ -31,6 +34,7 @@ const { title, description, ogImageUrl, ogType, noindex, nofollow } =
       noindex={noindex}
       nofollow={nofollow}
     />
+    {isProduction && <GoogleAnalytics />}
   </head>
   <body>
     <div class="wrap">
