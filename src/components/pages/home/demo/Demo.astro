@@ -4,6 +4,7 @@ import SectionTitle from "@/components/common/SectionTitle.astro";
 import { Image } from "astro:assets";
 import { RiExternalLinkLine } from "react-icons/ri";
 import demo01 from "@/assets/img/home/demo-01-thumb.png";
+import demo02 from "@/assets/img/home/demo-02-thumb.png";
 ---
 
 <section class="section js-header-theme-white-section" id="demo">
@@ -24,7 +25,7 @@ import demo01 from "@/assets/img/home/demo-01-thumb.png";
 
           <div class="content">
             <div class="plan">標準プラン</div>
-            <h3 class="name">アパレルECサイト</h3>
+            <h3 class="name">アパレルECサイト: HIVE</h3>
             <p class="text">
               アパレルブランドをイメージして制作した、シンプルなサイトです。基本的なページ構成に加え、ブログ機能やお問い合わせ機能も備えています。
               <br />
@@ -37,6 +38,40 @@ import demo01 from "@/assets/img/home/demo-01-thumb.png";
               </p>
               <a
                 href="https://hive-testing-themes.myshopify.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="view"
+              >
+                <span class="text">デモサイトを見る</span>
+                <RiExternalLinkLine />
+                <span class="tooltip">パスワード: echive</span>
+              </a>
+            </div>
+          </div>
+        </span>
+      </li>
+
+      <li class="item">
+        <span class="link">
+          <div class="thumb-wrap">
+            <Image src={demo02} alt="日本酒ECサイト" class="thumb" />
+          </div>
+
+          <div class="content">
+            <div class="plan">標準プラン</div>
+            <h3 class="name">日本酒ECサイト: 髙木醸造所</h3>
+            <p class="text">
+              日本酒を販売する醸造所をイメージして制作したサイトです。基本ページ一式、お知らせ投稿機能、お問い合わせの他に、liquidカスタマイズによる完全オリジナルデザインのページ制作を行いました。
+              <br />
+              酒類のネット販売に必須な年齢確認モーダルやフォーム入力欄機能をアプリを使わずに独自開発。また、レビュー機能を取り入れることで、購買率の向上も期待できる仕様になっています。
+            </p>
+
+            <div class="view-wrap">
+              <p class="password">
+                <span>パスワード: </span><span>echive</span>
+              </p>
+              <a
+                href="https://takaki-brewery.myshopify.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="view"
@@ -85,6 +120,7 @@ import demo01 from "@/assets/img/home/demo-01-thumb.png";
   .link {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     background-color: var.$c-dark-bg-2;
     background-color: #2d3236;
     padding: 6.4rem;
@@ -107,11 +143,12 @@ import demo01 from "@/assets/img/home/demo-01-thumb.png";
   .thumb-wrap {
     position: relative;
     width: calc(50% - 3.2rem);
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 11;
     overflow: hidden;
 
     @include mixin.tab {
       width: 100%;
+      aspect-ratio: 16 / 9;
     }
   }
 
@@ -174,6 +211,7 @@ import demo01 from "@/assets/img/home/demo-01-thumb.png";
     align-items: center;
     margin-top: auto;
     width: 100%;
+    margin-top: 1.2rem;
 
     @include mixin.sp {
       margin-top: 2rem;
