@@ -9,6 +9,7 @@ import Flow from "@/components/pages/home/flow/Flow.astro";
 import Faq from "@/components/pages/home/faq/Faq.astro";
 import Contact from "@/components/pages/home/contact/Contact.astro";
 import { TOP_METADATA } from "@/data/metadata";
+import CampaignBanner from "@/components/common/CampaignBanner.astro";
 ---
 
 <Layout title={TOP_METADATA.title} description={TOP_METADATA.description}>
@@ -20,4 +21,5 @@ import { TOP_METADATA } from "@/data/metadata";
   <Flow />
   <Faq />
   <Contact />
+  <CampaignBanner />
 </Layout>

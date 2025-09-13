@@ -1,0 +1,97 @@
+---
+import { Image } from "astro:assets";
+import campaignBanner from "@/assets/img/common/campaign-banner.png";
+import campaignBanner2 from "@/assets/img/common/campaign-banner-2.png";
+---
+
+<div class="campaign-banner" id="campaign-banner">
+  <button class="campaign-banner__close" id="close-banner"> × </button>
+  <a href="#contact" class="campaign-banner__link">
+    <Image src={campaignBanner2} alt="モニター企画実施中！" />
+  </a>
+</div>
+
+<script>
+  const banner = document.getElementById("campaign-banner");
+  const closeBtn = document.getElementById("close-banner");
+
+  if (sessionStorage.getItem("campaignBannerHidden") === "true") {
+    banner.style.display = "none";
+  }
+
+  closeBtn.addEventListener("click", () => {
+    banner.style.opacity = "0";
+    setTimeout(() => {
+      banner.style.display = "none";
+    }, 300);
+    sessionStorage.setItem("campaignBannerHidden", "true");
+  });
+</script>
+
+<style lang="scss">
+  .campaign-banner {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    z-index: var.$z-campaign-banner;
+    width: 50rem;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+    @include mixin.sp {
+      width: calc(100% - 6rem);
+      bottom: 2rem;
+      right: 3rem;
+    }
+  }
+
+  .campaign-banner__close {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    background: black;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .campaign-banner__inner {
+    width: 100%;
+    padding: 3rem;
+    margin: 0 auto;
+  }
+
+  .campaign-banner__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .campaign-banner__title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .campaign-banner__text {
+    font-size: 1.6rem;
+  }
+
+  .campaign-banner__text p {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+</style>
